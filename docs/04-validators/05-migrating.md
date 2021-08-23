@@ -1,3 +1,9 @@
+---
+id: migrating
+title: Migrating
+sidebar_position: 5
+---
+
 # Migrating a validator
 In some cases, you might want to move your running validator from one server to another. For example, this might be the case if you find a cheaper alternative or if your host does not meet the requirements.
 

@@ -1,4 +1,5 @@
 ---
+id: query-data
 title: Querying data
 sidebar_position: 4
 ---
@@ -6,7 +7,7 @@ sidebar_position: 4
 
 ## Introduction
 
-Aside from [performing transactions](perform-transactions.md) you can also query for the current chain state in order to
+Aside from [performing transactions](03-perform-transactions.md) you can also query for the current chain state in order to
 read the data stored inside it. Here you will find a list of all the query endpoints that are currently available.
 
 ## Profiles

@@ -1,3 +1,9 @@
+---
+id: validator-faq
+title: F.A.Q
+sidebar_position: 7
+---
+
 # Validator FAQ
 
 ::: warning Disclaimer

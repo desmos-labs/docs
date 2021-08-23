@@ -1,4 +1,5 @@
 ---
+id: observe-data
 title: Observing data
 sidebar_position: 5
 ---
@@ -6,7 +7,7 @@ sidebar_position: 5
 # Observing new data
 
 ## Introduction
-Aside from [querying data](query-data.md), you can also observe new data as its inserted inside the chain itself. In this way, you will be notified as soon as a transaction is properly executed without having to constantly polling the chain state by yourself. 
+Aside from [querying data](04-query-data.md), you can also observe new data as its inserted inside the chain itself. In this way, you will be notified as soon as a transaction is properly executed without having to constantly polling the chain state by yourself. 
 
 ## Websocket  
 All the live data observation is done though the usage of a [websocket](https://en.wikipedia.org/wiki/WebSocket). The endpoint of such websocket is the following: 
@@ -36,7 +37,7 @@ The `query` field can have the following values:
 
 * `tm.event='NewBloc'` if you want to observe each new block that is created (even empty ones)
 * `tm.event='Tx'` if you want to subscribe to all new transactions
-* `message.action='<action>'` if you want to subscribe to events emitted when a specific message is sent to the chain. In this case, please refer to the `Message action` section on each [transaction message](perform-transactions.md#available-messages) specification page to know what is the type associated to each message.
+* `message.action='<action>'` if you want to subscribe to events emitted when a specific message is sent to the chain. In this case, please refer to the `Message action` section on each [transaction message](03-perform-transactions.md#available-messages) specification page to know what is the type associated to each message.
 
 Please note that if you want to subscribe to multiple events you will need to send multiple query messages upon connecting to the websocket. 
 

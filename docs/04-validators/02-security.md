@@ -1,3 +1,9 @@
+---
+id: security
+title: Security
+sidebar_position: 2
+---
+
 ## Validator Security
 Each validator candidate is encouraged to run its operations independently, as diverse setups increase the resilience of the network.
 

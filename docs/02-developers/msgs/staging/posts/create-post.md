@@ -1,6 +1,6 @@
 # `MsgCreatePost`
 This message allows you to create a new public post. If you want to know more about the `Post` type, you can do so
-inside the [`Post` type documentation page](../../../types/staging/posts/post.md).
+inside the [`Post` type documentation page](docs/02-developers/types/staging/posts/post.md).
 
 ## Structure
 ```json

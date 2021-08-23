@@ -1,3 +1,9 @@
+---
+id: update
+title: Update
+sidebar_position: 3
+---
+
 # Updating your Desmos fullnode
 These instructions are for fullnodes that are running on previous versions of Desmos and would like to update to the
 latest testnet.
@@ -20,7 +26,7 @@ Make sure that every node has a unique `priv_validator.json`. Do not copy the `p
 Now it is time to upgrade the software.
 
 Go into the directory in which you have installed `desmos`. If you have followed
-the [installation instructions](setup.md) and didn't change the path, it should be `/home/$USER/desmos`:
+the [installation instructions](02-setup.md) and didn't change the path, it should be `/home/$USER/desmos`:
 
 ```bash
 cd <installation-path> 

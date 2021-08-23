@@ -1,3 +1,9 @@
+---
+id: common-problems
+title: Common Problems
+sidebar_position: 6
+---
+
 # Common Problems
 
 ## Problem #1: My validator has `voting_power: 0`

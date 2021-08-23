@@ -1,3 +1,9 @@
+---
+id: halting
+title: Halting
+sidebar_position: 4
+---
+
 # Halting Your Validator
 When attempting to perform routine maintenance or planning for an upcoming coordinated upgrade, it can be useful to have
 your validator systematically and gracefully halt. You can achieve this by either setting the `halt-height` to the

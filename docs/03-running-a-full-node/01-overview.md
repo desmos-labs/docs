@@ -1,3 +1,9 @@
+---
+id: overview
+title: Overview
+sidebar_position: 1
+---
+
 # Desmos fullnode overview
 
 A full-node is a program that fully validates transactions and blocks of a blockchain. It is distinct from a light-node

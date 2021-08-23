@@ -1,3 +1,9 @@
+---
+id: cosmovisor
+title: Use Cosmovisor
+sidebar_position: 5
+---
+
 # Cosmovisor 
 The Cosmos team provides a tool named _Cosmovisor_ that allows your node to perform some automatic operations when needed. This is particularly useful when dealing with on-chain upgrades, because Cosmovisor can help you by taking care of downloading the updated binary and restarting the node for you.  
 

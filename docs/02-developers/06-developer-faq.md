@@ -1,9 +1,10 @@
 ---
-title: FAQ
+id: developer-faq
+title: F.A.Q
 sidebar_position: 6
 ---
 
-# Developer FAQ
+# FAQs
 
 ## General Concepts
 ### What is a transaction? 
@@ -14,7 +15,7 @@ Every transaction is composed of some common data (such as the account data of t
 ### What is a message?
 A (transaction) message is the method that allows you to specify what action(s) should be done inside a transaction to change the current chain state. For example, inside Desmos we can use messages to tell the chain to store a new post, add a like to a post, comment on an existing post and many more.
 
-To know more about all the different messages types and the associated actions that allow you to do, please go to the [transactions page](perform-transactions.md). 
+To know more about all the different messages types and the associated actions that allow you to do, please go to the [transactions page](03-perform-transactions.md). 
 
 ### How do I send a transaction?
 Sending a transaction is pretty straight forward. All what you need to have is access to an instance of an HD wallet associated with a Desmos account having some `desmos` tokens inside. Once you have it, you simply need to: 
@@ -43,7 +44,7 @@ Due to the fact that transactions can take up a different time to be executed (s
 ws://<full-node-host>/websocket
 ```
 
-If you want to know more about it, please refer to the [websocket page](observe-data.md).
+If you want to know more about it, please refer to the [websocket page](05-observe-data.md).
 
 ## Developing applications
 ### I wrongly did an operation. Can I revert it?

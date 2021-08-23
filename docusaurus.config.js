@@ -3,35 +3,43 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 module.exports = {
   title: 'Desmos documentation',
-  tagline: 'Desmos documentation',
+  tagline: 'Desmos network official documentation for developers and validators',
   url: 'https://docs.desmos.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'Desmos-labs', // Usually your GitHub org/user name.
-  projectName: 'desmosdocs', // Usually your repo name.
+  onDuplicateRoutes: 'warn',
+  favicon: 'assets/favicon.ico',
+  organizationName: 'desmos-labs', // Usually your GitHub org/user name.
+  projectName: 'desmos-docs', // Usually your repo name.
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',
       respectPrefersColorScheme: true,
     },
+    /*algolia: {
+      apiKey: '',
+      indexName: '',
+      contextualSearch: true,
+      appId: '',
+
+    },*/
     navbar: {
       logo: {
-        alt: 'Desmos',
-        src: 'img/logo.svg',
-        srcDark: 'img/logo.svg',
-        //href: 'https://docs.desmos.network' activate this when the new docs is online
+        alt: 'Desmos logo',
+        src: 'assets/logo.svg',
+        srcDark: 'assets/logo.svg',
+        href: 'https://docs.desmos.network'
       },
       items: [
         {
           type: 'doc',
-          docId: 'intro', // qui pagina di apertura sezione docs
+          docId: 'intro', // open page of section
           position: 'left',
-          label: 'Docs',
+          label: 'Documentation',
           // docsPluginId: 'docs',
         },
-        // {to: '/blog', label: 'Blog', position: 'left'},
+        // {to: '/blog', label: 'Blog', position: 'left'}, to add extra sections
         {
           type: 'docsVersionDropdown',
           position: 'right',
@@ -50,6 +58,7 @@ module.exports = {
         */
       ],
     },
+    hideableSidebar: true,
     footer: {
       style: 'dark',
       links: [
@@ -95,12 +104,11 @@ module.exports = {
       ],
       logo: {
         alt: 'Desmos Logo',
-        src: 'img/logo.png',
+        src: 'assets/logo.png',
         href: 'https://www.desmos.network',
       },
       copyright: `Copyright © ${new Date().getFullYear()} Desmos Network`,
     },
-
   },
   i18n: {
     defaultLocale: 'en',
@@ -112,7 +120,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
+          sidebarCollapsible: true,
           editUrl:
             'https://github.com/desmos-labs/docs/main',
         },

@@ -1,6 +1,12 @@
+---
+id: create-local
+title: Create a local testnet
+sidebar_position: 2
+---
+
 # Create a local testnet
 :::warning Required desmos executables  
-You need to [install `desmos`](../install.md) before going further.  
+You need to [install `desmos`](docs/install.md) before going further.  
 :::
 
 There are two types of local testnets:
