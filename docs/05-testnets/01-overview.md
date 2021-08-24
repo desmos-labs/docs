@@ -17,7 +17,7 @@ There are two different types of testnets:
 ## Public testnets 
 Public testnets existing only one at a time, and are a preview of what the Desmos mainnet will actually be. 
 
-Testnet's [validators](docs/04-validators/01-overview.md) are publicly known and developers from all the world can write and read transactions from them. 
+Testnet's [validators](../04-validators/01-overview.md) are publicly known and developers from all the world can write and read transactions from them. 
 
 Public testnets are, in short, the real playground on which you can test the integration of your app (or your validator's setup) without worrying too much about security, but being sure to always be up to date with the latest stable changes.
 

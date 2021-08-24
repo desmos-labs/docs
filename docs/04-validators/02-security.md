@@ -7,12 +7,12 @@ sidebar_position: 2
 ## Validator Security
 Each validator candidate is encouraged to run its operations independently, as diverse setups increase the resilience of the network.
 
-## Key Management - HSM
-It is mission critical that an attacker cannot steal a validator's key. If this is possible, it puts the entire stake delegated to the compromised validator at risk. Hardware security modules are an important strategy for mitigating this risk.
+## Key Management System & Hardware Security Modules
+It is critical that an attacker cannot steal a validator's key. If this is possible, 
+it puts the entire stake delegated to the compromised validator at risk. 
+HSM alongside KMS are an important strategies for mitigating this risk.
 
-HSM modules must support `ed25519` signatures for the hub. The YubiHSM2 supports `ed25519` and can protect a private key but cannot ensure in a secure setting that it won't sign the same block twice.
-
-We will update this page when more key storage solutions become available.
+You can take a look on how to setup a KMS with or without HSM by reading [here](kms/kms.md).
 
 ## Sentry Nodes (DDOS Protection)
 Validators are responsible for ensuring that the network can sustain denial of service attacks.

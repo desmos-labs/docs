@@ -1,6 +1,3 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
 module.exports = {
   title: 'Desmos documentation',
   tagline: 'Desmos network official documentation for developers and validators',
@@ -37,25 +34,18 @@ module.exports = {
           docId: 'intro', // open page of section
           position: 'left',
           label: 'Documentation',
-          // docsPluginId: 'docs',
         },
         // {to: '/blog', label: 'Blog', position: 'left'}, to add extra sections
         {
           type: 'docsVersionDropdown',
           position: 'right',
           dropdownActiveClassDisabled: true,
-          //docsPluginId: 'docs',
-        },
-        {
-          type: 'localeDropdown',
-          position: 'right',
         },
         /*{
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          // Re-add this if we want to use localization
+          type: 'localeDropdown',
           position: 'right',
-        },
-        */
+        },*/
       ],
     },
     hideableSidebar: true,
@@ -63,12 +53,16 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Related docs',
           items: [
             {
-              label: 'Introduction',
-              to: '/docs/intro',
+              label: 'Cosmos SDK',
+              href: 'https://docs.cosmos.network',
             },
+            {
+              label: 'CosmWasm',
+              href: 'https://docs.cosmwasm.com/en/docs/1.0/'
+            }
           ],
         },
         {
@@ -110,19 +104,20 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} Desmos Network`,
     },
   },
-  i18n: {
+  /*i18n: { // add for localization
     defaultLocale: 'en',
-    locales: ['en', 'it', 'chinese'],
-  },
+    locales: ['en', 'chinese'],
+  },*/
   presets: [
     [
       '@docusaurus/preset-classic',
       {
         docs: {
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           sidebarCollapsible: true,
-          editUrl:
-            'https://github.com/desmos-labs/docs/main',
+          editUrl: 'https://github.com/desmos-labs/docs/master',
+          showLastUpdateTime: true,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

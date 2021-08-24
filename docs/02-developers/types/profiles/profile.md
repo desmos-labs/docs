@@ -1,3 +1,7 @@
+---
+id: profile
+---
+
 # Profile
 Inside Desmos, profile are the way that users could register their own identity.
 

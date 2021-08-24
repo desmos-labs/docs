@@ -1,6 +1,6 @@
 # `MSgCreateSubspace`
 This message allows you to create a subspace. If you want to know more about the `Subspace` type you can check the related
-docs [here](docs/02-developers/types/staging/subspaces/subspace.md)
+docs [here](../../../types/staging/subspaces/subspace.md)
 
 ## Structure
 ```json

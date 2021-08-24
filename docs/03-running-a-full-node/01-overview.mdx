@@ -4,6 +4,9 @@ title: Overview
 sidebar_position: 1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Desmos fullnode overview
 
 A full-node is a program that fully validates transactions and blocks of a blockchain. It is distinct from a light-node
@@ -60,9 +63,15 @@ In order to run a fullnode, you need to build `desmos` which requires `Go`, `git
 
 This process depends on your working environment.
 
-:::: tabs
-
-::: tab Linux
+<Tabs
+groupId="operating-systems"
+defaultValue="linux"
+values={[
+{label: 'Linux', value: 'linux'},
+{label: 'macOS', value: 'mac'},
+{label: 'Windows', value: 'win'},
+]}>
+<TabItem value="linux">
 
 The following example is based on **Ubuntu (Debian)** and assumes you are using a terminal environment by default.
 Please run the equivalent commands if you are running other Linux distributions.
@@ -85,9 +94,9 @@ echo 'export PATH="$GOBIN:$PATH"' >> ~/.profile
 source ~/.profile
 ```
 
-:::
+</TabItem>
 
-::: tab MacOS
+<TabItem value="mac">
 
 To install the required build tools,
 simple [install Xcode from the Mac App Store](https://apps.apple.com/hk/app/xcode/id497799835?l=en&mt=12).
@@ -114,12 +123,11 @@ echo 'export GOBIN="$GOPATH/bin"' >> ~/.profile
 echo 'export PATH="$GOBIN:$PATH"' >> ~/.profile
 source ~/.profile
 ```
+</TabItem>
 
-:::
+<TabItem value="win">
 
-::: tab Windows
-
-The software has not been tested on __Windows__. If you are currently running a __Windows__ PC, the following options
+The software has not been tested on __Windows__ If you are currently running a __Windows__ PC, the following options
 should be considered:
 
 1. Switch to a __Mac__ 👨‍💻.
@@ -131,13 +139,13 @@ Note that is still possible to build and run the software on __Windows__ but it 
 may require additional setup to be done. If you insist to build and run the software on __Windows__, the best bet would
 be installing the [Chocolatey](https://chocolatey.org/) package manager.
 
-:::
+</TabItem>
 
-::::
+</Tabs>
 
 ## 2. Install the software
 
 Once you have set up your environment correctly, you are now ready to install the Desmos software and start your full
 node.
 
-In order to do so, you can follow our [setup guide](setup.md).
+In order to do so, you can follow our [setup guide](02-setup.md).

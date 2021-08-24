@@ -4,7 +4,7 @@ Desmos is represented by the executable named `desmos`.
 
 It contains the Command Line Interface (CLI) that you can use to interface with the Desmos blockchain, as well as the
 daemon that allows you take part to a Desmos blockchain either as a full node or
-a [validator node](docs/04-validators/01-overview.md).
+a [validator node](04-validators/01-overview.md).
 
 ## Requirements
 

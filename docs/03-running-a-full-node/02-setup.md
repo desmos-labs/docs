@@ -343,7 +343,7 @@ desmos status 2>&1 | jq "{catching_up: .SyncInfo.catching_up}"
 # }
 ```
 
-After your node is fully synced, you can consider running your full node as a [validator node](docs/04-validators/setup.md).
+After your node is fully synced, you can consider running your full node as a [validator node](../04-validators/03-setup.md).
 
 ## 9. (Optional) Configure the background service
 
@@ -426,4 +426,4 @@ $ systemctl status desmosd
 ```
 
 ## 10. Cosmovisor
-In order to do automatic on-chain upgrades we will be using cosmovisor. Please check out [Using Cosmovisor](cosmovisor.md) for information on how to set this up.
+In order to do automatic on-chain upgrades we will be using cosmovisor. Please check out [Using Cosmovisor](05-cosmovisor.md) for information on how to set this up.
