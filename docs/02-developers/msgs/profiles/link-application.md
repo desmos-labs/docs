@@ -1,6 +1,6 @@
 # `MsgLinkApplication`
 This message allows you to start the process that will verify
-an [application link](docs/02-developers/types/profiles/application-link.md) and add it to your Desmos profile.
+an [application link](../../types/profiles/application-link.md) and add it to your Desmos profile.
 
 ## Structure
 
@@ -22,7 +22,7 @@ an [application link](docs/02-developers/types/profiles/application-link.md) and
 
 | Attribute | Type | Description |
 | :-------: | :----: | :-------- |
-| `link_data`  | [Data](docs/02-developers/types/profiles/application-link.md#data) | Data of the link to be verified |
+| `link_data`  | [Data](../../types/profiles/application-link.md#data) | Data of the link to be verified |
 | `call_data`| `string` | Hex encoded data that will be sent to the data source to verify the link |
 | `source_channel` | String | ID of the IBC channel to be used in order to send the packet |
 | `source_port` | String | ID of the IBC port to be used in order to send the packet |

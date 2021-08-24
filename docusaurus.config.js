@@ -11,7 +11,7 @@ module.exports = {
   onDuplicateRoutes: 'warn',
   favicon: 'assets/favicon.ico',
   organizationName: 'desmos-labs', // Usually your GitHub org/user name.
-  projectName: 'desmos-docs', // Usually your repo name.
+  projectName: 'docs', // Usually your repo name.
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',
@@ -112,7 +112,7 @@ module.exports = {
   },
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'fr', 'es' , 'it', 'chinese'],
+    locales: ['en', 'it', 'chinese'],
   },
   presets: [
     [
