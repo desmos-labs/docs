@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Desmos documentation',
   tagline: 'Desmos network official documentation for developers and validators',
-  url: 'https://docs.desmos.network',
+  url: 'https://test-docs.desmos.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
