@@ -5,7 +5,7 @@ slug: /
 sidebar_position: 1
 ---
 
-![cover](/assets/cover.jpg)
+![cover](../static/assets/cover.jpg)
 
 # Introduction
 
