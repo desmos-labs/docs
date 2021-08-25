@@ -103,7 +103,7 @@ Note that the `SourceAddress` field must one of the currently supported types:
 
 The overall view is the following:
 
-![chain-link-ibc](/assets/desmos-chain-link-ibc.png)
+![chain-link-ibc](../../../../static/assets/desmos-chain-link-ibc.png)
 
 #### Using a chain message
 In the case you don't want or cannot integrate IBC into your project, you can always rely on `MsgLinkChainAccount` to link an external profile to a Desmos profile: 
