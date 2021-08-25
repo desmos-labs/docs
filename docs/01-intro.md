@@ -4,10 +4,9 @@ title: Introduction
 slug: /
 sidebar_position: 1
 ---
+# Introduction
 
 ![cover](../static/assets/cover.jpg)
-
-# Introduction
 
 Desmos is a blockchain in the Cosmos ecosystem specific for social networking apps.
 It uses game theory and on-chain governance to decentralize the business model of social network which prioritize
