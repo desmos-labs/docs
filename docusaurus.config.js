@@ -104,10 +104,6 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} Desmos Network`,
     },
   },
-  /*i18n: { // add for localization
-    defaultLocale: 'en',
-    locales: ['en', 'chinese'],
-  },*/
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -130,4 +126,8 @@ module.exports = {
       },
     ],
   ],
+  /*i18n: { // add for localization
+    defaultLocale: 'en',
+    locales: ['en', 'chinese'],
+  },*/
 };
