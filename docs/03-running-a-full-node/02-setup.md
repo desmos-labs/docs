@@ -8,7 +8,7 @@ sidebar_position: 2
 Following you will find the instructions on how to manually setup your Desmos full node.
 
 :::warning Requirements
-Before starting, make sure you read the [overview](01-overview.md) to make sure your hardware meets the needed
+Before starting, make sure you read the [overview](01-overview.mdx) to make sure your hardware meets the needed
 requirements.
 :::
 
@@ -21,7 +21,7 @@ By default, Desmos uses [LevelDB](https://github.com/google/leveldb) as its data
 version `v0.6.0` we've also added the possibility of optionally
 using [Facebook's RocksDB](https://github.com/facebook/rocksdb), which, although still being experimental, is known to
 be faster and could lead to lower syncing times. If you want to try out RocksDB you can take a look at
-our [RocksDB installation guide](04-rocksdb-installation.md) before proceeding further.
+our [RocksDB installation guide](04-rocksdb-installation.mdx) before proceeding further.
 :::
 
 In your terminal, run the following:
@@ -209,7 +209,7 @@ pruning-keep-every = "500"
 pruning-interval = "10"
 ```
 
-You can find out more about pruning [here](01-overview.md#understanding-pruning).
+You can find out more about pruning [here](01-overview.mdx#understanding-pruning).
 
 ## 6. (Optional) Change your database backend
 

@@ -9,13 +9,13 @@ sidebar_position: 3
 A validator's stake is slashed if they become unavailable or sign blocks at the same height. Please read about 
 [Sentry Node Architecture](07-validator-faq.md#how-can-validators-protect-themselves-from-denial-of-service-attacks) to protect your node from DDOS attacks and to ensure high-availability.
 
-::: danger Warning
+:::danger Warning
 If you want to become a validator for the `mainnet`, you should [research security](02-security.md).
 :::
 
 ## 1. Run a fullnode
 To become a validator, you must first have `desmos` installed and be able to run a fullnode. You can
-first [setup your fullnode](../03-running-a-full-node/01-overview.md) if you haven't yet.
+first [setup your fullnode](../03-running-a-full-node/01-overview.mdx) if you haven't yet.
 
 The rest of the documentation will assume you have followed our instructions and have successfully set up a fullnode.
 
@@ -74,7 +74,7 @@ desmos tendermint show-validator
 
 To create your validator, just use the following command:
 
-::: warning Don't use more staking token than you have!
+:::warning Don't use more staking token than you have!
 
 On Morpheus testnet, we are using `udaric` as the staking token and it will be the example below.
 
@@ -97,15 +97,15 @@ desmos tx staking create-validator \
   --from=<key_name>
 ```
 
-::: tip
+:::tip
 When specifying the value of the `moniker` flag, please keep in mind this is going to be the public name associated to your validator. For this reason, it should represent your company name or something else that can easily identify you among all the other validators.
 :::
 
-::: tip
+:::tip
 When specifying commission parameters, the `commission-max-change-rate` is used to measure % _point_ change over the `commission-rate`. E.g. 1% to 2% is a 100% rate increase, but only 1 percentage point.
 :::
 
-::: tip
+:::tip
 `Min-self-delegation` is a stritly positive integer that represents the minimum amount of self-delegated staking token your validator must always have. A `min-self-delegation` of 1 means your validator will never have a self-delegation lower than `1udaric`. A valdiator self delegate lower than this number will automatically be unbonded.
 :::
 
@@ -166,5 +166,6 @@ To show the `operator address`, you can run
 desmos keys show <key_name> -a --bech val
 ```
 
-::: warning Note To be in the validator set, you need to have more total voting power than the 200th validator.
+:::warning Note 
+To be in the validator set, you need to have more total voting power than the 200th validator.
 :::

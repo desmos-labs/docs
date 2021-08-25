@@ -11,12 +11,17 @@ import TabItem from '@theme/TabItem';
 By default, Desmos uses [LevelDB](https://github.com/google/leveldb) as its database backend engine. However, since version 
 `v0.6.0` we've also added the possibility of optionally using [Facebook's RocksDB](https://github.com/facebook/rocksdb),
 which, although still being experimental, is know to be faster and could lead to lower syncing times. 
-If you want to try out RocksDB (which we suggest you to do) you can take a look at our [RocksDB installation guide](04-rocksdb-installation.md) before proceeding further. 
+If you want to try out RocksDB (which we suggest you to do) you can take a look at our
+[RocksDB installation guide](04-rocksdb-installation.mdx) before proceeding further.
 
-The following guide allows you to install [Facebook's RocksDB](https://github.com/facebook/rocksdb) inside your local machine, so that you will be able to use as Desmos' backend engine for better performances.
+The following guide allows you to install [Facebook's RocksDB](https://github.com/facebook/rocksdb) inside your local machine,
+so that you will be able to use as Desmos' backend engine for better performances.
 
 ## 1. Install the dependencies
-The first thing to do is to install all the dependencies for RocksDB. Following you will find the installation guide for both Ubuntu and MacOS. If you have a different operative system you can refer to the [official installation guide](https://github.com/facebook/rocksdb/blob/master/INSTALL.md)  
+The first thing to do is to install all the dependencies for RocksDB.
+Following you will find the installation guide for both Ubuntu and MacOS. If you have a different operative system you can refer to the
+[official installation guide](https://github.com/facebook/rocksdb/blob/master/INSTALL.md)
+
 <Tabs
 groupId="operating-systems"
 defaultValue="linux"
@@ -52,7 +57,8 @@ brew tap homebrew/versions; brew install gcc48 --use-llvm
 
 
 ## 2. Install RocksDB
-After having installed the dependencies, you need to install RocksDB. Again, following you will find the Linux and MacOS instructions. If you are running another OS, please refer to the [official documentation](https://github.com/facebook/rocksdb/blob/master/INSTALL.md).
+After having installed the dependencies, you need to install RocksDB. Again, following you will find the Linux and MacOS instructions.
+If you are running another OS, please refer to the [official documentation](https://github.com/facebook/rocksdb/blob/master/INSTALL.md).
 
 <Tabs
 groupId="operating-systems"
