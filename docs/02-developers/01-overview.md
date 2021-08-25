@@ -14,19 +14,20 @@ If you want to know more about the base concepts of a blockchain and understand 
 ## Glossary
 Before digging into the available transactions, let's clarify the meaning of some terms that we will be using a lot.
 
-* A **post** is a public message that everyone can read on the chain. When creating it you can also specify if it allows
-  to be commented on or not.
+* A **profile** contains a series of (personal) data associated to an account that a user can create on the chain;
 
-* A **comment** is a post that has been liked to a parent post.
+* A **post** is a public message that everyone can read on the chain.  
+  When creating it you can also specify if it allows
+  to be commented on or not;
+  
+* A **comment** is a post that has been liked to a parent post;
 
-* A **reaction** is the way that allows users to express a feeling on a specific post.
+* A **reaction** is the way that allows users to express a feeling on a specific post;
 
-* A **profile** contains a series of (personal) data associated to an account that a user can create on the chain.
+* A **subspace** is a "zone" where a specific app or more apps can live on and share contents;
 
-## Types
-
-If you want to know more about how we store the data on-chain and the custom types, please refer to
-the [*"Types"*page](02-types.md).
+If you want to know more about how we store the data on-chain and all the chain types, please refer to
+the [*"Types"* page](02-types.md).
 
 ## Performing transactions
 
@@ -35,5 +36,5 @@ transactions"* page](03-perform-transactions.md).
 
 ## Querying data
 
-If you want to know all the REST APIs endpoints and CLI commands available to query the existing chain state and the
+If you want to know all the GRPC endpoints and CLI commands available to query the existing chain state and the
 saved data, please go to the [*"Querying data"* page](04-query-data.md). 

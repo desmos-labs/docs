@@ -1,11 +1,11 @@
 # Pictures
-Pictures contains the data of a user profile's related pictures.
+Picture contains the data of a user profile's related pictures.
 
 ## Contained data
-Pictures contains two fields that are both omittable.
+Picture contains two fields that are both optional.
 
-### `Profile`
-The `Profile` identifies the main profile's picture.
+### `Profile` (`string`)
+The `Profile` is a valid `URI` that identifies the main profile's picture.
 
-### `Cover`
-The `Cover` represents the profile's cover.
+### `Cover` (`string`)
+The `Cover` is a valid `URI` representing the profile's cover.
