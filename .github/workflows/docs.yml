@@ -33,7 +33,7 @@ jobs:
         run: |
           npm ci
           npm run build
-          echo 'test.docs.desmos.network' > ./build/CNAME
+          echo 'test-docs.desmos.network' > ./build/CNAME
 
       - name: Deploy 📡
         if: github.ref == 'refs/heads/master'
