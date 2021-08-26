@@ -18,9 +18,57 @@ module.exports = {
         collapsed: false,
         items: [
             'developers/overview',
-            'developers/types',
-            'developers/perform-transactions',
-            'developers/query-data',
+            {
+                Types: [
+                    {
+                        Profiles: [
+                            'developers/types/profiles/profile',
+                            'developers/types/profiles/profile-pictures',
+                            'developers/types/profiles/dtag-transfer-request',
+                            'developers/types/profiles/relationship',
+                            'developers/types/profiles/user-block',
+                            'developers/types/profiles/application-link',
+                            'developers/types/profiles/chain-link'
+                        ]
+                    }
+                ],
+            },
+            {
+              Transactions: [
+                  {
+                    Profiles: [
+                        'developers/transactions/profiles/save-profile',
+                        'developers/transactions/profiles/delete-profile',
+                        'developers/transactions/profiles/request-dtag-transfer',
+                        'developers/transactions/profiles/accept-dtag-transfer-request',
+                        'developers/transactions/profiles/refuse-dtag-transfer-request',
+                        'developers/transactions/profiles/cancel-dtag-transfer-request',
+                        'developers/transactions/profiles/create-relationship',
+                        'developers/transactions/profiles/delete-relationship',
+                        'developers/transactions/profiles/block-user',
+                        'developers/transactions/profiles/unblock-user',
+                        'developers/transactions/profiles/link-application',
+                        'developers/transactions/profiles/unlink-application',
+                        'developers/transactions/profiles/link-chain-account',
+                        'developers/transactions/profiles/unlink-chain-account',
+                    ]
+                  },
+              ],
+            },
+            {
+                Queries: [
+                    {
+                        Profiles: [
+                            'developers/queries/profiles/profile',
+                            'developers/queries/profiles/incoming-dtag-requests',
+                            'developers/queries/profiles/relationships',
+                            'developers/queries/profiles/blocked-users',
+                            'developers/queries/profiles/chain-links',
+                            'developers/queries/profiles/application-links',
+                        ]
+                    }
+                ],
+            },
             'developers/observe-data',
             'developers/developer-faq',
         ]

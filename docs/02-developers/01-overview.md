@@ -27,14 +27,13 @@ Before digging into the available transactions, let's clarify the meaning of som
 * A **subspace** is a "zone" where a specific app or more apps can live on and share contents;
 
 If you want to know more about how we store the data on-chain and all the chain types, please refer to
-the [*"Types"* page](02-types.md).
+the __"Types" section__.
 
 ## Performing transactions
 
-If you want to know more about performing transactions to change the current chain state, please go to the [*"Performing
-transactions"* page](03-perform-transactions.md).
+If you want to know more about performing transactions to change the current chain state, please go to the __"Transactions" section__.
 
 ## Querying data
 
 If you want to know all the GRPC endpoints and CLI commands available to query the existing chain state and the
-saved data, please go to the [*"Querying data"* page](04-query-data.md). 
+saved data, please go to the __"Queries" section__. 
