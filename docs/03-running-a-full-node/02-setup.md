@@ -237,13 +237,13 @@ Now that everything is in place to start the node, the last thing to do is to op
 
 Your node uses vary different ports to interact with the rest of the chain. Particularly, it relies on:
 
-- port `26656` to listen for incoming connections from other nodes
-- port `26657` to expose the RPC service to clients
+- port `26656` to listen for incoming connections from other nodes;
+- port `26657` to expose the RPC service to clients.
 
 A part from those, it also uses:
 
-- port `9090` to expose the [gRPC](https://grpc.io/) service that allows clients to query the chain state
-- port `1317` to expose the REST APIs service
+- port `9090` to expose the [gRPC](https://grpc.io/) service that allows clients to query the chain state;
+- port `1317` to expose the REST APIs service.
 
 While opening any ports are optional, it is beneficial to the whole network if
 you open port `26656`. This would allow new nodes to connect to you as a peer, making them sync faster and the connections more reliable.

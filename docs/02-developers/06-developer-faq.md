@@ -15,7 +15,7 @@ Every transaction is composed of some common data (such as the account data of t
 ### What is a message?
 A (transaction) message is the method that allows you to specify what action(s) should be done inside a transaction to change the current chain state. For example, inside Desmos we can use messages to tell the chain to store a new post, add a like to a post, comment on an existing post and many more.
 
-To know more about all the different messages types and the associated actions that allow you to do, please go to the [transactions page](03-perform-transactions.md). 
+To know more about all the different messages types and the associated actions that allow you to do, please go to the __transactions__ section. 
 
 ### How do I send a transaction?
 Sending a transaction is pretty straight forward. All what you need to have is access to an instance of an HD wallet associated with a Desmos account having some `desmos` tokens inside. Once you have it, you simply need to: 
