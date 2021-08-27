@@ -2,7 +2,7 @@
 id: save-profile
 title: Save profile
 sidebar_label: Save profile
-slug: 03-transactions/profiles/save-profile
+slug: save-profile
 ---
 
 # `MsgSaveProfile`

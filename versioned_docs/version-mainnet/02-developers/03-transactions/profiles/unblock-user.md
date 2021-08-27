@@ -2,7 +2,7 @@
 id: unblock-user
 title: Unblock user
 sidebar_label: Unblock User
-slug: 03-transactions/profiles/unblock-user
+slug: unblock-user
 ---
 
 # `MsgUnblockUser`

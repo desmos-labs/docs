@@ -2,7 +2,7 @@
 id: unlink-application
 title: Unlink application
 sidebar_label: Unlink application
-slug: 03-transactions/profiles/unlink-application
+slug: unlink-application
 ---
 
 # `MsgUnlinkApplication`

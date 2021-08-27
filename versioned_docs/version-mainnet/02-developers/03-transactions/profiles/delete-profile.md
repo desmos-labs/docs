@@ -2,7 +2,7 @@
 id: delete-profile
 title: Delete profile
 sidebar_label: Delete profile
-slug: 03-transactions/profiles/delete-profile
+slug: delete-profile
 ---
 
 # `MsgDeleteProfile`

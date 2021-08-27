@@ -2,7 +2,7 @@
 id: request-dtag-transfer
 title: Request DTag transfer
 sidebar_label: Request DTag transfer
-slug: 03-transactions/profiles/request-dtag-transfer
+slug: request-dtag-transfer
 ---
 
 # `MsgRequestDTagTransfer`

@@ -2,7 +2,7 @@
 id: profile-pictures
 title: Profile pictures
 sidebar_label: Profile pictures
-slug: 02-types/profiles/profile-pictures
+slug: profile-pictures
 ---
 
 # Pictures

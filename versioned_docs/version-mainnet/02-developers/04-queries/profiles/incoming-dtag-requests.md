@@ -2,7 +2,7 @@
 id: incoming-dtag-requests
 title: Query incoming DTag requests
 sidebar_label: Incoming DTag requests
-slug: /04-queries/profiles/incoming-dtag-requests
+slug: incoming-dtag-requests
 ---
 
 ## Query incoming DTag requests

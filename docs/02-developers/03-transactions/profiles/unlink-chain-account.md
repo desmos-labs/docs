@@ -2,7 +2,7 @@
 id: unlink-chain-account
 title: Unlink chain account
 sidebar_label: Unlink chain account
-slug: 03-transactions/profiles/unlink-chain-account
+slug: unlink-chain-account
 ---
 
 # `MsgUnlinkChainAccount`

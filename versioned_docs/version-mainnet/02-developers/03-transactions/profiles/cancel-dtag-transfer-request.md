@@ -2,7 +2,7 @@
 id: cancel-dtag-transfer-request
 title: Cancel DTag transfer request
 sidebar_label: Cancel DTag transfer request
-slug: 03-transactions/profiles/cancel-dtag-transfer-request
+slug: cancel-dtag-transfer-request
 ---
 
 # `MsgCancelDTagTransferRequest`

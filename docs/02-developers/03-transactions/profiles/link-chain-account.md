@@ -2,7 +2,7 @@
 id: link-chain-account
 title: Link chain account
 sidebar_label: Link chain account
-slug: 03-transactions/profiles/link-chain-account
+slug: link-chain-account
 ---
 
 # `MsgLinkChainAccount`

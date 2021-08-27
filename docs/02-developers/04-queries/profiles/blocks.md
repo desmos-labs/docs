@@ -2,7 +2,7 @@
 id: blocked-users
 title: Query Blocked users
 sidebar_label: Blocked users
-slug: /04-queries/profiles/blocked-users
+slug: blocked-users
 ---
 
 ## Query blocked users

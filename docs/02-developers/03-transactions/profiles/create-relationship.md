@@ -2,7 +2,7 @@
 id: create-relationship
 title: Create Relationship
 sidebar_label: Create Relationship
-slug: 03-transactions/profiles/create-relationship
+slug: create-relationship
 ---
 
 # `MsgCreateRelationship`

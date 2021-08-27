@@ -2,7 +2,7 @@
 id: chain-link
 title: Chain link
 sidebar_label: Chain link
-slug: 02-types/profiles/chain-link
+slug: chain-link
 ---
 
 # Chain link

@@ -2,7 +2,7 @@
 id: accept-dtag-transfer-request
 title: Accept DTag transfer request
 sidebar_label: Accept DTag transfer request
-slug: 03-transactions/profiles/accept-dtag-transfer-request
+slug: accept-dtag-transfer-request
 ---
 
 # `MsgAcceptDTagTransferRequest`

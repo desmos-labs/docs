@@ -2,7 +2,7 @@
 id: link-application
 title: Link application
 sidebar_label: Link application
-slug: 03-transactions/profiles/link-application
+slug: link-application
 ---
 
 # `MsgLinkApplication`
