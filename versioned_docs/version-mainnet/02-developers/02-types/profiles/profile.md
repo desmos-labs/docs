@@ -2,7 +2,7 @@
 id: profile
 title: Profile
 sidebar_label: Profile
-slug: 02-types/profiles/profile
+slug: profile
 ---
 
 # Profile

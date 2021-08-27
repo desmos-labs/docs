@@ -2,7 +2,7 @@
 id: dtag-transfer-request
 title: DTag transfer request
 sidebar_label: DTag transfer request
-slug: 02-types/profiles/dtag-transfer-request
+slug: dtag-transfer-request
 ---
 
 # DTag transfer request

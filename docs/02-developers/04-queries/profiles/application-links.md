@@ -2,7 +2,7 @@
 id: application-links
 title: Query application links
 sidebar_label: Application links
-slug: /04-queries/profiles/application-link
+slug: application-link
 ---
 ## Query application links
 This query allows you to retrieve the application links with the optional user `address`.

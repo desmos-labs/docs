@@ -2,7 +2,7 @@
 id: relationships
 title: Query relationships
 sidebar_label: Relationships
-slug: /04-queries/profiles/relationships
+slug: relationships
 ---
 
 ## Query relationships

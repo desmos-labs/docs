@@ -2,7 +2,7 @@
 id: delete-relationship
 title: Delete relationship
 sidebar_label: Delete relationship
-slug: 03-transactions/profiles/delete-relationship
+slug: delete-relationship
 ---
 
 # `MsgDeleteRelationship`

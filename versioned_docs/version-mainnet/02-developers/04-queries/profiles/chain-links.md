@@ -2,7 +2,7 @@
 id: chain-links
 title: Query chain links
 sidebar_label: Chain links
-slug: /04-queries/profiles/chain-links
+slug: chain-links
 ---
 
 ## Query chain links

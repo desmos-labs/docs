@@ -2,7 +2,7 @@
 id: relationship
 title: Relationship
 sidebar_label: Relationship
-slug: 02-types/profiles/relationship
+slug: relationship
 ---
 
 # Relationship

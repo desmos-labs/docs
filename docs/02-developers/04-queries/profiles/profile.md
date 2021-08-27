@@ -2,7 +2,7 @@
 id: profile
 title: Query Profile
 sidebar_label: Profile
-slug: /04-queries/profiles/profile
+slug: profile
 ---
 
 # Query a profile

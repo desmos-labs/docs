@@ -2,7 +2,7 @@
 id: application-link
 title: Application link
 sidebar_label: Application link
-slug: 02-types/profiles/application-link
+slug: application-link
 ---
 
 # Application link

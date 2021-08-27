@@ -2,7 +2,7 @@
 id: user-block
 title: User block
 sidebar_label: User block
-slug: 02-types/profiles/user-block
+slug: user-block
 ---
 
 # User Block

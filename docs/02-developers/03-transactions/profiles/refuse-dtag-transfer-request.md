@@ -2,7 +2,7 @@
 id: refuse-dtag-transfer-request
 title: Refuse DTag transfer request
 sidebar_label: Refuse DTag transfer request
-slug: 03-transactions/profiles/refuse-dtag-transfer-request
+slug: refuse-dtag-transfer-request
 ---
 
 # `MsgRefuseDTagTransferRequest`

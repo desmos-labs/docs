@@ -2,7 +2,7 @@
 id: block-user
 title: Block user
 sidebar_label: Block user
-slug: 03-transactions/profiles/block-user
+slug: block-user
 ---
 
 # `MsgBlockUser`
