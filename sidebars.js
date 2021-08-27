@@ -78,11 +78,11 @@ module.exports = {
           label: 'Running a Fullnode',
           collapsed: false,
           items: [
-              'running-a-full-node/overview',
-              'running-a-full-node/setup',
-              'running-a-full-node/update',
-              'running-a-full-node/rocksdb-installation',
-              'running-a-full-node/cosmovisor'
+              'full-node/overview',
+              'full-node/setup',
+              'full-node/update',
+              'full-node/rocksdb-installation',
+              'full-node/cosmovisor'
           ]
       },
       {

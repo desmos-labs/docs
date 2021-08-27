@@ -187,23 +187,23 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-mainnet/running-a-full-node/overview"
+          "id": "version-mainnet/full-node/overview"
         },
         {
           "type": "doc",
-          "id": "version-mainnet/running-a-full-node/setup"
+          "id": "version-mainnet/full-node/setup"
         },
         {
           "type": "doc",
-          "id": "version-mainnet/running-a-full-node/update"
+          "id": "version-mainnet/full-node/update"
         },
         {
           "type": "doc",
-          "id": "version-mainnet/running-a-full-node/rocksdb-installation"
+          "id": "version-mainnet/full-node/rocksdb-installation"
         },
         {
           "type": "doc",
-          "id": "version-mainnet/running-a-full-node/cosmovisor"
+          "id": "version-mainnet/full-node/cosmovisor"
         }
       ],
       "collapsible": true
