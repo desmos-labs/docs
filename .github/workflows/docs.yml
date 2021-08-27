@@ -10,7 +10,7 @@ on:
     branches:
       - master
 jobs:
-  Markdown-Link-Check:
+  Markdown-Link-Check-testnet:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -21,6 +21,18 @@ jobs:
           use-quiet-mode: 'yes'
           use-verbose-mode: 'yes'
           folder-path: 'docs'
+
+  Markdown-Link-Check-mainnet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@master
+      - name: Checking docs 🔍
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'yes'
+          folder-path: 'versioned_docs'
 
   Build-and-Deploy:
     runs-on: ubuntu-latest

@@ -117,6 +117,9 @@ module.exports = {
           versions: {
             current: {
               label: "Testnet 🛠"
+            },
+            mainnet: {
+              label: "Mainnet 🚀"
             }
           }
         },
