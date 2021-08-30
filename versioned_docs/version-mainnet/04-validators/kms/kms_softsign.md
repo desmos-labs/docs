@@ -29,7 +29,7 @@ state_file = "/root/kms/home/state/cosmoshub-3-consensus.json"
 ### Software-based Signer Configuration
 
 [[providers.softsign]]
-chain_ids = ["<chain-id>"]
+chain_ids = ["desmos-mainnet-1"]
 key_type = "consensus"
 path = "/root/kms/home/secrets/validator-consensus.key"
 
