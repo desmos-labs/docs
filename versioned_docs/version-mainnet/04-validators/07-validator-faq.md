@@ -1,5 +1,5 @@
 ---
-id: validator-faq
+id: faq
 title: F.A.Q
 sidebar_position: 7
 ---

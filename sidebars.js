@@ -70,7 +70,7 @@ module.exports = {
                 ],
             },
             'developers/observe-data',
-            'developers/developer-faq',
+            'developers/faq',
         ]
       },
       {
@@ -78,11 +78,11 @@ module.exports = {
           label: 'Running a Fullnode',
           collapsed: false,
           items: [
-              'full-node/overview',
-              'full-node/setup',
-              'full-node/update',
-              'full-node/rocksdb-installation',
-              'full-node/cosmovisor'
+              'fullnode/overview',
+              'fullnode/setup',
+              'fullnode/update',
+              'fullnode/rocksdb-installation',
+              'fullnode/cosmovisor'
           ]
       },
       {
@@ -96,7 +96,7 @@ module.exports = {
               'validators/halting',
               'validators/migrating',
               'validators/common-problems',
-              'validators/validator-faq'
+              'validators/faq'
           ]
       },
       {

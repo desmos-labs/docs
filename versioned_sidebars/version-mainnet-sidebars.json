@@ -175,7 +175,7 @@
         },
         {
           "type": "doc",
-          "id": "version-mainnet/developers/developer-faq"
+          "id": "version-mainnet/developers/faq"
         }
       ],
       "collapsible": true
@@ -187,23 +187,23 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-mainnet/full-node/overview"
+          "id": "version-mainnet/fullnode/overview"
         },
         {
           "type": "doc",
-          "id": "version-mainnet/full-node/setup"
+          "id": "version-mainnet/fullnode/setup"
         },
         {
           "type": "doc",
-          "id": "version-mainnet/full-node/update"
+          "id": "version-mainnet/fullnode/update"
         },
         {
           "type": "doc",
-          "id": "version-mainnet/full-node/rocksdb-installation"
+          "id": "version-mainnet/fullnode/rocksdb-installation"
         },
         {
           "type": "doc",
-          "id": "version-mainnet/full-node/cosmovisor"
+          "id": "version-mainnet/fullnode/cosmovisor"
         }
       ],
       "collapsible": true
@@ -239,7 +239,7 @@
         },
         {
           "type": "doc",
-          "id": "version-mainnet/validators/validator-faq"
+          "id": "version-mainnet/validators/faq"
         }
       ],
       "collapsible": true
