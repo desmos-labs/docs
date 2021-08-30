@@ -1,5 +1,5 @@
 ---
-id: developer-faq
+id: faq
 title: F.A.Q
 sidebar_position: 6
 ---

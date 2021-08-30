@@ -15,7 +15,7 @@ If you want to become a validator for the `mainnet`, you should [research securi
 
 ## 1. Run a fullnode
 To become a validator, you must first have `desmos` installed and be able to run a fullnode. You can
-first [setup your fullnode](../03-full-node/01-overview.mdx) if you haven't yet.
+first [setup your fullnode](../03-fullnode/01-overview.mdx) if you haven't yet.
 
 The rest of the documentation will assume you have followed our instructions and have successfully set up a fullnode.
 
