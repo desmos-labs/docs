@@ -85,7 +85,7 @@ desmos tx staking create-validator \
   --amount=1000000udsm \
   --pubkey=$(desmos tendermint show-validator) \
   --moniker="<Your moniker here>" \
-  --chain-id=desmos-mainnet-1 \
+  --chain-id=desmos-mainnet \
   --commission-rate="0.10" \
   --commission-max-rate="0.20" \
   --commission-max-change-rate="0.01" \
@@ -124,7 +124,7 @@ desmos tx staking edit-validator \
   --identity=6A0D65E29A4CBC8E \
   --details="To infinity and beyond!" \
   --commission-rate="0.10" \
-  --chain-id=desmos-mainnet-1 \
+  --chain-id=desmos-mainnet \
   --from=<key_name>
 ```
 

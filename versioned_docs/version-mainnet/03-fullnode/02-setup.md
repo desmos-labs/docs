@@ -110,7 +110,7 @@ In order to provide a custom seed to your private key, you can do as follows:
 ## 3. Get the genesis file
 
 To connect to an existing network, or start a new one, a genesis file is required. The file contains all the settings
-telling how the genesis block of the network should look like.  To connect to the `desmos-mainnet-1`, you will need the
+telling how the genesis block of the network should look like.  To connect to the `desmos-mainnet`, you will need the
 corresponding genesis file. Visit the [mainnet repo](https://github.com/desmos-labs/mainnet) and
 download the correct genesis file by running the following command.
 
@@ -124,7 +124,7 @@ After the download, ensure it's the correct one by checking that it has the same
 
 ```bash
 jq -S -c -M '' genesis.json | shasum -a 256
-9e5d67484c23e5fc8c35e6aa14d0b17bf74b9dbf97b024391b7992d9df57db82  -
+619c9462ccd9045522300c5ce9e7f4662cac096eed02ef0535cca2a6826074c4  -
 ```
 
 ## 4. Setup seeds, peers and state sync
@@ -306,7 +306,7 @@ You should see an output like the following one:
     },
     "id": "84cc13d6acf22c32c209f4205d2693f70f458dde",
     "listen_addr": "tcp://0.0.0.0:26656",
-    "network": "desmos-mainnet-1",
+    "network": "desmos-mainnet",
     "version": "",
     "channels": "40202122233038606100",
     "moniker": "fullnode",
