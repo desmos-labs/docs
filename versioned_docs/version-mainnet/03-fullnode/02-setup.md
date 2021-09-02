@@ -36,7 +36,7 @@ git clone https://github.com/desmos-labs/desmos.git && cd desmos
 # Checkout the correct tag
 # Please check on https://github.com/desmos-labs/mainnet to get
 # the tag to use based on the current mainnet version
-git checkout tags/<version>
+git checkout tags/v1.0.1
 
 # Build the software
 # If you want to use the default database backend run
@@ -117,7 +117,7 @@ download the correct genesis file by running the following command.
 ```bash
 # Download the existing genesis file for the testnet
 # Replace <chain-id> with the id of the testnet you would like to join
-curl https://raw.githubusercontent.com/desmos-labs/mainnet/master/genesis.json > $HOME/.desmos/config/genesis.json
+curl https://raw.githubusercontent.com/desmos-labs/mainnet/main/genesis.json > ~/.desmos/config/genesis.json
 ```
 
 After the download, ensure it's the correct one by checking that it has the same hashsum below:
@@ -139,7 +139,7 @@ connect to such nodes. Our team is running three seed nodes, and we advise you t
 following `seeds` value:
 
 ```toml
-seeds = ""
+seeds = "9bde6ab4e0e00f721cc3f5b4b35f3a0e8979fab5@seed-1.mainnet.desmos.network,5c86915026093f9a2f81e5910107cf14676b48fc@seed-2.mainnet.desmos.network,45105c7241068904bdf5a32c86ee45979794637f@seed-3.mainnet.desmos.network"
 ```
 
 Next, you will need to set some persistent peers of your node. Such nodes are going to be a particular type of peer

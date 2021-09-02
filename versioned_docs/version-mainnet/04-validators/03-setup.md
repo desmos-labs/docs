@@ -49,15 +49,6 @@ Please select a key name that you will easily remember and be able to type fast.
 places inside other commands later.
 :::
 
-Once that you have created your local wallet, it's time to get some tokens to be used as the initial validator stake so
-that it can run properly. If you are setting up a validator inside one of our testnets, you can request some testnet
-tokens inside our [Discord](https://discord.gg/yxPRGdq). Once you have joined, go inside the `#ask-tokens` channel and
-run the following command:
-
-```
-!send <your_address>
-```
-
 You can get your address by running:
 
 ```shell
@@ -145,7 +136,7 @@ desmos query staking validator <account_desmos>
 ```bash
 desmos tx slashing unjail \
 	--from=<key_name> \
-	--chain-id=<chain_id>
+	--chain-id=desmos-mainnet-1
 ```
 
 ## 4. Confirm your validator is running
