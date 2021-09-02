@@ -5,7 +5,7 @@ the [`Report` type documentation page](../../../02-types/staging/posts/report.md
 ## Structure
 ```json
 {
-  "@type": "/desmos.reports.v1beta1.MsgReportPost",
+  "@type": "/desmos.posts.v1beta1.MsgReportPost",
   "post_id": "<ID of the post to report>",
   "report": {
     "type": "<Report's type>",
@@ -45,7 +45,7 @@ The `type` field will only accept the following values:
 ## Example
 ```json
 {
-  "@type": "/desmos.reports.v1beta1.MsgReportPost",
+  "@type": "/desmos.posts.v1beta1.MsgReportPost",
   "post_id": "301921ac3c8e623d8f35aef1886fea20849e49f08ec8ddfdd9b96feaf0c4fd15",
   "report": {
     "type": "scam",
