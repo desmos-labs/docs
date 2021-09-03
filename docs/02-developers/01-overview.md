@@ -20,7 +20,7 @@ Before digging into the available transactions, let's clarify the meaning of som
   When creating it you can also specify if it allows
   to be commented on or not;
   
-* A **comment** is a post that has been liked to a parent post;
+* A **comment** is a post that has been linked to a parent post;
 
 * A **reaction** is the way that allows users to express a feeling on a specific post;
 
