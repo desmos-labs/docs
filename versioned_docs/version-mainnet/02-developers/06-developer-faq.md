@@ -8,7 +8,7 @@ sidebar_position: 6
 
 ## General Concepts
 ### What is a transaction? 
-As you know, the blockchain can be seen as a decentralized state machine that stores a state. A transaction is the method used by clients to tell the chain that som operations must be taken to change such current state.
+As you know, the blockchain can be seen as a decentralized state machine that stores a state. A transaction is the method used by clients to tell the chain that some operations must be taken to change such current state.
 
 Every transaction is composed of some common data (such as the account data of the sender, a `memo`, etc.) but the most important parts are [messages](#what-is-a-message). 
 
