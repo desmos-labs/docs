@@ -135,14 +135,6 @@ following `seeds` value:
 seeds = "be3db0fe5ee7f764902dbcc75126a2e082cbf00c@seed-1.morpheus.desmos.network:26656,4659ab47eef540e99c3ee4009ecbe3fbf4e3eaff@seed-2.morpheus.desmos.network:26656,1d9cc23eedb2d812d30d99ed12d5c5f21ff40c23@seed-3.morpheus.desmos.network:26656"
 ```
 
-Next, you will need to set some persistent peers of your node. Such nodes are going to be a particular type of peer
-nodes to which your fullnode will always try to connect. You need to set them as the following value so that your node
-can start syncing faster with the rest of the chain:
-
-```toml
-persistent_peers = "67dcef828fc2be3c3bcc19c9542d2b228bd7cff9@seed-4.morpheus.desmos.network:26656,fcf8207fb84a7238089bd0cd8db994e0af9016b6@seed-5.morpheus.desmos.network:26656"
-```
-
 ### Using state sync
 
 Starting from Desmos `v0.15.0`, we've added the support for Tendermint'
