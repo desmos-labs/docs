@@ -139,15 +139,7 @@ connect to such nodes. Our team is running three seed nodes, and we advise you t
 following `seeds` value:
 
 ```toml
-seeds = "9bde6ab4e0e00f721cc3f5b4b35f3a0e8979fab5@seed-1.mainnet.desmos.network,5c86915026093f9a2f81e5910107cf14676b48fc@seed-2.mainnet.desmos.network,45105c7241068904bdf5a32c86ee45979794637f@seed-3.mainnet.desmos.network"
-```
-
-Next, you will need to set some persistent peers of your node. Such nodes are going to be a particular type of peer
-nodes to which your fullnode will always try to connect. You need to set them as the following value so that your node
-can start syncing faster with the rest of the chain:
-
-```toml
-persistent_peers = ""
+seeds = "9bde6ab4e0e00f721cc3f5b4b35f3a0e8979fab5@seed-1.mainnet.desmos.network:26656,5c86915026093f9a2f81e5910107cf14676b48fc@seed-2.mainnet.desmos.network:26656,45105c7241068904bdf5a32c86ee45979794637f@seed-3.mainnet.desmos.network:26656"
 ```
 
 ### Using state sync
