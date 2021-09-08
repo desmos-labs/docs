@@ -233,6 +233,45 @@ key.
 Also, once your validator is tombstoned all you can do is create a new one, and earn again all the delegations that you
 had before.
 
+## Problem #7: My validator run out of space
+
+![run-out-of-space](../../../static/assets/no_space_left.png)
+
+This situation occurs if you haven’t allocated enough disk space to your node when you’ve created it.
+The space you need is directly related to the pruning strategy your using, you can read more about it [here](https://docs.desmos.network/fullnode/overview#understanding-pruning).
+
+Assuming you’re using a VPS, to solve this we can rely on different strategies, each of one of them with upside/downside:
+
+__A)__ Add more diskspace and extend your filesystem to use it:
+1) Log into the provider console and buy more diskspace;
+2) Follow this guide to learn how to extend the filesystem on linux:
+https://www.astroarch.com/2019/06/linux-notes-extending-a-file-system-in-a-virtual-disk/;
+3) Restart your validator node.
+
+     Pros: Faster solution, ideal for mainnet validators. 
+     Cons: Raise renting costs of VPS.
+
+
+__B)__ Switch pruning strategy, reset your node, state-sync it:
+1) Stop your node daemon service (usually sudo `systemctl stop desmosd`);
+2) Navigate to .desmos/config/ and open app.toml;
+3) Switch from pruning nothing to default/everything or from default to everything*;
+4) Unsafe reset your node with `desmos unsafe-reset-all`;
+5) Resync the node with state-sync (if possible).
+Pros: Cheaper solution, help to understand the meaning of different pruning strategies.
+Cons: Not feasible for mainnet validators, longer times to be back online validating.
+
+__*About pruning everything__:  
+  Currently, pruning everything looks to be unsafe and unstable so we suggest to __NOT use__ this strategy in production.   
+  However, our team is currently testing it inside our morpheus-apollo-2 testnet and will give some results in the upcoming weeks/months.
+
+## Problem #8: Wrong Block Header AppHash
+
+![run-out-of-space](../../../static/assets/wrong_block_header.png)
+
+If you run into this problem while you're syncing your node, probably you are using a wrong Desmos binary version.
+If so, please ask inside our discord server what's the correct version/versions to use in order to sync the node correctly.
+
 ##### NOTE
 
 Previous delegators will still be able to unbond from a tombstoned validator.
