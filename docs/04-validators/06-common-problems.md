@@ -244,23 +244,27 @@ Assuming you’re using a VPS, to solve this we can rely on different strategies
 
 __A)__ Add more diskspace and extend your filesystem to use it:
 1) Log into the provider console and buy more diskspace;
-2) Follow this guide to learn how to extend the filesystem on linux:
-   https://www.astroarch.com/2019/06/linux-notes-extending-a-file-system-in-a-virtual-disk/;
+2) Follow [this guide](https://www.astroarch.com/2019/06/linux-notes-extending-a-file-system-in-a-virtual-disk/) 
+   to learn how to extend the filesystem on linux;
 3) Restart your validator node.
-
-   Pros: Faster solution, ideal for mainnet validators.
-   Cons: Raise renting costs of VPS.
+   
+__Pros__: Faster solution, ideal for mainnet validators.  
+__Cons__: Raise renting costs of VPS.
 
 
 
 __B)__ Switch pruning strategy, reset your node, state-sync it:
 1) Stop your node daemon service (usually sudo `systemctl stop desmosd`);
-2) Navigate to .desmos/config/ and open app.toml;
+2) Navigate to `.desmos/config/` and open app.toml;
 3) Switch from pruning nothing to default/everything or from default to everything*;
-4) Unsafe reset your node with `desmos unsafe-reset-all`;
-5) Resync the node with state-sync (if possible).
-   Pros: Cheaper solution, help to understand the meaning of different pruning strategies.
-   Cons: Not feasible for mainnet validators, longer times to be back online validating.
+4) Backup the `addrbook.json` file (this will help the node connect faster to peers after the restart);  
+5) Navigate to .desmos/data/ and backup the `priv_validator_state.json` file (this will keep the voting state avoiding double sign); 
+6) Unsafe reset your node with `desmos unsafe-reset-all`;
+7) Place the backup of `addrbook.json` and `priv_validator_state.json` back into `.desmos/config/` and `.desmos/data/` folders respectively;
+8) Resync the node with state-sync (if possible).
+   
+__Pros__: Cheaper solution, help to understand the meaning of different pruning strategies.  
+__Cons__: Not feasible for mainnet validators, longer times to be back online validating.
 
 __*About pruning everything__:  
 Currently, pruning everything looks to be unsafe and unstable so we suggest to __NOT use__ this strategy in production.   

@@ -74,8 +74,8 @@ To solve this, what you can do is getting more tokens delegated to it by followi
    ```bash
    desmos query account $(desmos keys show <your_key> --address) --chain-id <chain_id>
    ```
-   
-4. Delegate the tokens to your validator: 
+
+4. Delegate the tokens to your validator:
    ```bash
    desmos tx staking delegate \
      $(desmos keys show <your_key> --bech=val --address) \
@@ -87,7 +87,7 @@ To solve this, what you can do is getting more tokens delegated to it by followi
    # desmos tx staking delegate \
    #  $(desmos keys show validator --bech=val --address) \
    #  10000000udaric \
-   #  --chain-id desmos-mainnet \
+   #  --chain-id morpheus-1001 \
    #  --from validator --yes
    ```
 
@@ -105,7 +105,7 @@ command:
 desmos tx slashing unjail --chain-id <chain_id> --from <your_key>
 
 # Example
-# desmos tx slashing unjail --chain-id desmos-mainnet --from validator
+# desmos tx slashing unjail --chain-id morpheus-1001 --from validator
 ```
 
 This will perform an unjail transaction that will set your validator as active again from the next block.
@@ -133,7 +133,7 @@ systemctl restart desmosd
 ## Problem #5: The persistent peers do not work properly
 
 Sometimes, it might happen that your node cannot connect to the persistent peers we have provided inside
-the [mainnet repository](https://github.com/desmos-labs/mainnet). This happens because all nodes have a limit of
+the [testnet repository](https://github.com/desmos-labs/morpheus). This happens because all nodes have a limit of
 inbound connections that they can accept. Once that limit is exceed, the nodes will not accept any more connections.
 
 In order to solve this problem, there are two alternative way:
@@ -159,29 +159,29 @@ In order to use this particular type of nodes, all you have to do is:
    seeds = ""
    ```
 
-3. Replace that line with the following: 
+3. Replace that line with the following:
    ```
    seeds = "cd4612957461881d5f62367c589aaa0fdf933bd8@seed-1.morpheus.desmos.network:26656,fc4714d15629e3b016847c45d5648230a30a50f1@seed-2.morpheus.desmos.network:26656"
    ```
-   
-4. Empty your persistent peers list by replacing the `pesistent_peers = "..."` line with 
+
+4. Empty your persistent peers list by replacing the `pesistent_peers = "..."` line with
    ```
    persistent_peers = ""
    ```
-   
-4. Save the file and exit the editor. 
+
+4. Save the file and exit the editor.
 5. Restart your node.
 
 ### Changing your persistent peers
-Instead of using a seed node, you can also keep relying on persistent peers. In this case, you will need to find new ones to connect your node to. To do this, you can query the current peers of any chain node using the following RPC endpoint: 
+Instead of using a seed node, you can also keep relying on persistent peers. In this case, you will need to find new ones to connect your node to. To do this, you can query the current peers of any chain node using the following RPC endpoint:
 
 ```
 /net_info
 ```
 
-For example, you can use the public RPC endpoint [here](https://rpc.morpheus.desmos.network/net_info). 
+For example, you can use the public RPC endpoint [here](https://rpc.morpheus.desmos.network/net_info).
 
-From that page, you can see all the peers connected to that node. Their info is present inside the `peers` field, which contains a list of objects made as follows: 
+From that page, you can see all the peers connected to that node. Their info is present inside the `peers` field, which contains a list of objects made as follows:
 
 ```json{4,5,17}
 {
@@ -204,13 +204,13 @@ From that page, you can see all the peers connected to that node. Their info is 
 }
 ```
 
-In order to get new peers addresses, all you have to do is to combine the `id`, `remote_ip` and `listen_addr` field values as follows: 
+In order to get new peers addresses, all you have to do is to combine the `id`, `remote_ip` and `listen_addr` field values as follows:
 
 ```
 id@remote_ip:listen_addr(port)
 ```
 
-In the above case, that peer's address would be: 
+In the above case, that peer's address would be:
 
 ```
 d45d4e0a6a6c393d58cfa1c5fed6286164fbfceb@35.193.251.165:26656
@@ -244,26 +244,31 @@ Assuming you’re using a VPS, to solve this we can rely on different strategies
 
 __A)__ Add more diskspace and extend your filesystem to use it:
 1) Log into the provider console and buy more diskspace;
-2) Follow this guide to learn how to extend the filesystem on linux:
-https://www.astroarch.com/2019/06/linux-notes-extending-a-file-system-in-a-virtual-disk/;
+2) Follow [this guide](https://www.astroarch.com/2019/06/linux-notes-extending-a-file-system-in-a-virtual-disk/)
+   to learn how to extend the filesystem on linux;
 3) Restart your validator node.
 
-     Pros: Faster solution, ideal for mainnet validators. 
-     Cons: Raise renting costs of VPS.
+__Pros__: Faster solution, ideal for mainnet validators.  
+__Cons__: Raise renting costs of VPS.
+
 
 
 __B)__ Switch pruning strategy, reset your node, state-sync it:
 1) Stop your node daemon service (usually sudo `systemctl stop desmosd`);
-2) Navigate to .desmos/config/ and open app.toml;
+2) Navigate to `.desmos/config/` and open app.toml;
 3) Switch from pruning nothing to default/everything or from default to everything*;
-4) Unsafe reset your node with `desmos unsafe-reset-all`;
-5) Resync the node with state-sync (if possible).
-Pros: Cheaper solution, help to understand the meaning of different pruning strategies.
-Cons: Not feasible for mainnet validators, longer times to be back online validating.
+4) Backup the `addrbook.json` file (this will help the node connect faster to peers after the restart);
+5) Navigate to .desmos/data/ and backup the `priv_validator_state.json` file (this will keep the voting state avoiding double sign);
+6) Unsafe reset your node with `desmos unsafe-reset-all`;
+7) Place the backup of `addrbook.json` and `priv_validator_state.json` back into `.desmos/config/` and `.desmos/data/` folders respectively;
+8) Resync the node with state-sync (if possible).
+
+__Pros__: Cheaper solution, help to understand the meaning of different pruning strategies.  
+__Cons__: Not feasible for mainnet validators, longer times to be back online validating.
 
 __*About pruning everything__:  
-  Currently, pruning everything looks to be unsafe and unstable so we suggest to __NOT use__ this strategy in production.   
-  However, our team is currently testing it inside our morpheus-apollo-2 testnet and will give some results in the upcoming weeks/months.
+Currently, pruning everything looks to be unsafe and unstable so we suggest to __NOT use__ this strategy in production.   
+However, our team is currently testing it inside our morpheus-apollo-2 testnet and will give some results in the upcoming weeks/months.
 
 ## Problem #8: Wrong Block Header AppHash
 
