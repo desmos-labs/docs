@@ -133,7 +133,7 @@ systemctl restart desmosd
 ## Problem #5: The persistent peers do not work properly
 
 Sometimes, it might happen that your node cannot connect to the persistent peers we have provided inside
-the [testnet repository](https://github.com/desmos-labs/morpheus). This happens because all nodes have a limit of
+the [mainnet repository](https://github.com/desmos-labs/mainnet). This happens because all nodes have a limit of
 inbound connections that they can accept. Once that limit is exceed, the nodes will not accept any more connections.
 
 In order to solve this problem, there are two alternative way:
