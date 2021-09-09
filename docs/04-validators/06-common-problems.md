@@ -87,7 +87,7 @@ To solve this, what you can do is getting more tokens delegated to it by followi
    # desmos tx staking delegate \
    #  $(desmos keys show validator --bech=val --address) \
    #  10000000udaric \
-   #  --chain-id morpheus-1001 \
+   #  --chain-id morpheus-apollo-2 \
    #  --from validator --yes
    ```
 
@@ -105,7 +105,7 @@ command:
 desmos tx slashing unjail --chain-id <chain_id> --from <your_key>
 
 # Example
-# desmos tx slashing unjail --chain-id morpheus-1001 --from validator
+# desmos tx slashing unjail --chain-id morpheus-apollo-2 --from validator
 ```
 
 This will perform an unjail transaction that will set your validator as active again from the next block.
