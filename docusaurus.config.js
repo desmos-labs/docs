@@ -14,13 +14,13 @@ module.exports = {
       defaultMode: 'dark',
       respectPrefersColorScheme: true,
     },
-    /*algolia: {
+    algolia: {
       apiKey: 'a0c8cc3eb829f6595a2cd41870f92a81',
       indexName: 'desmos',
       contextualSearch: true,
       appId: 'BH4D9OD16A',
 
-    },*/
+    },
     navbar: {
       logo: {
         alt: 'Desmos logo',
