@@ -154,21 +154,21 @@ under the `statesync` section:
 1. Enable state sync by setting `enable = true`
 
 2. Set the RPC addresses from where to get the snapshots using the `rpc_servers` field
-   to `seed...`.
+   and filling it with two RPCs from this [list](https://github.com/desmos-labs/mainnet/blob/main/references/rpc-nodes.md).
    These are two of our fullnodes that are set up to create periodic snapshots every 500 blocks.
 
 3. Get a trusted chain height, and the associated block hash. To do this, you will have to:
 1. Get the current chain height by running:
    ```bash
-   curl -s http://seed... | jq "{height: .result.signed_header.header.height}"
+   curl -s <rpc-address>/commit  | jq "{height: .result.signed_header.header.height}"
    ```
 2. Once you have the current chain height, get a height that is a little bit lower (200 blocks) than the current one. To
    do this you can execute:
    ```bash
-   curl -s http://seed-.../commit?height=<your-height> | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
+   curl -s <rpc-address>/commit?height=<your-height> | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
 
    # Example
-   # curl -s http://seed-.../commit?height=100000 | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
+   # curl -s https://rpc-desmos.itastakers.com/commit?height=100000 | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
    ```
 
 4. Now that you have a trusted height and block hash, use those values as the `trust_height` and `trust_hash` values.
@@ -179,9 +179,9 @@ end (the `trust_height` and `trust_hash` should contain your values instead):
 ```toml
 enable = true
 
-rpc_servers = "seed-..."
-trust_height = 16962
-trust_hash = ""
+rpc_servers = "rpc-desmos.itastakers.com:26657,135.181.60.250:26557"
+trust_height = 139142
+trust_hash = "F55CA4C56CAC348E453A38D6BEBD70B1CD92F7431214AE167B09EFDA478186BE"
 trust_period = "336h0m0s"
 ```
 
