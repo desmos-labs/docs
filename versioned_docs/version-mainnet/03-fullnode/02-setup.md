@@ -154,18 +154,18 @@ under the `statesync` section:
 1. Enable state sync by setting `enable = true`
 
 2. Set the RPC addresses from where to get the snapshots using the `rpc_servers` field
-   to `rpc-desmos.itastakers.com:26657,135.181.60.250:26557`.
+   and filling it with two RPCs from this [list](https://github.com/desmos-labs/mainnet/blob/main/references/rpc-nodes.md).
    These are two of our fullnodes that are set up to create periodic snapshots every 500 blocks.
 
 3. Get a trusted chain height, and the associated block hash. To do this, you will have to:
 1. Get the current chain height by running:
    ```bash
-   curl -s https://rpc-desmos.itastakers.com/commit  | jq "{height: .result.signed_header.header.height}"
+   curl -s <rpc-address>/commit  | jq "{height: .result.signed_header.header.height}"
    ```
 2. Once you have the current chain height, get a height that is a little bit lower (200 blocks) than the current one. To
    do this you can execute:
    ```bash
-   curl -s https://rpc-desmos.itastakers.com/commit?height=<your-height> | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
+   curl -s <rpc-address>/commit?height=<your-height> | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
 
    # Example
    # curl -s https://rpc-desmos.itastakers.com/commit?height=100000 | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
