@@ -154,7 +154,7 @@ under the `statesync` section:
 1. Enable state sync by setting `enable = true`
 
 2. Set the RPC addresses from where to get the snapshots using the `rpc_servers` field
-   to `rpc-desmos.itastakers.com:26657,rpc-....`.
+   to `rpc-desmos.itastakers.com:26657,135.181.60.250:26557`.
    These are two of our fullnodes that are set up to create periodic snapshots every 500 blocks.
 
 3. Get a trusted chain height, and the associated block hash. To do this, you will have to:
@@ -179,7 +179,7 @@ end (the `trust_height` and `trust_hash` should contain your values instead):
 ```toml
 enable = true
 
-rpc_servers = "rpc-desmos.itastakers.com:26657,rpc-...."
+rpc_servers = "rpc-desmos.itastakers.com:26657,135.181.60.250:26557"
 trust_height = 139142
 trust_hash = "F55CA4C56CAC348E453A38D6BEBD70B1CD92F7431214AE167B09EFDA478186BE"
 trust_period = "336h0m0s"
