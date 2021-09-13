@@ -87,7 +87,7 @@ To solve this, what you can do is getting more tokens delegated to it by followi
    # desmos tx staking delegate \
    #  $(desmos keys show validator --bech=val --address) \
    #  10000000udaric \
-   #  --chain-id morpheus-1001 \
+   #  --chain-id morpheus-apollo-2 \
    #  --from validator --yes
    ```
 
@@ -105,7 +105,7 @@ command:
 desmos tx slashing unjail --chain-id <chain_id> --from <your_key>
 
 # Example
-# desmos tx slashing unjail --chain-id morpheus-1001 --from validator
+# desmos tx slashing unjail --chain-id morpheus-apollo-2 --from validator
 ```
 
 This will perform an unjail transaction that will set your validator as active again from the next block.
@@ -232,6 +232,50 @@ key.
 
 Also, once your validator is tombstoned all you can do is create a new one, and earn again all the delegations that you
 had before.
+
+## Problem #7: My validator run out of space
+
+![run-out-of-space](../../static/assets/no_space_left.png)
+
+This situation occurs if you haven’t allocated enough disk space to your node when you’ve created it.
+The space you need is directly related to the pruning strategy your using, you can read more about it [here](https://docs.desmos.network/fullnode/overview#understanding-pruning).
+
+Assuming you’re using a VPS, to solve this we can rely on different strategies, each of one of them with upside/downside:
+
+__A)__ Add more diskspace and extend your filesystem to use it:
+1) Log into the provider console and buy more diskspace;
+2) Follow [this guide](https://www.astroarch.com/2019/06/linux-notes-extending-a-file-system-in-a-virtual-disk/) 
+   to learn how to extend the filesystem on linux;
+3) Restart your validator node.
+   
+__Pros__: Faster solution, ideal for mainnet validators.  
+__Cons__: Raise renting costs of VPS.
+
+
+
+__B)__ Switch pruning strategy, reset your node, state-sync it:
+1) Stop your node daemon service (usually sudo `systemctl stop desmosd`);
+2) Navigate to `.desmos/config/` and open app.toml;
+3) Switch from pruning nothing to default/everything or from default to everything*;
+4) Backup the `addrbook.json` file (this will help the node connect faster to peers after the restart);  
+5) Navigate to .desmos/data/ and backup the `priv_validator_state.json` file (this will keep the voting state avoiding double sign); 
+6) Unsafe reset your node with `desmos unsafe-reset-all`;
+7) Place the backup of `addrbook.json` and `priv_validator_state.json` back into `.desmos/config/` and `.desmos/data/` folders respectively;
+8) Resync the node with state-sync (if possible).
+   
+__Pros__: Cheaper solution, help to understand the meaning of different pruning strategies.  
+__Cons__: Not feasible for mainnet validators, longer times to be back online validating.
+
+__*About pruning everything__:  
+Currently, pruning everything looks to be unsafe and unstable so we suggest to __NOT use__ this strategy in production.   
+However, our team is currently testing it inside our morpheus-apollo-2 testnet and will give some results in the upcoming weeks/months.
+
+## Problem #8: Wrong Block Header AppHash
+
+![run-out-of-space](../../static/assets/wrong_block_header.png)
+
+If you run into this problem while you're syncing your node, probably you are using a wrong Desmos binary version.
+If so, please ask inside our discord server what's the correct version/versions to use in order to sync the node correctly.
 
 ##### NOTE
 
