@@ -19,7 +19,6 @@ module.exports = {
       indexName: 'desmos',
       contextualSearch: true,
       appId: 'BH4D9OD16A',
-
     },
     navbar: {
       logo: {
