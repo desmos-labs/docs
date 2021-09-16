@@ -99,7 +99,7 @@ When specifying commission parameters, the `commission-max-change-rate` is used 
 `Min-self-delegation` is a stritly positive integer that represents the minimum amount of self-delegated staking token your validator must always have. A `min-self-delegation` of 1 means your validator will never have a self-delegation lower than `1udaric`. A valdiator self delegate lower than this number will automatically be unbonded.
 :::
 
-You can confirm that you are in the validator set by using a block explorer, e.g. [Big Dipper](https://morpheus.desmos.network).
+You can confirm that you are in the validator set by using a block explorer, e.g. [Big Dipper](https://explorer.desmos.network).
 
 ## 3. Edit the validator description
 You can edit your validator's public description. This info is to identify your validator, and will be relied on by delegators to decide which validators to stake to. Make sure to provide input for every flag below. If a flag is not included in the command the field will default to empty (`--moniker` defaults to the machine name) if the field has never been set or remain the same if it has been set in the past.
