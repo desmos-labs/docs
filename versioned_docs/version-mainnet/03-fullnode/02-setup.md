@@ -154,9 +154,8 @@ under the `statesync` section:
 1. Enable state sync by setting `enable = true`
 
 2. Set the RPC addresses from where to get the snapshots using the `rpc_servers` field
-   and filling it with two RPCs from this [list](https://github.com/desmos-labs/mainnet/blob/main/references/rpc-nodes.md).
-   These are two of our fullnodes that are set up to create periodic snapshots every 500 blocks.
-
+   and filling it with two RPCs that provides snapshots.  
+   (You can ask inside our [discord](https://discord.desmos.network/) for them).
 3. Get a trusted chain height, and the associated block hash. To do this, you will have to:
 1. Get the current chain height by running:
    ```bash
