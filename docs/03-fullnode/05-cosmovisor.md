@@ -18,7 +18,7 @@ go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@latest
 
 To install a previous version, you can specify the version. 
 
-**IMPORTANT**: Chains that use Cosmos-SDK v0.42.x and want to use auto-download feature MUST use Cosmovisor v0.1.0
+**IMPORTANT**: If you are setting up Desmos for versions **before `v2.0.0`** and you want to use auto-download feature, you MUST use Cosmovisor v0.1.0:
 ```
 go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v0.1.0
 ```
