@@ -145,7 +145,7 @@ seeds = "9bde6ab4e0e00f721cc3f5b4b35f3a0e8979fab5@seed-1.mainnet.desmos.network:
 ### Using state sync
 
 Starting from Desmos `v0.15.0`, we've added the support for Tendermint'
-s [state sync](https://docs.tendermint.com/master/tendermint-core/state-sync.html). This feature allows new nodes to
+s [state sync](https://docs.tendermint.com/master/nodes/state-sync.html#configure-state-sync). This feature allows new nodes to
 sync with the chain extremely fast, by downloading snapshots created by other full nodes.
 
 In order to use this feature, you will have to edit a couple of things inside your `~/.desmos/config/config.toml` file,

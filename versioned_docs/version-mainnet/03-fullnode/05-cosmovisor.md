@@ -4,61 +4,82 @@ title: Use Cosmovisor
 sidebar_position: 5
 ---
 
-# Cosmovisor 
-The Cosmos team provides a tool named _Cosmovisor_ that allows your node to perform some automatic operations when needed. This is particularly useful when dealing with on-chain upgrades, because Cosmovisor can help you by taking care of downloading the updated binary and restarting the node for you.  
+# Cosmovisor
+The Cosmos team provides a tool named _Cosmovisor_ that allows your node to perform some automatic operations when needed. This is particularly useful when dealing with on-chain upgrades, because Cosmovisor can help you by taking care of downloading the updated binary and restarting the node for you.
 
-If you want to learn how to setup Cosmovisor inside your full or validator node, please follow the guide below. 
+If you want to learn how to setup Cosmovisor inside your full or validator node, please follow the guide below.
 
 ## Setup
 ### 1. Downloading Cosmovisor
-The first thing you have to do is downloading the `cosmovisor` binary file. To do this you can execute the following command: 
-
-```shell
-go get github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor
+To install the latest version of `cosmovisor`, run the following command:
+```
+go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@latest
 ```
 
-This will download all the dependencies and build `cosmovisor` for your machine. Once that's done, you can execute the following command to make sure that `cosmovisor` is installed: 
+To install a previous version, you can specify the version.
 
-```shell
-cosmovisor version
+**IMPORTANT**: If you are setting up Desmos for versions **before `v2.0.0`** and you want to use auto-download feature, you MUST use Cosmovisor v0.1.0:
+```
+go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v0.1.0
 ```
 
-It should print `DAEMON_NAME is not set`. If that's the case, you have installed `cosmovisor` successfully.
+It is possible to confirm the version of cosmovisor when using Cosmovisor v1.0.0, but it is not possible to do so with `v0.1.0`.
+
+You can also install from source by pulling the cosmos-sdk repository and switching to the correct version and building as follows:
+```
+git clone git@github.com:cosmos/cosmos-sdk
+cd cosmos-sdk
+git checkout cosmovisor/vx.x.x
+cd cosmovisor
+make
+```
+
+This will build cosmovisor in your current directory. Afterwards you may want to put it into your machine's PATH like as follows:
+```
+cp cosmovisor ~/go/bin/cosmovisor
+```
+
+*Note: If you are using go `v1.15` or earlier, you will need to use `go get`, and you may want to run the command outside a project directory.*
 
 ### 2. Setting up environmental variables
 Cosmovisor relies on the following environmental variables to work properly:
 
 * `DAEMON_HOME` is the location where upgrade binaries should be kept (e.g. `$HOME/.desmos`).
 * `DAEMON_NAME` is the name of the binary itself (eg. `desmos`).
-* `DAEMON_ALLOW_DOWNLOAD_BINARIES` (*optional*) if set to `true` will enable auto-downloading of new binaries
+* `DAEMON_ALLOW_DOWNLOAD_BINARIES` (*optional*, default = `false`) if set to `true` will enable auto-downloading of new binaries
   (for security reasons, this is intended for full nodes rather than validators).
-* `DAEMON_RESTART_AFTER_UPGRADE` (*optional*) if set to `true` it will restart the sub-process with the same
+* `DAEMON_RESTART_AFTER_UPGRADE` (*optional*, default = `true`) if set to `true` it will restart the sub-process with the same
   command line arguments and flags (but new binary) after a successful upgrade. By default, `cosmovisor` dies
   afterwards and allows the supervisor to restart it if needed. Note that this will not auto-restart the child
   if there was an error.
-  
-To properly set those variables, we suggest you to edit the `~/.profile` file so that they are loaded when you log into your machine. To edit this file you can simply run 
+* `DAEMON_POLL_INTERVAL` (*optional*, default = `300ms`) is the interval length for polling the upgrade plan file. The value can either be a number (in milliseconds) or a duration (e.g. `1s`).
+* `UNSAFE_SKIP_BACKUP` (*optional*, default = `false`), if set to `true`, upgrades directly without performing a backup. Otherwise (`false`) backs up the data before trying the upgrade. The default value of `false` is useful and recommended in case of failures and when a backup needed to rollback. We recommend using the default backup option `UNSAFE_SKIP_BACKUP=false`.
+
+To properly set those variables, we suggest you to edit the `~/.profile` file so that they are loaded when you log into your machine. To edit this file you can simply run
 
 ```shell
 sudo nano ~/.profile
 ```
 
-Once you're in, we suggest you to set the following values: 
+Once you're in, we suggest you to set the following values:
 
 ```
 export DAEMON_HOME=$HOME/.desmos
 export DAEMON_NAME=desmos
 export DAEMON_ALLOW_DOWNLOAD_BINARIES=true
 export DAEMON_RESTART_AFTER_UPGRADE=true
+export UNSAFE_SKIP_BACKUP=false
 ```
 
-Once you're done, please reload the `~/.profile` file by running 
+**IMPORTANT**: If you don't have much free disk space, please set `UNSAFE_SKIP_BACKUP=true` to avoid your node failing the upgrade due to insufficient disk space when creating the backup.
+
+Once you're done, please reload the `~/.profile` file by running
 
 ```shell
 source ~/.profile
 ```
 
-You can verify the values set by running 
+You can verify the values set by running
 
 ```
 echo $DAEMON_NAME
@@ -67,14 +88,14 @@ echo $DAEMON_NAME
 If this outputs `desmos` you are ready to go.
 
 ### 3. Copying Desmos files in the proper folders
-In order to work properly, Cosmovisor needs the `desmos` binary to be placed in the `~/.desmos/cosmovisor/genesis/bin` folder. To do this you can simply run the following command: 
+In order to work properly, Cosmovisor needs the `desmos` binary to be placed in the `~/.desmos/cosmovisor/genesis/bin` folder. To do this you can simply run the following command:
 
 ```shell
 mkdir -p ~/.desmos/cosmovisor/genesis/bin/
 cp $(which desmos) ~/.desmos/cosmovisor/genesis/bin/
 ```
 
-To verify that you have setup everything correctly, you can run the following command: 
+To verify that you have setup everything correctly, you can run the following command:
 
 ```shell
 cosmovisor version
@@ -83,7 +104,7 @@ cosmovisor version
 This should output the Desmos version.
 
 ### 4. Restarting your node
-Finally, if you've setup everything correctly you can now restart your node. To do this you can simply stop the running `desmos start` and re-start your Desmos node using the following command: 
+Finally, if you've setup everything correctly you can now restart your node. To do this you can simply stop the running `desmos start` and re-start your Desmos node using the following command:
 
 ```
 cosmovisor start
@@ -109,11 +130,14 @@ Environment="DAEMON_HOME=$HOME/.desmos"
 Environment="DAEMON_NAME=desmos"
 Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=true"
 Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
+Environment="UNSAFE_SKIP_BACKUP=false"
 
 [Install]
 WantedBy=multi-user.target
 EOF
 ```
+
+**IMPORTANT**: If you don't have much free disk space, please set `UNSAFE_SKIP_BACKUP=true` to avoid your node failing the upgrade due to insufficient disk space when creating the backup.
 
 Once you have edited your system file, you need to reload it using the following command:
 
@@ -121,7 +145,7 @@ Once you have edited your system file, you need to reload it using the following
 sudo systemctl daemon-reload
 ```
 
-Finally, you can restart is as follows: 
+Finally, you can restart is as follows:
 
 ```shell
 sudo systemctl restart desmosd
