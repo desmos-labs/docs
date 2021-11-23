@@ -86,7 +86,7 @@ To solve this, what you can do is getting more tokens delegated to it by followi
    # Example
    # desmos tx staking delegate \
    #  $(desmos keys show validator --bech=val --address) \
-   #  10000000udaric \
+   #  10000000udsm \
    #  --chain-id desmos-mainnet \
    #  --from validator --yes
    ```
