@@ -83,7 +83,7 @@ desmos tx staking create-validator \
   --min-self-delegation="1" \
   --gas="auto" \
   --gas-adjustment="1.2" \
-  --gas-prices="0.025udaric" \
+  --gas-prices="0.025udsm" \
   --from=<key_name>
 ```
 
@@ -96,7 +96,7 @@ When specifying commission parameters, the `commission-max-change-rate` is used 
 :::
 
 :::tip
-`Min-self-delegation` is a stritly positive integer that represents the minimum amount of self-delegated staking token your validator must always have. A `min-self-delegation` of 1 means your validator will never have a self-delegation lower than `1udaric`. A valdiator self delegate lower than this number will automatically be unbonded.
+`Min-self-delegation` is a strictly positive integer that represents the minimum amount of self-delegated staking token your validator must always have. A `min-self-delegation` of 1 means your validator will never have a self-delegation lower than `1DSM`. A valdiator self delegate lower than this number will automatically be unbonded.
 :::
 
 You can confirm that you are in the validator set by using a block explorer, e.g. [Big Dipper](https://explorer.desmos.network).
