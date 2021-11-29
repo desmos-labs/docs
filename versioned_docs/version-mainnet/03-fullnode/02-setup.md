@@ -123,7 +123,7 @@ curl https://raw.githubusercontent.com/desmos-labs/mainnet/main/genesis.json > ~
 After the download, ensure it's the correct one by checking that it has the same hashsum below:
 
 ```bash
-jq -S -c -M '' genesis.json | shasum -a 256
+jq -S -c -M '' /root/.desmos/config/genesis.json | shasum -a 256
 619c9462ccd9045522300c5ce9e7f4662cac096eed02ef0535cca2a6826074c4  -
 ```
 
