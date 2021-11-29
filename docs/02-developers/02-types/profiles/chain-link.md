@@ -74,14 +74,14 @@ You can see a list of such key types [here](https://github.com/cosmos/cosmos-sdk
 ### 2. Create the link
 Once you have created the two ownership proofs, you are now ready to create the link. This can be done in two ways: 
 1. [Using IBC](#using-ibc);
-2. [Usign a chain message](#using-chain-message).
+2. [Using the CLI](#using-the-cli).
 
 #### Using IBC
 This is the way that you want to use when integrating the Desmos connection from your chain.  
 To implement the IBC capability of connecting an external account to a Desmos profile, 
 the `x/profiles` module supports the following packet data type: 
 
-#### LinkChainAccountPacketData
+##### LinkChainAccountPacketData
 `LinkChainAccountPacketData` defines the object that should be sent inside a
 `MsgSendPacket` when wanting to link an external chain to a Desmos profile
 using IBC.
@@ -123,6 +123,10 @@ The overall view is the following:
 
 ![chain-link-ibc](../../../../static/assets/desmos-chain-link-ibc.png)
 
-##### Using the CLI
-Note that you can generate the chain-link-json using `desmos create-chain-link-json` command,
-then compose this message using the `desmos tx profiles link-chain <data.json>` command. 
+#### Using the CLI
+You can easily create a chain link using the CLI by running two commands: 
+
+1.`desmos create-chain-link-json`
+   This will start an interactive prompt session allowing you to generate the proper JSON file containing all the linkage information. 
+2. `desmos tx profiles link-chain [/path/to/link_file.json]`
+   This will effectively link your Desmos profile to the external chain address. The required argument is the (absolute) path to the file generated using the `create-chain-link-json` command. 
