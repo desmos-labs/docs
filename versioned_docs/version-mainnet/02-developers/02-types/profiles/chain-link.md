@@ -121,7 +121,7 @@ Note that the `SourceAddress` field must be one of the currently supported types
 
 The overall view is the following:
 
-![chain-link-ibc](../../../../static/assets/desmos-chain-link-ibc.png)
+![chain-link-ibc](../../../../../static/assets/desmos-chain-link-ibc.png)
 
 #### Using the CLI
 You can easily create a chain link using the CLI by running two commands:
