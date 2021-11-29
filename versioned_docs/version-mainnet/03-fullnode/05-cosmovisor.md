@@ -18,12 +18,9 @@ go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@latest
 
 To install a previous version, you can specify the version.
 
-**IMPORTANT**: If you are setting up Desmos for versions **before `v2.0.0`** and you want to use auto-download feature, you MUST use Cosmovisor v0.1.0:
 ```
 go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v0.1.0
 ```
-
-It is possible to confirm the version of cosmovisor when using Cosmovisor v1.0.0, but it is not possible to do so with `v0.1.0`.
 
 You can also install from source by pulling the cosmos-sdk repository and switching to the correct version and building as follows:
 ```
@@ -37,6 +34,11 @@ make
 This will build cosmovisor in your current directory. Afterwards you may want to put it into your machine's PATH like as follows:
 ```
 cp cosmovisor ~/go/bin/cosmovisor
+```
+
+To check your cosmovisor version, you can use this command and make sure it matches the version you've installed:
+```
+strings $(which cosmovisor) | egrep -e "mod\s+github.com/cosmos/cosmos-sdk/cosmovisor
 ```
 
 *Note: If you are using go `v1.15` or earlier, you will need to use `go get`, and you may want to run the command outside a project directory.*
