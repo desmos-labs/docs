@@ -36,7 +36,7 @@ git clone https://github.com/desmos-labs/desmos.git && cd desmos
 # Checkout the correct tag
 # Please check on https://github.com/desmos-labs/mainnet to get
 # the tag to use based on the current mainnet version
-git checkout tags/v1.0.1
+git checkout tags/v2.3.0
 
 # Build the software
 # If you want to use the default database backend run
@@ -157,21 +157,36 @@ under the `statesync` section:
    and filling it with two RPCs that provides snapshots.  
    (You can ask inside our [discord](https://discord.desmos.network/) for them).
 3. Get a trusted chain height, and the associated block hash. To do this, you will have to:
-1. Get the current chain height by running:
-   ```bash
-   curl -s <rpc-address>/commit  | jq "{height: .result.signed_header.header.height}"
-   ```
-2. Once you have the current chain height, get a height that is a little bit lower (200 blocks) than the current one. To
-   do this you can execute:
-   ```bash
-   curl -s <rpc-address>/commit?height=<your-height> | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
+   - Get the current chain height by running:
+      ```bash
+      curl -s <rpc-address>/commit  | jq "{height: .result.signed_header.header.height}"
+      ```
+   - Once you have the current chain height, get a height that is a little bit lower (200 blocks) than the current one. To
+      do this you can execute:
+      ```bash
+      curl -s <rpc-address>/commit?height=<your-height> | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
 
-   # Example
-   # curl -s https://rpc-desmos.itastakers.com/commit?height=100000 | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
-   ```
+      # Example
+      # curl -s https://rpc-desmos.itastakers.com/commit?height=100000 | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
+      ```
+4. Now that you have a trusted height and block hash, use those values as the `trust_height` and `trust_hash` values. Also,
+make sure they're the right values for the Desmos version you're starting to synchronize:  
+   
+   | **State sync height range** | **Desmos version** |
+   | :-------------------------: | :----------------: |
+   |           `0 - 1149679`     |      `v1.0.1`      |
+   |     `1149680 - 1347304`     |      `v2.3.0`      |
+   |     `> 1347305`             |      `v2.3.1`      |
 
-4. Now that you have a trusted height and block hash, use those values as the `trust_height` and `trust_hash` values.
-
+**NOTE**: If you change the state sync height, you will need to perform these actions before trying to sync again:  
+   * If you're running a **validator node**:
+      - Backup the `~/.desmos/data/priv_validator_state.json`;   
+      - Run `desmos unsafe-reset-all`;
+      - Restore the `priv_validator_state.json` file.
+      - Restart the node.
+   * If you're running a *full node*:
+      - Run `desmos unsafe-reset-all`;
+      - Restart the node.
 Here is an example of what the `statesync` section of your `~/.desmos/config/config.toml` file should look like in the
 end (the `trust_height` and `trust_hash` should contain your values instead):
 
