@@ -167,27 +167,19 @@ under the `statesync` section:
 4. Now that you have a trusted height and block hash, use those values as the `trust_height` and `trust_hash` values. Also,
 make sure they're the right values for the Desmos version you're starting to synchronize:
 
-   | **State sync height range** | **Desmos version**  |
-   | :-------------------------: | :-----------------: |
-   |      `0 - 1235764`          |      `v0.17.0`      |
-   |      `1235765 - 1415529`    |      `v0.17.4`      |
-   |      `1415530 - 2121235`    |      `v0.17.6`      |
-   |      `2121236 - 2226899`    |      `v1.0.4`       |
-   |      `2226900 - 2589024`    |      `v2.0.0`       |
-   |      `2589025 - 2643234`    |      `v2.1.0`       |
-   |      `2643235 - 2756259`    |      `v2.2.0`       |
-   |      `2756260 - 3130831`    |      `v2.3.0`       |
+   | **State sync height range** |     **Desmos version**      |
+   |:---------------------------:| :-------------------------: |
+   | `0 - 1235764`               |          `v0.17.0`          |
+   | `1235765 - 1415529`         |          `v0.17.4`          |
+   | `1415530 - 2121235`         |          `v0.17.6`          |
+   | `2121236 - 2226899`         |          `v1.0.4`           |
+   | `2226900 - 2589024`         |          `v2.0.0`           |
+   | `2589025 - 2643234`         |          `v2.1.0`           |
+   | `2643235 - 2756259`         |          `v2.2.0`           |
+   | `2756260 - 3130831`         |          `v2.3.0`           |
+   | `2756260 - 3130831`         |          `v2.3.0`           |
+   | `> 3130831`                 |          `v2.3.1`           |
 
-**NOTE**: If you change the state sync height, you will need to perform these actions before trying to sync again:
-* If you're running a **validator node**:
-   - Backup the `~/.desmos/data/priv_validator_state.json`;
-   - Run `desmos unsafe-reset-all`;
-   - Restore the `priv_validator_state.json` file.
-   - Restart the node.
-* If you're running a *full node*:
-   - Run `desmos unsafe-reset-all`;
-   - Restart the node.
-   
 Here is an example of what the `statesync` section of your `~/.desmos/config/config.toml` file should look like in the
 end (the `trust_height` and `trust_hash` should contain your values instead):
 
@@ -199,6 +191,17 @@ trust_height = 16962
 trust_hash = "E8ED7A890A64986246EEB02D7D8C4A6D497E3B60C0CAFDDE30F2EE385204C314"
 trust_period = "336h0m0s"
 ```
+
+#### Changing state sync height
+If you change the state sync height, you will need to perform these actions before trying to sync again:
+* If you're running a **validator node**:
+   1. Backup the `~/.desmos/data/priv_validator_state.json`;
+   2. Run `desmos unsafe-reset-all`;
+   3. Restore the `priv_validator_state.json` file.
+   4. Restart the node.
+* If you're running a *full node*:
+   1. Run `desmos unsafe-reset-all`;
+   2. Restart the node.
 
 ## 5. (Optional) Edit snapshot config
 
