@@ -78,7 +78,7 @@ To create your validator, just use the following command:
 
 On Morpheus testnet, we are using `udaric` as the staking token and it will be the example below.
 
-We are going to use `udsm` as the staking token on Mainnet.  
+We are using `udsm` as the staking token on Mainnet.  
 :::
 
 #### Testnet: 

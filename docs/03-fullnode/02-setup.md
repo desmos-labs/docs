@@ -132,6 +132,13 @@ download the correct genesis file by running the following command.
 curl https://raw.githubusercontent.com/desmos-labs/mainnet/main/genesis.json > ~/.desmos/config/genesis.json
 ```
 
+After the download, ensure it's the correct one by checking that it has the same hashsum below:
+
+```bash
+jq -S -c -M '' /root/.desmos/config/genesis.json | shasum -a 256
+619c9462ccd9045522300c5ce9e7f4662cac096eed02ef0535cca2a6826074c4  -
+```
+
 ## 4. Setup seeds, peers and state sync
 
 The next thing you have to do now is telling your node how to connect with other nodes that are already present on the
@@ -174,8 +181,8 @@ under the `statesync` section:
       ```bash
       curl -s http://seed-4.morpheus.desmos.network:26657/commit | jq "{height: .result.signed_header.header.height}"
       ```
-   - Once you have the current chain height, get a height that is a little bit lower (200 blocks) than the current one. To
-   do this you can execute:
+   - Once you have the current chain height, get a height that is a little bit lower (200 blocks) than the current one.  
+     To do this you can execute:
       ```bash
       curl -s http://seed-4.morpheus.desmos.network:26657/commit?height=<your-height> | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
 
@@ -187,8 +194,8 @@ under the `statesync` section:
        ```bash
        curl -s <rpc-address>/commit  | jq "{height: .result.signed_header.header.height}"
        ```
-   - Once you have the current chain height, get a height that is a little bit lower (200 blocks) than the current one. To
-      do this you can execute:
+   - Once you have the current chain height, get a height that is a little bit lower (200 blocks) than the current one.  
+     To do this you can execute:
        ```bash
        curl -s <rpc-address>/commit?height=<your-height> | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
  
