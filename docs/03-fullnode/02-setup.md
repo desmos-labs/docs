@@ -34,9 +34,7 @@ cd $HOME
 git clone https://github.com/desmos-labs/desmos.git && cd desmos
 
 # Checkout the correct tag
-# Please check on https://github.com/desmos-labs/morpheus to get
-# the tag to use based on the current network version
-git checkout tags/<version>
+git checkout tags/2.3.1
 
 # Build the software
 # If you want to use the default database backend run
@@ -110,7 +108,10 @@ In order to provide a custom seed to your private key, you can do as follows:
 ## 3. Get the genesis file
 
 To connect to an existing network, or start a new one, a genesis file is required. The file contains all the settings
-telling how the genesis block of the network should look like. To connect to the `morpheus` testnets, you will need the
+telling how the genesis block of the network should look like.
+
+#### Testnet 
+To connect to the `morpheus` testnets, you will need the
 corresponding genesis file of each testnet. Visit the [testnet repo](https://github.com/desmos-labs/morpheus) and
 download the correct genesis file by running the following command.
 
@@ -118,6 +119,17 @@ download the correct genesis file by running the following command.
 # Download the existing genesis file for the testnet
 # Replace <chain-id> with the id of the testnet you would like to join
 curl https://raw.githubusercontent.com/desmos-labs/morpheus/master/<chain-id>/genesis.json > $HOME/.desmos/config/genesis.json
+```
+
+#### Mainnet
+To connect to the `desmos-mainnet`, you will need the
+corresponding genesis file. Visit the [mainnet repo](https://github.com/desmos-labs/mainnet) and
+download the correct genesis file by running the following command.
+
+```bash
+# Download the existing genesis file for the mainnet
+# Replace <chain-id> with the id of the testnet you would like to join
+curl https://raw.githubusercontent.com/desmos-labs/mainnet/main/genesis.json > ~/.desmos/config/genesis.json
 ```
 
 ## 4. Setup seeds, peers and state sync
@@ -131,8 +143,13 @@ provide it with a list of other fullnodes that are present on the network. Then,
 connect to such nodes. Our team is running three seed nodes, and we advise you to use them by setting the
 following `seeds` value:
 
+#### Testnet
 ```toml
 seeds = "be3db0fe5ee7f764902dbcc75126a2e082cbf00c@seed-1.morpheus.desmos.network:26656,4659ab47eef540e99c3ee4009ecbe3fbf4e3eaff@seed-2.morpheus.desmos.network:26656,1d9cc23eedb2d812d30d99ed12d5c5f21ff40c23@seed-3.morpheus.desmos.network:26656"
+```
+#### Mainnet
+```toml
+seeds = "9bde6ab4e0e00f721cc3f5b4b35f3a0e8979fab5@seed-1.mainnet.desmos.network:26656,5c86915026093f9a2f81e5910107cf14676b48fc@seed-2.mainnet.desmos.network:26656,45105c7241068904bdf5a32c86ee45979794637f@seed-3.mainnet.desmos.network:26656"
 ```
 
 ### Using state sync
@@ -217,6 +234,15 @@ trust_period = "336h0m0s"
 
 Here is an example of what the `statesync` section of your `~/.desmos/config/config.toml` file should look like in the
 end (the `trust_height` and `trust_hash` should contain your values instead):
+
+```toml
+enable = true
+
+rpc_servers = "rpc-desmos.itastakers.com:26657,135.181.60.250:26557"
+trust_height = 139142
+trust_hash = "F55CA4C56CAC348E453A38D6BEBD70B1CD92F7431214AE167B09EFDA478186BE"
+trust_period = "336h0m0s"
+```
 
 ### Changing state sync height
 If you change the state sync height, you will need to perform these actions before trying to sync again:
