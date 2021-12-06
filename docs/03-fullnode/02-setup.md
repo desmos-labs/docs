@@ -144,13 +144,15 @@ sync with the chain extremely fast, by downloading snapshots created by other fu
 In order to use this feature, you will have to edit a couple of things inside your `~/.desmos/config/config.toml` file,
 under the `statesync` section:
 
-1. Enable state sync by setting `enable = true`
+1. Enable state sync by setting `enable = true`;
 
-2. Set the RPC addresses from where to get the snapshots using the `rpc_servers` field
-   to `seed-4.morpheus.desmos.network:26657,seed-5.morpheus.desmos.network:26657`.
-   These are two of our fullnodes that are set up to create periodic snapshots every 600 blocks.
+2. Set the RPC addresses from where to get the snapshots using the `rpc_servers` field to:  
+   - **Testnet**: `seed-4.morpheus.desmos.network:26657,seed-5.morpheus.desmos.network:26657`  
+     These are two of our fullnodes that are set up to create periodic snapshots every 600 blocks;
+   - **Mainnet**: You can ask inside our [discord](https://discord.desmos.network/).  
 
 3. Get a trusted chain height, and the associated block hash. To do this, you will have to:
+   #### Testnet
    - Get the current chain height by running:
       ```bash
       curl -s http://seed-4.morpheus.desmos.network:26657/commit | jq "{height: .result.signed_header.header.height}"
@@ -163,9 +165,22 @@ under the `statesync` section:
       # Example
       # curl -s http://seed-4.morpheus.desmos.network:26657/commit?height=100000 | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
       ```
-
+   #### Mainnet
+   - Get the current chain height by running:
+       ```bash
+       curl -s <rpc-address>/commit  | jq "{height: .result.signed_header.header.height}"
+       ```
+   - Once you have the current chain height, get a height that is a little bit lower (200 blocks) than the current one. To
+      do this you can execute:
+       ```bash
+       curl -s <rpc-address>/commit?height=<your-height> | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
+ 
+       # Example
+       # curl -s https://rpc-desmos.itastakers.com/commit?height=100000 | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
+       ```
 4. Now that you have a trusted height and block hash, use those values as the `trust_height` and `trust_hash` values. Also,
 make sure they're the right values for the Desmos version you're starting to synchronize:
+   #### Testnet
 
    | **State sync height range** |     **Desmos version**      |
    |:---------------------------:| :-------------------------: |
@@ -192,7 +207,18 @@ trust_hash = "E8ED7A890A64986246EEB02D7D8C4A6D497E3B60C0CAFDDE30F2EE385204C314"
 trust_period = "336h0m0s"
 ```
 
-#### Changing state sync height
+#### Mainnet
+
+| **State sync height range** | **Desmos version** |
+| :-------------------------: | :----------------: |
+|           `0 - 1149679`     |      `v1.0.1`      |
+|     `1149680 - 1347304`     |      `v2.3.0`      |
+|     `> 1347305`             |      `v2.3.1`      |
+
+Here is an example of what the `statesync` section of your `~/.desmos/config/config.toml` file should look like in the
+end (the `trust_height` and `trust_hash` should contain your values instead):
+
+### Changing state sync height
 If you change the state sync height, you will need to perform these actions before trying to sync again:
 * If you're running a **validator node**:
    1. Backup the `~/.desmos/data/priv_validator_state.json`;

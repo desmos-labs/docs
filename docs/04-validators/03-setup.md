@@ -78,9 +78,10 @@ To create your validator, just use the following command:
 
 On Morpheus testnet, we are using `udaric` as the staking token and it will be the example below.
 
-We are going to use `udesmos` as the staking token on Mainnet.
+We are going to use `udsm` as the staking token on Mainnet.  
 :::
 
+#### Testnet: 
 ```bash
 desmos tx staking create-validator \
   --amount=1000000udaric \
@@ -97,6 +98,23 @@ desmos tx staking create-validator \
   --from=<key_name>
 ```
 
+#### Mainnet:
+```bash
+desmos tx staking create-validator \
+  --amount=1000000udsm \
+  --pubkey=$(desmos tendermint show-validator) \
+  --moniker="<Your moniker here>" \
+  --chain-id=<chain_id> \
+  --commission-rate="0.10" \
+  --commission-max-rate="0.20" \
+  --commission-max-change-rate="0.01" \
+  --min-self-delegation="1" \
+  --gas="auto" \
+  --gas-adjustment="1.2" \
+  --gas-prices="0.025udsm" \
+  --from=<key_name>
+```
+
 :::tip
 When specifying the value of the `moniker` flag, please keep in mind this is going to be the public name associated to your validator. For this reason, it should represent your company name or something else that can easily identify you among all the other validators.
 :::
@@ -106,10 +124,12 @@ When specifying commission parameters, the `commission-max-change-rate` is used 
 :::
 
 :::tip
-`Min-self-delegation` is a stritly positive integer that represents the minimum amount of self-delegated staking token your validator must always have. A `min-self-delegation` of 1 means your validator will never have a self-delegation lower than `1udaric`. A valdiator self delegate lower than this number will automatically be unbonded.
+`Min-self-delegation` is a strictly positive integer that represents the minimum amount of self-delegated staking token your validator must always have. A `min-self-delegation` of 1 means your validator will never have a self-delegation lower than `1udaric` (or `1udsm` in mainnet). A validator with a self delegation lower than this number will automatically be unbonded.
 :::
 
-You can confirm that you are in the validator set by using a block explorer, e.g. [Big Dipper](https://morpheus.desmos.network).
+You can confirm that you are in the validator set by using a block explorer:
+- Testnet:  [Big Dipper](https://morpheus.desmos.network)
+- Mainnet: [Big Dipper](https://explorer.desmos.network).
 
 ## 3. Edit the validator description
 You can edit your validator's public description. This info is to identify your validator, and will be relied on by delegators to decide which validators to stake to. Make sure to provide input for every flag below. If a flag is not included in the command the field will default to empty (`--moniker` defaults to the machine name) if the field has never been set or remain the same if it has been set in the past.
@@ -167,5 +187,5 @@ desmos keys show <key_name> -a --bech val
 ```
 
 :::warning Note 
-To be in the validator set, you need to have more total voting power than the 200th validator.
+To be in the validator set, you need to have more total voting power than the last validator.
 :::

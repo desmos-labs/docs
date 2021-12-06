@@ -68,7 +68,7 @@ To solve this, what you can do is getting more tokens delegated to it by followi
    ```
 
 2. Require more tokens using the [Discord](https://discord.gg/J6VsHDT) bot inside the `#ask-tokens` channel by
-   sending `!send <address>`.
+   sending `!send <address>`. (**TESTNET ONLY**)
 
 3. Make sure the tokens have been sent properly:
    ```bash
