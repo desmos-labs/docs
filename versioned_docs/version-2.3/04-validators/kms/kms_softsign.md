@@ -29,14 +29,14 @@ state_file = "/root/kms/home/state/cosmoshub-3-consensus.json"
 ### Software-based Signer Configuration
 
 [[providers.softsign]]
-chain_ids = ["desmos-mainnet-1"]
+chain_ids = ["<chain-id>"]
 key_type = "consensus"
 path = "/root/kms/home/secrets/validator-consensus.key"
 
 ## Validator Configuration
 
 [[validator]]
-chain_id = "desmos-mainnet"
+chain_id = "morpheus-apollo-1"
 addr = "tcp://127.0.0.1:26658"
 secret_key = "/root/kms/home/secrets/kms-identity.key"
 protocol_version = "v0.34"
@@ -85,7 +85,7 @@ Copy the `consensus_pubkey` `key` value and put it inside the `kms-identity.key`
 ```bash
 cd ~/.desmos/config
 
-tmkms softsign import priv_validator_key.json "/root/kms/home/secret/desmos-mainnet.consensus.key"
+tmkms softsign import priv_validator_key.json "/root/kms/home/secret/morpheus-apollo-1.consensus.key"
 ```
 
 ### Chain configuration
@@ -113,11 +113,11 @@ If you've setup everything properly you should see a log like this:
 2021-06-09T14:23:51.525184Z  INFO tmkms::commands::start: tmkms 0.10.1 starting up...
 2021-06-09T14:23:51.525380Z  INFO tmkms::keyring: [keyring:softsign] added consensus Ed25519 key: desmosvalconspub1zcjduepqepu8acj4qua576zzquvcly2un0xkzhwh0ehvgmx8gxgl34zhkceskthfp6
 2021-06-09T14:23:51.526030Z  INFO tmkms::connection::tcp: KMS node ID: 7489C3177FB578314099657A7B56CC241144CCC8
-2021-06-09T14:23:51.527591Z  INFO tmkms::session: [desmos-mainnet@tcp://127.0.0.1:26659] connected to validator successfully
-2021-06-09T14:23:51.527625Z  WARN tmkms::session: [desmos-mainnet@tcp://127.0.0.1:26659]: unverified validator peer ID! (6CA3A1674B1AE6774D1BA6E100D559C5BF80F82B)
-2021-06-09T14:35:20.416891Z  INFO tmkms::session: [desmos-mainnet@tcp://127.0.0.1:26659] signed PreCommit:78AD7099DE at h/r/s 609456/0/2 (0 ms)
-2021-06-09T14:35:25.792444Z  INFO tmkms::session: [desmos-mainnet@tcp://127.0.0.1:26659] signed PreVote:2DA528546B at h/r/s 609457/0/1 (0 ms)
-2021-06-09T14:35:26.126467Z  INFO tmkms::session: [desmos-mainnet@tcp://127.0.0.1:26659] signed PreCommit:2DA528546B at h/r/s 609457/0/2 (0 ms)
-2021-06-09T14:35:31.529730Z  INFO tmkms::session: [desmos-mainnet@tcp://127.0.0.1:26659] signed PreVote:AD37ACB851 at h/r/s 609458/0/1 (0 ms)
-2021-06-09T14:35:31.793969Z  INFO tmkms::session: [desmos-mainnet@tcp://127.0.0.1:26659] signed PreCommit:AD37ACB851 at h/r/s 609458/0/2 (0 ms)
+2021-06-09T14:23:51.527591Z  INFO tmkms::session: [morpheus-apollo-1@tcp://127.0.0.1:26659] connected to validator successfully
+2021-06-09T14:23:51.527625Z  WARN tmkms::session: [morpheus-apollo-1@tcp://127.0.0.1:26659]: unverified validator peer ID! (6CA3A1674B1AE6774D1BA6E100D559C5BF80F82B)
+2021-06-09T14:35:20.416891Z  INFO tmkms::session: [morpheus-apollo-1@tcp://127.0.0.1:26659] signed PreCommit:78AD7099DE at h/r/s 609456/0/2 (0 ms)
+2021-06-09T14:35:25.792444Z  INFO tmkms::session: [morpheus-apollo-1@tcp://127.0.0.1:26659] signed PreVote:2DA528546B at h/r/s 609457/0/1 (0 ms)
+2021-06-09T14:35:26.126467Z  INFO tmkms::session: [morpheus-apollo-1@tcp://127.0.0.1:26659] signed PreCommit:2DA528546B at h/r/s 609457/0/2 (0 ms)
+2021-06-09T14:35:31.529730Z  INFO tmkms::session: [morpheus-apollo-1@tcp://127.0.0.1:26659] signed PreVote:AD37ACB851 at h/r/s 609458/0/1 (0 ms)
+2021-06-09T14:35:31.793969Z  INFO tmkms::session: [morpheus-apollo-1@tcp://127.0.0.1:26659] signed PreCommit:AD37ACB851 at h/r/s 609458/0/2 (0 ms)
 ```

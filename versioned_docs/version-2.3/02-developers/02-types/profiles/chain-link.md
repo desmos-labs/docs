@@ -6,39 +6,39 @@ slug: chain-link
 ---
 
 # Chain link
-A chain link represents a link to an external chain account that has been created by the user to connect their Desmos
-profile to such accounts. These links can be created either offline or using IBC following the specification
-described inside the [_"Create a chain link"_ section](#create-a-chain-link).
+A chain link represents a link to an external chain account that has been created by the user to connect their Desmos 
+profile to such accounts. These links can be created either offline or using IBC following the specification 
+described inside the [_"Create a chain link"_ section](#create-a-chain-link). 
 
 ## Contained data
-Here follows the data contained inside a chain link.
+Here follows the data contained inside a chain link. 
 
 ### `User` (`string`)
 Represents the Desmos address to which the chain link is associated.
 
 ### `Address` (`object`)
-Contains the data of the external chain address. Currently, it can be of two different types:
+Contains the data of the external chain address. Currently, it can be of two different types: 
 
 - `Bech32Address` to represent Bech32-based addresses
 - `Base58Address` to support Base58-encoded addresses
 
 ### `Proof` (`object`)
-Contains the data proving the ownership of the external chain account.
+Contains the data proving the ownership of the external chain account. 
 
 - #### `PubKey` (`object`)
   Contains the data of the public key associated with the external address that is used to verify the ownership of such address.
 
 - #### `Signature` (`string`)
-  Represents the hex-encoded signature of the plain text that has been created signing it with the private key associated with the provided public key.
+  Represents the hex-encoded signature of the plain text that has been created signing it with the private key associated with the provided public key. 
 
 - #### `PlainText` (`string`)
-  Represents the plain text value that has been signed with the private key associated with the address in order to get the signature.
+  Represents the plain text value that has been signed with the private key associated with the address in order to get the signature. 
 
 ### `ChainConfig` (`object`)
-Contains the details of the external chain to which the link is associated.
+Contains the details of the external chain to which the link is associated. 
 
-- #### `Name` (`string`)
-Contains the human-readable chain name.
+ - #### `Name` (`string`)
+Contains the human-readable chain name. 
 
 ### `CreationTime` (`time`)
 Represents the time in which the link has been created.
@@ -50,13 +50,13 @@ When creating a chain link, you need to provide two different proofs to make sur
 1. The proof that you own the external chain account;
 2. The proof that you own the Desmos profile to which you want to link.
 
-In order to create a proof, the following steps are needed:
+In order to create a proof, the following steps are needed: 
 
 1. Get a generic plain text data to sign;
-2. Sign the plain text data using your private key;
-3. Assemble the signature, plain text and public key into a `Proof` object.
+2. Sign the plain text data using your private key; 
+3. Assemble the signature, plain text and public key into a `Proof` object. 
 
-Here is an example of a valid proof object encoded using JSON:
+Here is an example of a valid proof object encoded using JSON: 
 ```json
 {
   "pub_key": {
@@ -68,18 +68,18 @@ Here is an example of a valid proof object encoded using JSON:
 }
 ```
 
-Note that the `pub_key` field must be encoded using Protobuf and must be compatible with the public key types that are currently supported by Cosmos.
+Note that the `pub_key` field must be encoded using Protobuf and must be compatible with the public key types that are currently supported by Cosmos. 
 You can see a list of such key types [here](https://github.com/cosmos/cosmos-sdk/tree/master/proto/cosmos/crypto).
 
 ### 2. Create the link
-Once you have created the two ownership proofs, you are now ready to create the link. This can be done in two ways:
+Once you have created the two ownership proofs, you are now ready to create the link. This can be done in two ways: 
 1. [Using IBC](#using-ibc);
 2. [Using the CLI](#using-the-cli).
 
 #### Using IBC
 This is the way that you want to use when integrating the Desmos connection from your chain.  
-To implement the IBC capability of connecting an external account to a Desmos profile,
-the `x/profiles` module supports the following packet data type:
+To implement the IBC capability of connecting an external account to a Desmos profile, 
+the `x/profiles` module supports the following packet data type: 
 
 ##### LinkChainAccountPacketData
 `LinkChainAccountPacketData` defines the object that should be sent inside a
@@ -115,7 +115,7 @@ type LinkChainAccountPacketData struct {
 | `DestinationAddress` | `string` | Desmos address of the profile to which link the external address |
 | `DestinationProof` | `Proof` | Proof of ownership of the Desmos profile | 
 
-Note that the `SourceAddress` field must be one of the currently supported types:
+Note that the `SourceAddress` field must be one of the currently supported types: 
 - `Base58Address` if the external address is represented by the Base58 encoded public key of the account;
 - `Bech32Address` if the external address is Bech32 encoded.
 
@@ -124,9 +124,9 @@ The overall view is the following:
 ![chain-link-ibc](../../../../../static/assets/desmos-chain-link-ibc.png)
 
 #### Using the CLI
-You can easily create a chain link using the CLI by running two commands:
+You can easily create a chain link using the CLI by running two commands: 
 
 1.`desmos create-chain-link-json`
-This will start an interactive prompt session allowing you to generate the proper JSON file containing all the linkage information.
+   This will start an interactive prompt session allowing you to generate the proper JSON file containing all the linkage information. 
 2. `desmos tx profiles link-chain [/path/to/link_file.json]`
    This will effectively link your Desmos profile to the external chain address. The required argument is the (absolute) path to the file generated using the `create-chain-link-json` command. 

@@ -34,9 +34,7 @@ cd $HOME
 git clone https://github.com/desmos-labs/desmos.git && cd desmos
 
 # Checkout the correct tag
-# Please check on https://github.com/desmos-labs/mainnet to get
-# the tag to use based on the current mainnet version
-git checkout tags/v2.3.0
+git checkout tags/2.3.1
 
 # Build the software
 # If you want to use the default database backend run
@@ -110,12 +108,26 @@ In order to provide a custom seed to your private key, you can do as follows:
 ## 3. Get the genesis file
 
 To connect to an existing network, or start a new one, a genesis file is required. The file contains all the settings
-telling how the genesis block of the network should look like.  To connect to the `desmos-mainnet`, you will need the
-corresponding genesis file. Visit the [mainnet repo](https://github.com/desmos-labs/mainnet) and
+telling how the genesis block of the network should look like.
+
+#### Testnet 
+To connect to the `morpheus` testnets, you will need the
+corresponding genesis file of each testnet. Visit the [testnet repo](https://github.com/desmos-labs/morpheus) and
 download the correct genesis file by running the following command.
 
 ```bash
 # Download the existing genesis file for the testnet
+# Replace <chain-id> with the id of the testnet you would like to join
+curl https://raw.githubusercontent.com/desmos-labs/morpheus/master/<chain-id>/genesis.json > $HOME/.desmos/config/genesis.json
+```
+
+#### Mainnet
+To connect to the `desmos-mainnet`, you will need the
+corresponding genesis file. Visit the [mainnet repo](https://github.com/desmos-labs/mainnet) and
+download the correct genesis file by running the following command.
+
+```bash
+# Download the existing genesis file for the mainnet
 # Replace <chain-id> with the id of the testnet you would like to join
 curl https://raw.githubusercontent.com/desmos-labs/mainnet/main/genesis.json > ~/.desmos/config/genesis.json
 ```
@@ -138,6 +150,11 @@ provide it with a list of other fullnodes that are present on the network. Then,
 connect to such nodes. Our team is running three seed nodes, and we advise you to use them by setting the
 following `seeds` value:
 
+#### Testnet
+```toml
+seeds = "be3db0fe5ee7f764902dbcc75126a2e082cbf00c@seed-1.morpheus.desmos.network:26656,4659ab47eef540e99c3ee4009ecbe3fbf4e3eaff@seed-2.morpheus.desmos.network:26656,1d9cc23eedb2d812d30d99ed12d5c5f21ff40c23@seed-3.morpheus.desmos.network:26656"
+```
+#### Mainnet
 ```toml
 seeds = "9bde6ab4e0e00f721cc3f5b4b35f3a0e8979fab5@seed-1.mainnet.desmos.network:26656,5c86915026093f9a2f81e5910107cf14676b48fc@seed-2.mainnet.desmos.network:26656,45105c7241068904bdf5a32c86ee45979794637f@seed-3.mainnet.desmos.network:26656"
 ```
@@ -151,32 +168,76 @@ sync with the chain extremely fast, by downloading snapshots created by other fu
 In order to use this feature, you will have to edit a couple of things inside your `~/.desmos/config/config.toml` file,
 under the `statesync` section:
 
-1. Enable state sync by setting `enable = true`
+1. Enable state sync by setting `enable = true`;
 
-2. Set the RPC addresses from where to get the snapshots using the `rpc_servers` field
-   and filling it with two RPCs that provides snapshots.  
-   (You can ask inside our [discord](https://discord.desmos.network/) for them).
+2. Set the RPC addresses from where to get the snapshots using the `rpc_servers` field to:  
+   - **Testnet**: `seed-4.morpheus.desmos.network:26657,seed-5.morpheus.desmos.network:26657`  
+     These are two of our fullnodes that are set up to create periodic snapshots every 600 blocks;
+   - **Mainnet**: You can ask inside our [discord](https://discord.desmos.network/).  
+
 3. Get a trusted chain height, and the associated block hash. To do this, you will have to:
+   #### Testnet
    - Get the current chain height by running:
       ```bash
-      curl -s <rpc-address>/commit  | jq "{height: .result.signed_header.header.height}"
+      curl -s http://seed-4.morpheus.desmos.network:26657/commit | jq "{height: .result.signed_header.header.height}"
       ```
-   - Once you have the current chain height, get a height that is a little bit lower (200 blocks) than the current one. To
-      do this you can execute:
+   - Once you have the current chain height, get a height that is a little bit lower (200 blocks) than the current one.  
+     To do this you can execute:
       ```bash
-      curl -s <rpc-address>/commit?height=<your-height> | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
+      curl -s http://seed-4.morpheus.desmos.network:26657/commit?height=<your-height> | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
 
       # Example
-      # curl -s https://rpc-desmos.itastakers.com/commit?height=100000 | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
+      # curl -s http://seed-4.morpheus.desmos.network:26657/commit?height=100000 | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
       ```
+   #### Mainnet
+   - Get the current chain height by running:
+       ```bash
+       curl -s <rpc-address>/commit  | jq "{height: .result.signed_header.header.height}"
+       ```
+   - Once you have the current chain height, get a height that is a little bit lower (200 blocks) than the current one.  
+     To do this you can execute:
+       ```bash
+       curl -s <rpc-address>/commit?height=<your-height> | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
+ 
+       # Example
+       # curl -s https://rpc-desmos.itastakers.com/commit?height=100000 | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
+       ```
 4. Now that you have a trusted height and block hash, use those values as the `trust_height` and `trust_hash` values. Also,
-make sure they're the right values for the Desmos version you're starting to synchronize:  
-   
-   | **State sync height range** | **Desmos version** |
-   | :-------------------------: | :----------------: |
-   |           `0 - 1149679`     |      `v1.0.1`      |
-   |     `1149680 - 1347304`     |      `v2.3.0`      |
-   |     `> 1347305`             |      `v2.3.1`      |
+make sure they're the right values for the Desmos version you're starting to synchronize:
+   #### Testnet
+
+   | **State sync height range** |     **Desmos version**      |
+   |:---------------------------:| :-------------------------: |
+   | `0 - 1235764`               |          `v0.17.0`          |
+   | `1235765 - 1415529`         |          `v0.17.4`          |
+   | `1415530 - 2121235`         |          `v0.17.6`          |
+   | `2121236 - 2226899`         |          `v1.0.4`           |
+   | `2226900 - 2589024`         |          `v2.0.0`           |
+   | `2589025 - 2643234`         |          `v2.1.0`           |
+   | `2643235 - 2756259`         |          `v2.2.0`           |
+   | `2756260 - 3130831`         |          `v2.3.0`           |
+   | `2756260 - 3130831`         |          `v2.3.0`           |
+   | `> 3130831`                 |          `v2.3.1`           |
+
+Here is an example of what the `statesync` section of your `~/.desmos/config/config.toml` file should look like in the
+end (the `trust_height` and `trust_hash` should contain your values instead):
+
+```toml
+enable = true
+
+rpc_servers = "seed-4.morpheus.desmos.network:26657,seed-5.morpheus.desmos.network:26657"
+trust_height = 16962
+trust_hash = "E8ED7A890A64986246EEB02D7D8C4A6D497E3B60C0CAFDDE30F2EE385204C314"
+trust_period = "336h0m0s"
+```
+
+#### Mainnet
+
+| **State sync height range** | **Desmos version** |
+| :-------------------------: | :----------------: |
+|           `0 - 1149679`     |      `v1.0.1`      |
+|     `1149680 - 1347304`     |      `v2.3.0`      |
+|     `> 1347305`             |      `v2.3.1`      |
 
 Here is an example of what the `statesync` section of your `~/.desmos/config/config.toml` file should look like in the
 end (the `trust_height` and `trust_hash` should contain your values instead):
@@ -190,16 +251,16 @@ trust_hash = "F55CA4C56CAC348E453A38D6BEBD70B1CD92F7431214AE167B09EFDA478186BE"
 trust_period = "336h0m0s"
 ```
 
-#### Changing state sync height
+### Changing state sync height
 If you change the state sync height, you will need to perform these actions before trying to sync again:
 * If you're running a **validator node**:
-    1. Backup the `~/.desmos/data/priv_validator_state.json`;
-    2. Run `desmos unsafe-reset-all`;
-    3. Restore the `priv_validator_state.json` file.
-    4. Restart the node.
+   1. Backup the `~/.desmos/data/priv_validator_state.json`;
+   2. Run `desmos unsafe-reset-all`;
+   3. Restore the `priv_validator_state.json` file.
+   4. Restart the node.
 * If you're running a *full node*:
-    1. Run `desmos unsafe-reset-all`;
-    2. Restart the node.
+   1. Run `desmos unsafe-reset-all`;
+   2. Restart the node.
 
 ## 5. (Optional) Edit snapshot config
 
@@ -314,7 +375,7 @@ You should see an output like the following one:
     },
     "id": "84cc13d6acf22c32c209f4205d2693f70f458dde",
     "listen_addr": "tcp://0.0.0.0:26656",
-    "network": "desmos-mainnet",
+    "network": "morpheus-13001",
     "version": "",
     "channels": "40202122233038606100",
     "moniker": "fullnode",
