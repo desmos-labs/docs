@@ -79,7 +79,23 @@ module.exports = {
           collapsed: false,
           items: [
               'fullnode/overview',
-              'fullnode/setup',
+              {
+                  Setup: [
+                     'fullnode/setup/common',
+                      {
+                          Mainnet: [
+                              'fullnode/setup/mainnet/genesis-file',
+                              'fullnode/setup/mainnet/seeds',
+                              'fullnode/setup/mainnet/state-sync'
+                          ],
+                          Testnet: [
+                              'fullnode/setup/testnet/genesis-file',
+                              'fullnode/setup/testnet/seeds',
+                              'fullnode/setup/testnet/state-sync'
+                          ]
+                      }
+                  ]
+              },
               'fullnode/update',
               'fullnode/rocksdb-installation',
               'fullnode/cosmovisor'

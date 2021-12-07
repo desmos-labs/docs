@@ -1,4 +1,11 @@
-# Genesis file for mainnet
+---
+id: genesis-file
+title: Genesis File
+sidebar_label: Genesis File
+slug: genesis-file
+---
+
+# Genesis file
 To connect to the `desmos-mainnet`, you will need the
 corresponding genesis file.
 

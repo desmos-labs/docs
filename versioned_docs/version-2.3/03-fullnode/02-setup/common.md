@@ -1,14 +1,15 @@
 ---
-id: setup
-title: Setup
-sidebar_position: 2
+id: common
+title: Common
+sidebar_label: Common
+slug: common
 ---
 
 # Full node setup
 Following you will find the instructions on how to manually setup your Desmos full node.
 
 :::warning Requirements
-Before starting, make sure you read the [overview](01-overview.mdx) to make sure your hardware meets the needed
+Before starting, make sure you read the [overview](../01-overview.mdx) to make sure your hardware meets the needed
 requirements.
 :::
 
@@ -21,7 +22,7 @@ By default, Desmos uses [LevelDB](https://github.com/google/leveldb) as its data
 version `v0.6.0` we've also added the possibility of optionally
 using [Facebook's RocksDB](https://github.com/facebook/rocksdb), which, although still being experimental, is known to
 be faster and could lead to lower syncing times. If you want to try out RocksDB you can take a look at
-our [RocksDB installation guide](04-rocksdb-installation.mdx) before proceeding further.
+our [RocksDB installation guide](../04-rocksdb-installation.mdx) before proceeding further.
 :::
 
 In your terminal, run the following:
@@ -109,8 +110,8 @@ In order to provide a custom seed to your private key, you can do as follows:
 
 To connect to an existing network, or start a new one, a genesis file is required. The file contains all the settings
 telling how the genesis block of the network should look like.
- - If you are setting up a **testnet** node refers to this [procedure](testnet-setup/genesis-file-procedure.md);
- - If you are setting up a **mainnet** node refers to this [procedure](mainnet-setup/genesis-file-procedure.md).
+ - If you are setting up a **testnet** node refers to this [procedure](testnet/genesis-file-procedure.md);
+ - If you are setting up a **mainnet** node referes to this [procedure](mainnet/genesis-file-procedure.md).
 
 ## 4. Setup seeds
 
@@ -121,8 +122,8 @@ file.
 Seed nodes are a particular type of nodes present on the network. Your fullnode will connect to them, and they will
 provide it with a list of other fullnodes that are present on the network. Then, your fullnode will automatically
 connect to such nodes. 
-- If you are looking for **testnet** seeds please check here: [Testnet seeds](testnet-setup/seeds.md);
-- If you are looking for **mainnet** seeds please check here: [Mainnet seeds](mainnet-setup/seeds.md).
+- If you are looking for **testnet** seeds please check here: [Testnet seeds](testnet/seeds.md);
+- If you are looking for **mainnet** seeds please check here: [Mainnet seeds](mainnet/seeds.md).
 
 ## 5. State sync
 
@@ -130,8 +131,8 @@ Starting from Desmos `v0.15.0`, we've added the support for Tendermint'
 s [state sync](https://docs.tendermint.com/master/nodes/state-sync.html#configure-state-sync). This feature allows new nodes to
 sync with the chain extremely fast, by downloading snapshots created by other full nodes.
 Here below, you can find the links to check for the correct procedure depending on which network you're setting up your node:
-- If you are setting up state-sync for **testnet** follow the [State-sync testnet procedure](testnet-setup/state-sync.md);
-- If you are setting up state-sync for **mainnet** follow the [State-sync mainnet procedure](mainnet-setup/state-sync.md).
+- If you are setting up state-sync for **testnet** follow the [State-sync testnet procedure](testnet/state-sync.md);
+- If you are setting up state-sync for **mainnet** follow the [State-sync mainnet procedure](mainnet/state-sync.md).
 
 ### Changing state sync height
 If you change the state sync height, you will need to perform these actions before trying to sync again:
@@ -167,7 +168,8 @@ pruning-keep-every = "500"
 pruning-interval = "10"
 ```
 
-You can find out more about pruning [here](01-overview.mdx#understanding-pruning).
+You can find out more about pruning [here](../01-overview.mdx#understanding-pruning).
+You can find out more about pruning [here](../01-overview.mdx#understanding-pruning).
 
 ## 7. (Optional) Change your database backend
 
@@ -301,7 +303,7 @@ desmos status 2>&1 | jq "{catching_up: .SyncInfo.catching_up}"
 # }
 ```
 
-After your node is fully synced, you can consider running your full node as a [validator node](../04-validators/03-setup.md).
+After your node is fully synced, you can consider running your full node as a [validator node](../../04-validators/03-setup.md).
 
 ## 10. (Optional) Configure the background service
 
@@ -384,4 +386,4 @@ $ systemctl status desmosd
 ```
 
 ## 10. Cosmovisor
-In order to do automatic on-chain upgrades we will be using cosmovisor. Please check out [Using Cosmovisor](05-cosmovisor.md) for information on how to set this up.
+In order to do automatic on-chain upgrades we will be using cosmovisor. Please check out [Using Cosmovisor](../05-cosmovisor.md) for information on how to set this up.

@@ -1,3 +1,10 @@
+---
+id: seeds
+title: Seeds
+sidebar_label: Seeds
+slug: seeds
+---
+
 # Mainnet seeds
 Add these seeds here to the `~/.desmos/config/config.toml` file
 ```toml

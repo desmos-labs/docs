@@ -1,3 +1,10 @@
+---
+id: state-sync
+title: State Sync
+sidebar_label: State Sync
+slug: state-sync
+---
+
 # State sync testnet
 In order to use this feature, you will have to edit a couple of things inside your `~/.desmos/config/config.toml` file,
 under the `statesync` section:

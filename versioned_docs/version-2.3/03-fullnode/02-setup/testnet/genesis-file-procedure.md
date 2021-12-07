@@ -1,4 +1,11 @@
-# Genesis file for testnet
+---
+id: genesis-file
+title: Genesis File
+sidebar_label: Genesis File
+slug: genesis-file
+---
+
+# Genesis file
 
 To connect to the `morpheus` testnets, you will need the
 corresponding genesis file of each testnet. Visit the [testnet repo](https://github.com/desmos-labs/morpheus) and

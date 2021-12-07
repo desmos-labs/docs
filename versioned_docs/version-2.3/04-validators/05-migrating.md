@@ -18,7 +18,7 @@ In this case, what you need to do is following a two-step procedure:
 
 ## 1. Setup new fullnode
 To avoid as much missed blocks as possible it is recommended that you setup a new server and fully sync up a full node first. To do this,
-you can read the guide [here](../03-fullnode/02-setup.md).
+you can read the guide [here](../03-fullnode/02-setup/common.md).
 
 Proceed to step 2 only if your new node has caught up.
 
