@@ -20,6 +20,6 @@ No check is ever performed on this field's values, and any string is accepted as
 ## `Tags`
 `Tags` is the third field of a `Attachment`. This field allows you to tag any user on a particular attachment.
 This field can be omitted and the system will check that every tag inside the array `Tags` is a valid `bech32` 
-encoded `address` of desmos.
+encoded `address` of Desmos.
 E.g.
 `desmos1ulmv2dyc8zjmhk9zlsq4ajpudwc8zjfm82aysr`
