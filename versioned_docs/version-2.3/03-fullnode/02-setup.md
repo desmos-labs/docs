@@ -109,37 +109,10 @@ In order to provide a custom seed to your private key, you can do as follows:
 
 To connect to an existing network, or start a new one, a genesis file is required. The file contains all the settings
 telling how the genesis block of the network should look like.
+ - If you are setting up a **testnet** node refers to this [procedure](testnet-setup/genesis-file-procedure.md);
+ - If you are setting up a **mainnet** node refers to this [procedure](mainnet-setup/genesis-file-procedure.md).
 
-#### Testnet 
-To connect to the `morpheus` testnets, you will need the
-corresponding genesis file of each testnet. Visit the [testnet repo](https://github.com/desmos-labs/morpheus) and
-download the correct genesis file by running the following command.
-
-```bash
-# Download the existing genesis file for the testnet
-# Replace <chain-id> with the id of the testnet you would like to join
-curl https://raw.githubusercontent.com/desmos-labs/morpheus/master/<chain-id>/genesis.json > $HOME/.desmos/config/genesis.json
-```
-
-#### Mainnet
-To connect to the `desmos-mainnet`, you will need the
-corresponding genesis file. Visit the [mainnet repo](https://github.com/desmos-labs/mainnet) and
-download the correct genesis file by running the following command.
-
-```bash
-# Download the existing genesis file for the mainnet
-# Replace <chain-id> with the id of the testnet you would like to join
-curl https://raw.githubusercontent.com/desmos-labs/mainnet/main/genesis.json > ~/.desmos/config/genesis.json
-```
-
-After the download, ensure it's the correct one by checking that it has the same hashsum below:
-
-```bash
-jq -S -c -M '' /root/.desmos/config/genesis.json | shasum -a 256
-619c9462ccd9045522300c5ce9e7f4662cac096eed02ef0535cca2a6826074c4  -
-```
-
-## 4. Setup seeds, peers and state sync
+## 4. Setup seeds
 
 The next thing you have to do now is telling your node how to connect with other nodes that are already present on the
 network. In order to do so, we will use the `seeds` and `persistent_peers` values of the `~/.desmos/config/config.toml`
@@ -147,122 +120,31 @@ file.
 
 Seed nodes are a particular type of nodes present on the network. Your fullnode will connect to them, and they will
 provide it with a list of other fullnodes that are present on the network. Then, your fullnode will automatically
-connect to such nodes. Our team is running three seed nodes, and we advise you to use them by setting the
-following `seeds` value:
+connect to such nodes. 
+- If you are looking for **testnet** seeds please check here: [Testnet seeds](testnet-setup/seeds.md);
+- If you are looking for **mainnet** seeds please check here: [Mainnet seeds](mainnet-setup/seeds.md).
 
-#### Testnet
-```toml
-seeds = "be3db0fe5ee7f764902dbcc75126a2e082cbf00c@seed-1.morpheus.desmos.network:26656,4659ab47eef540e99c3ee4009ecbe3fbf4e3eaff@seed-2.morpheus.desmos.network:26656,1d9cc23eedb2d812d30d99ed12d5c5f21ff40c23@seed-3.morpheus.desmos.network:26656"
-```
-#### Mainnet
-```toml
-seeds = "9bde6ab4e0e00f721cc3f5b4b35f3a0e8979fab5@seed-1.mainnet.desmos.network:26656,5c86915026093f9a2f81e5910107cf14676b48fc@seed-2.mainnet.desmos.network:26656,45105c7241068904bdf5a32c86ee45979794637f@seed-3.mainnet.desmos.network:26656"
-```
-
-### Using state sync
+## 5. State sync
 
 Starting from Desmos `v0.15.0`, we've added the support for Tendermint'
 s [state sync](https://docs.tendermint.com/master/nodes/state-sync.html#configure-state-sync). This feature allows new nodes to
 sync with the chain extremely fast, by downloading snapshots created by other full nodes.
-
-In order to use this feature, you will have to edit a couple of things inside your `~/.desmos/config/config.toml` file,
-under the `statesync` section:
-
-1. Enable state sync by setting `enable = true`;
-
-2. Set the RPC addresses from where to get the snapshots using the `rpc_servers` field to:  
-   - **Testnet**: `seed-4.morpheus.desmos.network:26657,seed-5.morpheus.desmos.network:26657`  
-     These are two of our fullnodes that are set up to create periodic snapshots every 600 blocks;
-   - **Mainnet**: You can ask inside our [discord](https://discord.desmos.network/).  
-
-3. Get a trusted chain height, and the associated block hash. To do this, you will have to:
-   #### Testnet
-   - Get the current chain height by running:
-      ```bash
-      curl -s http://seed-4.morpheus.desmos.network:26657/commit | jq "{height: .result.signed_header.header.height}"
-      ```
-   - Once you have the current chain height, get a height that is a little bit lower (200 blocks) than the current one.  
-     To do this you can execute:
-      ```bash
-      curl -s http://seed-4.morpheus.desmos.network:26657/commit?height=<your-height> | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
-
-      # Example
-      # curl -s http://seed-4.morpheus.desmos.network:26657/commit?height=100000 | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
-      ```
-   #### Mainnet
-   - Get the current chain height by running:
-       ```bash
-       curl -s <rpc-address>/commit  | jq "{height: .result.signed_header.header.height}"
-       ```
-   - Once you have the current chain height, get a height that is a little bit lower (200 blocks) than the current one.  
-     To do this you can execute:
-       ```bash
-       curl -s <rpc-address>/commit?height=<your-height> | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
- 
-       # Example
-       # curl -s https://rpc-desmos.itastakers.com/commit?height=100000 | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
-       ```
-4. Now that you have a trusted height and block hash, use those values as the `trust_height` and `trust_hash` values. Also,
-make sure they're the right values for the Desmos version you're starting to synchronize:
-   #### Testnet
-
-   | **State sync height range** |     **Desmos version**      |
-   |:---------------------------:| :-------------------------: |
-   | `0 - 1235764`               |          `v0.17.0`          |
-   | `1235765 - 1415529`         |          `v0.17.4`          |
-   | `1415530 - 2121235`         |          `v0.17.6`          |
-   | `2121236 - 2226899`         |          `v1.0.4`           |
-   | `2226900 - 2589024`         |          `v2.0.0`           |
-   | `2589025 - 2643234`         |          `v2.1.0`           |
-   | `2643235 - 2756259`         |          `v2.2.0`           |
-   | `2756260 - 3130831`         |          `v2.3.0`           |
-   | `2756260 - 3130831`         |          `v2.3.0`           |
-   | `> 3130831`                 |          `v2.3.1`           |
-
-Here is an example of what the `statesync` section of your `~/.desmos/config/config.toml` file should look like in the
-end (the `trust_height` and `trust_hash` should contain your values instead):
-
-```toml
-enable = true
-
-rpc_servers = "seed-4.morpheus.desmos.network:26657,seed-5.morpheus.desmos.network:26657"
-trust_height = 16962
-trust_hash = "E8ED7A890A64986246EEB02D7D8C4A6D497E3B60C0CAFDDE30F2EE385204C314"
-trust_period = "336h0m0s"
-```
-
-#### Mainnet
-
-| **State sync height range** | **Desmos version** |
-| :-------------------------: | :----------------: |
-|           `0 - 1149679`     |      `v1.0.1`      |
-|     `1149680 - 1347304`     |      `v2.3.0`      |
-|     `> 1347305`             |      `v2.3.1`      |
-
-Here is an example of what the `statesync` section of your `~/.desmos/config/config.toml` file should look like in the
-end (the `trust_height` and `trust_hash` should contain your values instead):
-
-```toml
-enable = true
-
-rpc_servers = "rpc-desmos.itastakers.com:26657,135.181.60.250:26557"
-trust_height = 139142
-trust_hash = "F55CA4C56CAC348E453A38D6BEBD70B1CD92F7431214AE167B09EFDA478186BE"
-trust_period = "336h0m0s"
-```
+Here below, you can find the links to check for the correct procedure depending on which network you're setting up your node:
+- If you are setting up state-sync for **testnet** follow the [State-sync testnet procedure](testnet-setup/state-sync.md);
+- If you are setting up state-sync for **mainnet** follow the [State-sync mainnet procedure](mainnet-setup/state-sync.md).
 
 ### Changing state sync height
 If you change the state sync height, you will need to perform these actions before trying to sync again:
 * If you're running a **validator node**:
-   1. Backup the `~/.desmos/data/priv_validator_state.json`;
-   2. Run `desmos unsafe-reset-all`;
-   3. Restore the `priv_validator_state.json` file.
-   4. Restart the node.
+    1. Backup the `~/.desmos/data/priv_validator_state.json`;
+    2. Run `desmos unsafe-reset-all`;
+    3. Restore the `priv_validator_state.json` file.
+    4. Restart the node.
 * If you're running a *full node*:
-   1. Run `desmos unsafe-reset-all`;
-   2. Restart the node.
-
-## 5. (Optional) Edit snapshot config
+    1. Run `desmos unsafe-reset-all`;
+    2. Restart the node.
+    
+## 6. (Optional) Edit snapshot config
 
 Currently, the `snapshot` feature is enabled by the default. This means that your node will periodically create snapshots of the chain state and make them public, allowing other nodes to quickly join the network by syncing the application state at a given height.
 
@@ -287,7 +169,7 @@ pruning-interval = "10"
 
 You can find out more about pruning [here](01-overview.mdx#understanding-pruning).
 
-## 6. (Optional) Change your database backend
+## 7. (Optional) Change your database backend
 
 If you would like to run your node using [Facebook's RocksDB](https://github.com/facebook/rocksdb) as the database
 backend, and you have correctly built the Desmos binaries to work with it following the instructions
@@ -307,7 +189,7 @@ db_backend = "rocksdb"
 ```
 
 
-## 7. Open the proper ports
+## 8. Open the proper ports
 
 Now that everything is in place to start the node, the last thing to do is to open up the proper ports.
 
@@ -347,7 +229,7 @@ sudo ufw status
 If you also want to run a gRPC server, RPC node or the REST APIs, you also need to remember to open the related ports as
 well.
 
-## 8. Start the Desmos node
+## 9. Start the Desmos node
 
 After setting up the binary and opening up ports, you are now finally ready to start your node:
 
@@ -421,7 +303,7 @@ desmos status 2>&1 | jq "{catching_up: .SyncInfo.catching_up}"
 
 After your node is fully synced, you can consider running your full node as a [validator node](../04-validators/03-setup.md).
 
-## 9. (Optional) Configure the background service
+## 10. (Optional) Configure the background service
 
 To allow your `desmos` instance to run in the background as a service you need to execute the following command
 
