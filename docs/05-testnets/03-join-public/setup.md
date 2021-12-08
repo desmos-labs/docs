@@ -5,7 +5,7 @@ sidebar_label: Setup
 slug: setup
 ---
 
-# Join the public testnet
+# Setup
 
 :::tip Current Testnet  
 See the [testnet repo](https://github.com/desmos-labs/morpheus) for information on the latest testnet, 
@@ -14,7 +14,7 @@ including the correct version of Desmos to use and details about the genesis fil
 
 ## Validators
 :::warning Requires desmos executables  
-To join the public testnet you **must** have [`desmos` installed](docs/03-fullnode/02-setup.md).  
+To join the public testnet you **must** have [`desmos` installed](../../03-fullnode/02-setup.md).  
 :::
 
 To become a testnet validators, the mainnet instructions apply:

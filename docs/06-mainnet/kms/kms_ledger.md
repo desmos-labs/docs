@@ -2,7 +2,7 @@
 
 ::: danger Warning
 The following instructions are a brief walkthrough and not a comprehensive guideline. 
-You should consider and [research more about the security implications](../../06-mainnet/security.md) of activating an external KMS.
+You should consider and [research more about the security implications](../security.md) of activating an external KMS.
 :::
 
 ::: danger Warning
