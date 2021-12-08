@@ -26,12 +26,12 @@ You can find other configuration examples [here](https://github.com/iqlusioninc/
    # Example KMS configuration file
    [[validator]]
    addr = "tcp://localhost:26658"    # or "unix:///path/to/socket"
-   chain_id = "desmos-mainnet-1"
+   chain_id = "desmos-mainnet"
    reconnect = true # true is the default
    secret_key = "~/.tmkms/secret_connection.key"
   
    [[providers.ledgertm]]
-   chain_ids = ["desmos-mainnet-1"]
+   chain_ids = ["desmos-mainnet"]
    ```
 
 - Edit `addr` to point to your `desmos` instance.

@@ -8,7 +8,8 @@ slug: profile
 # Profile
 Inside Desmos, profile are the way that users could register their own identity.
 
-Since this is a decentralized profile, every data inside it can be omitted except for the `DTag` which could be used to identify a Desmos wallet once the profile is created. 
+Since this is a decentralized profile, every data inside it can be omitted except for the `DTag` which could be used
+to identify a desmos `bech32addr` once the profile is created. 
 
 Profile can be enriched with some of your personal data that could be verified later on chain by providing
 some additional information.

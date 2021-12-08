@@ -6,7 +6,9 @@ slug: chain-link
 ---
 
 # Chain link
-A chain link represents a link to an external chain account that has been created by the user to connect their Desmos profile to such accounts. These links can be created either offline or using IBC following the specification described inside the [_"Create a chain link"_ section](#create-a-chain-link).
+A chain link represents a link to an external chain account that has been created by the user to connect their Desmos
+profile to such accounts. These links can be created either offline or using IBC following the specification
+described inside the [_"Create a chain link"_ section](#create-a-chain-link).
 
 ## Contained data
 Here follows the data contained inside a chain link.
@@ -27,18 +29,16 @@ Contains the data proving the ownership of the external chain account.
   Contains the data of the public key associated with the external address that is used to verify the ownership of such address.
 
 - #### `Signature` (`string`)
-  Represents the hex-encoded signature of the plain text that has been created signing it with the private key
-  associated with the provided public key.
+  Represents the hex-encoded signature of the plain text that has been created signing it with the private key associated with the provided public key.
 
 - #### `PlainText` (`string`)
-  Represents the hex-encoded plain text value that has been signed with the private key associated with the
-  specified `Address` in order to generate the `signature` value.
+  Represents the plain text value that has been signed with the private key associated with the address in order to get the signature.
 
 ### `ChainConfig` (`object`)
 Contains the details of the external chain to which the link is associated.
 
 - #### `Name` (`string`)
-  Represents the human-readable chain name.
+Contains the human-readable chain name.
 
 ### `CreationTime` (`time`)
 Represents the time in which the link has been created.
@@ -57,36 +57,34 @@ In order to create a proof, the following steps are needed:
 3. Assemble the signature, plain text and public key into a `Proof` object.
 
 Here is an example of a valid proof object encoded using JSON:
-
 ```json
 {
-    "pub_key": {
-        "@type": "/cosmos.crypto.secp256k1.PubKey",
-        "key": "A58DXR/lXKVkIjLofXgST/OHi+pkOQbVIiOjnTy7Zoqo"
-    },
-    "signature": "ecc6175e730917fb289d3a9f4e49a5630a44b42d972f481342f540e09def2ec5169780d85c4e060d52cc3ffb3d677745a4d56cd385760735bc6db0f1816713be",
-    "plain_text": "cosmos15uc89vnzufu5kuhhsxdkltt38zfx8vcyggzwfm"
+  "pub_key": {
+    "@type": "/cosmos.crypto.secp256k1.PubKey",
+    "key": "A58DXR/lXKVkIjLofXgST/OHi+pkOQbVIiOjnTy7Zoqo"
+  },
+  "signature": "ecc6175e730917fb289d3a9f4e49a5630a44b42d972f481342f540e09def2ec5169780d85c4e060d52cc3ffb3d677745a4d56cd385760735bc6db0f1816713be",
+  "plain_text": "cosmos15uc89vnzufu5kuhhsxdkltt38zfx8vcyggzwfm"
 }
 ```
 
-Note that the `pub_key` field must be encoded using Protobuf and must be compatible with the public key types that are
-currently supported by Cosmos. You can see a list of such key
-types [here](https://github.com/cosmos/cosmos-sdk/tree/master/proto/cosmos/crypto).
+Note that the `pub_key` field must be encoded using Protobuf and must be compatible with the public key types that are currently supported by Cosmos.
+You can see a list of such key types [here](https://github.com/cosmos/cosmos-sdk/tree/master/proto/cosmos/crypto).
 
 ### 2. Create the link
 Once you have created the two ownership proofs, you are now ready to create the link. This can be done in two ways:
-
 1. [Using IBC](#using-ibc);
 2. [Using the CLI](#using-the-cli).
 
 #### Using IBC
 This is the way that you want to use when integrating the Desmos connection from your chain.  
-To implement the IBC capability of connecting an external account to a Desmos profile, the `x/profiles` module supports
-the following packet data type:
+To implement the IBC capability of connecting an external account to a Desmos profile,
+the `x/profiles` module supports the following packet data type:
 
 ##### LinkChainAccountPacketData
 `LinkChainAccountPacketData` defines the object that should be sent inside a
-`MsgSendPacket` when wanting to link an external chain to a Desmos profile using IBC.
+`MsgSendPacket` when wanting to link an external chain to a Desmos profile
+using IBC.
 
 ```golang
 type LinkChainAccountPacketData struct {
@@ -109,16 +107,15 @@ type LinkChainAccountPacketData struct {
 }
 ```
 
-|        Field         |     Type      | Description                                                       |
-|:--------------------:|:-------------:|:------------------------------------------------------------------|
-|   `SourceAddress`    | `AddressData` | Contains the details of the external address to be linked         |
-|    `SourceProof`     |    `Proof`    | Contains the data to verify the ownership of the external address |
-| `SourceChainConfig`  | `ChainConfig` | Contains the data of the external chain to be linked              |
-| `DestinationAddress` |   `string`    | Desmos address of the profile to which link the external address  |
-|  `DestinationProof`  |    `Proof`    | Proof of ownership of the Desmos profile                          | 
+| Field | Type | Description |
+| :----: | :-----: | :------ |
+| `SourceAddress` | `AddressData` | Contains the details of the external address to be linked |
+| `SourceProof` | `Proof` | Contains the data to verify the ownership of the external address |
+| `SourceChainConfig` | `ChainConfig` | Contains the data of the external chain to be linked |
+| `DestinationAddress` | `string` | Desmos address of the profile to which link the external address |
+| `DestinationProof` | `Proof` | Proof of ownership of the Desmos profile | 
 
 Note that the `SourceAddress` field must be one of the currently supported types:
-
 - `Base58Address` if the external address is represented by the Base58 encoded public key of the account;
 - `Bech32Address` if the external address is Bech32 encoded.
 
@@ -130,9 +127,6 @@ The overall view is the following:
 You can easily create a chain link using the CLI by running two commands:
 
 1.`desmos create-chain-link-json`
-This will start an interactive prompt session allowing you to generate the proper JSON file containing all the linkage
-information.
-
+This will start an interactive prompt session allowing you to generate the proper JSON file containing all the linkage information.
 2. `desmos tx profiles link-chain [/path/to/link_file.json]`
-   This will effectively link your Desmos profile to the external chain address. The required argument is the (absolute)
-   path to the file generated using the `create-chain-link-json` command. 
+   This will effectively link your Desmos profile to the external chain address. The required argument is the (absolute) path to the file generated using the `create-chain-link-json` command. 

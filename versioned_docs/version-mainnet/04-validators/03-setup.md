@@ -49,15 +49,6 @@ Please select a key name that you will easily remember and be able to type fast.
 places inside other commands later.
 :::
 
-Once that you have created your local wallet, it's time to get some tokens to be used as the initial validator stake so
-that it can run properly. If you are setting up a validator inside one of our testnets, you can request some testnet
-tokens inside our [Discord](https://discord.gg/yxPRGdq). Once you have joined, go inside the `#ask-tokens` channel and
-run the following command:
-
-```
-!send <your_address>
-```
-
 You can get your address by running:
 
 ```shell
@@ -76,35 +67,16 @@ To create your validator, just use the following command:
 
 :::warning Don't use more staking token than you have!
 
-On Morpheus testnet, we are using `udaric` as the staking token and it will be the example below.
+On Mainnet, we are using `udsm` as the staking token and it will be the example below.
 
-We are using `udsm` as the staking token on Mainnet.  
 :::
 
-#### Testnet: 
-```bash
-desmos tx staking create-validator \
-  --amount=1000000udaric \
-  --pubkey=$(desmos tendermint show-validator) \
-  --moniker="<Your moniker here>" \
-  --chain-id=<chain_id> \
-  --commission-rate="0.10" \
-  --commission-max-rate="0.20" \
-  --commission-max-change-rate="0.01" \
-  --min-self-delegation="1" \
-  --gas="auto" \
-  --gas-adjustment="1.2" \
-  --gas-prices="0.025udaric" \
-  --from=<key_name>
-```
-
-#### Mainnet:
 ```bash
 desmos tx staking create-validator \
   --amount=1000000udsm \
   --pubkey=$(desmos tendermint show-validator) \
   --moniker="<Your moniker here>" \
-  --chain-id=<chain_id> \
+  --chain-id=desmos-mainnet \
   --commission-rate="0.10" \
   --commission-max-rate="0.20" \
   --commission-max-change-rate="0.01" \
@@ -124,12 +96,10 @@ When specifying commission parameters, the `commission-max-change-rate` is used 
 :::
 
 :::tip
-`Min-self-delegation` is a strictly positive integer that represents the minimum amount of self-delegated staking token your validator must always have. A `min-self-delegation` of 1 means your validator will never have a self-delegation lower than `1udaric` (or `1udsm` in mainnet). A validator with a self delegation lower than this number will automatically be unbonded.
+`Min-self-delegation` is a strictly positive integer that represents the minimum amount of self-delegated staking token your validator must always have. A `min-self-delegation` of 1 means your validator will never have a self-delegation lower than `1DSM`. A valdiator self delegate lower than this number will automatically be unbonded.
 :::
 
-You can confirm that you are in the validator set by using a block explorer:
-- Testnet:  [Big Dipper](https://morpheus.desmos.network)
-- Mainnet: [Big Dipper](https://explorer.desmos.network).
+You can confirm that you are in the validator set by using a block explorer, e.g. [Big Dipper](https://explorer.desmos.network).
 
 ## 3. Edit the validator description
 You can edit your validator's public description. This info is to identify your validator, and will be relied on by delegators to decide which validators to stake to. Make sure to provide input for every flag below. If a flag is not included in the command the field will default to empty (`--moniker` defaults to the machine name) if the field has never been set or remain the same if it has been set in the past.
@@ -145,7 +115,7 @@ desmos tx staking edit-validator \
   --identity=6A0D65E29A4CBC8E \
   --details="To infinity and beyond!" \
   --commission-rate="0.10" \
-  --chain-id=<chain_id> \
+  --chain-id=desmos-mainnet \
   --from=<key_name>
 ```
 
@@ -166,7 +136,7 @@ desmos query staking validator <account_desmos>
 ```bash
 desmos tx slashing unjail \
 	--from=<key_name> \
-	--chain-id=<chain_id>
+	--chain-id=desmos-mainnet-1
 ```
 
 ## 4. Confirm your validator is running
@@ -187,5 +157,5 @@ desmos keys show <key_name> -a --bech val
 ```
 
 :::warning Note 
-To be in the validator set, you need to have more total voting power than the last validator.
+To be in the validator set, you need to have more total voting power than the 200th validator.
 :::
