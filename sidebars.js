@@ -124,9 +124,9 @@ module.exports = {
           collapsed: false,
           items: [
             'mainnet/genesis-file',
-            'mainnet/security',
             'mainnet/seeds',
-            'mainnet/state-sync'
+            'mainnet/state-sync',
+            'mainnet/security'
           ]
       }
       /*{
