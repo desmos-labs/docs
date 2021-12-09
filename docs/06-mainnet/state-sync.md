@@ -6,6 +6,10 @@ slug: state-sync
 ---
 
 # State sync mainnet
+:::warning Mainnet only   
+The following seed nodes are to be used when configuring a full node for the **mainnet**. If you are looking for testnet seed nodes, please refer to [this](../05-testnets/03-join-public/state-sync.md) instead.  
+:::
+
 In order to use this feature, you will have to edit a couple of things inside your `~/.desmos/config/config.toml` file,
 under the `statesync` section:
 
@@ -36,14 +40,13 @@ under the `statesync` section:
       |     `1149680 - 1347304`     |      `v2.3.0`      |
       |     `> 1347305`             |      `v2.3.1`      |
 
-   Here is an example of what the `statesync` section of your `~/.desmos/config/config.toml` file should look like in the
-   end (the `trust_height` and `trust_hash` should contain your values instead):
+Here is an example of what the `statesync` section of your `~/.desmos/config/config.toml` file should look like in the end (the `trust_height` and `trust_hash` should contain your values instead):
 
-   ```toml
-   enable = true
-   
-   rpc_servers = "rpc-desmos.itastakers.com:26657,135.181.60.250:26557"
-   trust_height = 139142
-   trust_hash = "F55CA4C56CAC348E453A38D6BEBD70B1CD92F7431214AE167B09EFDA478186BE"
-   trust_period = "336h0m0s"
-   ```
+```toml
+enable = true
+
+rpc_servers = "rpc-desmos.itastakers.com:26657,135.181.60.250:26557"
+trust_height = 139142
+trust_hash = "F55CA4C56CAC348E453A38D6BEBD70B1CD92F7431214AE167B09EFDA478186BE"
+trust_period = "336h0m0s"
+```

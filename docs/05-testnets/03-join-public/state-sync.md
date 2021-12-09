@@ -6,6 +6,10 @@ slug: state-sync
 ---
 
 # State sync testnet
+:::warning Testnet only   
+The following seed nodes are to be used when configuring a full node for the **testnet**. If you are looking for mainnet seed nodes, please refer to [this](../../06-mainnet/state-sync.md) instead.
+:::
+
 In order to use this feature, you will have to edit a couple of things inside your `~/.desmos/config/config.toml` file,
 under the `statesync` section:
 
@@ -33,7 +37,7 @@ under the `statesync` section:
    make sure they're the right values for the Desmos version you're starting to synchronize:
 
    | **State sync height range** |     **Desmos version**      |
-      |:---------------------------:| :-------------------------: |
+   |:---------------------------:| :-------------------------: |
    | `0 - 1235764`               |          `v0.17.0`          |
    | `1235765 - 1415529`         |          `v0.17.4`          |
    | `1415530 - 2121235`         |          `v0.17.6`          |
@@ -45,14 +49,13 @@ under the `statesync` section:
    | `2756260 - 3130831`         |          `v2.3.0`           |
    | `> 3130831`                 |          `v2.3.1`           |
 
-    Here is an example of what the `statesync` section of your `~/.desmos/config/config.toml` file should look like in the
-    end (the `trust_height` and `trust_hash` should contain your values instead):
+Here is an example of what the `statesync` section of your `~/.desmos/config/config.toml` file should look like in the end (the `trust_height` and `trust_hash` should contain your values instead):
 
-    ```toml
-    enable = true
+```toml
+enable = true
 
-    rpc_servers = "seed-4.morpheus.desmos.network:26657,seed-5.morpheus.desmos.network:26657"
-    trust_height = 16962
-    trust_hash = "E8ED7A890A64986246EEB02D7D8C4A6D497E3B60C0CAFDDE30F2EE385204C314"
-    trust_period = "336h0m0s"
-    ```
+rpc_servers = "seed-4.morpheus.desmos.network:26657,seed-5.morpheus.desmos.network:26657"
+trust_height = 16962
+trust_hash = "E8ED7A890A64986246EEB02D7D8C4A6D497E3B60C0CAFDDE30F2EE385204C314"
+trust_period = "336h0m0s"
+```

@@ -5,7 +5,7 @@ sidebar_position: 2
 ---
 
 # Create a local testnet
-:::warning Required desmos executables  
+:::warning Required Desmos executables  
 You need to [install `desmos`](../install.md) before going further.  
 :::
 

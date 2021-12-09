@@ -13,7 +13,7 @@ including the correct version of Desmos to use and details about the genesis fil
 :::
 
 ## Validators
-:::warning Requires desmos executables  
+:::warning Requires Desmos executable  
 To join the public testnet you **must** have [`desmos` installed](../../03-fullnode/02-setup.md).  
 :::
 
