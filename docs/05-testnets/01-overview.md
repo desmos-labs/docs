@@ -22,7 +22,7 @@ Testnet's [validators](../04-validators/01-overview.md) are publicly known and d
 Public testnets are, in short, the real playground on which you can test the integration of your app (or your validator's setup) without worrying too much about security, but being sure to always be up to date with the latest stable changes.
 
 :::tip Joining the public testnet  
-If you want to know more about how to join the currently running public testnet, please refer to the [_Join the public testnet_](03-join-public.md) page.  
+If you want to know more about how to join the currently running public testnet, please refer to the [_Join the public testnet_](../05-testnets/03-join-public/setup.md) page.  
 :::     
 
 ## Local testnets 

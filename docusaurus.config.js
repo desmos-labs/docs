@@ -115,7 +115,7 @@ module.exports = {
           showLastUpdateTime: true,
           versions: {
             current: {
-              label: "Testnet 🛠"
+              label: "unversioned"
             },
             mainnet: {
               label: "Mainnet 🚀"

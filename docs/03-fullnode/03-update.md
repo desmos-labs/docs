@@ -55,7 +55,7 @@ specific version instead, use the following commands:
 2. Checkout the tag you want 
    ```bash
    git checkout tags/<tag>
-   # Example: git checkout tags/v0.2.0
+   # Example: git checkout tags/v2.3.1
    ```
    
 :::
