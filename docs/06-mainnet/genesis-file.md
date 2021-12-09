@@ -6,8 +6,11 @@ slug: genesis-file
 ---
 
 # Genesis file
-To connect to the `desmos-mainnet`, you will need the
-corresponding genesis file.
+:::warning Mainnet only   
+The following seed nodes are to be used when configuring a full node for the **mainnet**. If you are looking for testnet seed nodes, please refer to [this](../05-testnets/03-join-public/genesis-file.md) instead.  
+:::
+
+To connect to the `desmos-mainnet`, you will need the corresponding genesis file.
 
 ## 1. Download
 Visit the [mainnet repo](https://github.com/desmos-labs/mainnet) and

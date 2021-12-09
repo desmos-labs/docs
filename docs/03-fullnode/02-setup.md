@@ -109,8 +109,8 @@ In order to provide a custom seed to your private key, you can do as follows:
 
 To connect to an existing network, or start a new one, a genesis file is required. The file contains all the settings
 telling how the genesis block of the network should look like.
- - If you are setting up a **testnet** node refers to this [procedure](../05-testnets/03-join-public/genesis-file.md);
- - If you are setting up a **mainnet** node referes to this [procedure](../06-mainnet/genesis-file.md).
+ - If you are setting up a **testnet** node refer to this [procedure](../05-testnets/03-join-public/genesis-file.md);
+ - If you are setting up a **mainnet** node refer to this [procedure](../06-mainnet/genesis-file.md).
 
 ## 4. Setup seeds
 
@@ -130,8 +130,8 @@ Starting from Desmos `v0.15.0`, we've added the support for Tendermint'
 s [state sync](https://docs.tendermint.com/master/nodes/state-sync.html#configure-state-sync). This feature allows new nodes to
 sync with the chain extremely fast, by downloading snapshots created by other full nodes.
 Here below, you can find the links to check for the correct procedure depending on which network you're setting up your node:
-- If you are setting up state-sync for **testnet** follow the [State-sync testnet procedure](../05-testnets/03-join-public/state-sync.md);
-- If you are setting up state-sync for **mainnet** follow the [State-sync mainnet procedure](../06-mainnet/state-sync.md).
+- If you are setting up state-sync for the **testnet** follow the [State sync testnet procedure](../05-testnets/03-join-public/state-sync.md);
+- If you are setting up state-sync for the **mainnet** follow the [State sync mainnet procedure](../06-mainnet/state-sync.md).
 
 ### Changing state sync height
 If you change the state sync height, you will need to perform these actions before trying to sync again:

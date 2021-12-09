@@ -15,7 +15,7 @@ module.exports = {
       {
         type: 'category',
         label: 'Developers',
-        collapsed: false,
+        collapsed: true,
         items: [
             'developers/overview',
             {
@@ -76,7 +76,7 @@ module.exports = {
       {
           type: 'category',
           label: 'Running a Fullnode',
-          collapsed: false,
+          collapsed: true,
           items: [
               'fullnode/overview',
               'fullnode/setup',
@@ -88,7 +88,7 @@ module.exports = {
       {
           type: 'category',
           label: 'Validators',
-          collapsed: false,
+          collapsed: true,
           items: [
               'validators/overview',
               'validators/setup',
@@ -101,7 +101,7 @@ module.exports = {
       {
           type: 'category',
           label: 'Testnets',
-          collapsed: false,
+          collapsed: true,
           items: [
               'testnets/overview',
               'testnets/create-local',
@@ -121,7 +121,7 @@ module.exports = {
       {
           type: 'category',
           label: 'Mainnet',
-          collapsed: false,
+          collapsed: true,
           items: [
             'mainnet/genesis-file',
             'mainnet/seeds',
