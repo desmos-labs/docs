@@ -163,12 +163,6 @@ View the validator's information with this command:
 desmos query staking validator <account_desmos>
 ```
 
-```bash
-desmos tx slashing unjail \
-	--from=<key_name> \
-	--chain-id=<chain_id>
-```
-
 ## 4. Confirm your validator is running
 Your validator is active if the following command returns anything:
 
