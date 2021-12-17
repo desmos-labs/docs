@@ -37,7 +37,7 @@ cp cosmovisor ~/go/bin/cosmovisor
 ```
 To check your cosmovisor version, you can use this command and make sure it matches the version you've installed:
 ```
-strings $(which cosmovisor) | egrep -e "mod\s+github.com/cosmos/cosmos-sdk/cosmovisor
+strings $(which cosmovisor) | egrep -e "mod\s+github.com/cosmos/cosmos-sdk/cosmovisor"
 ```
 
 *Note: If you are using go `v1.15` or earlier, you will need to use `go get`, and you may want to run the command outside a project directory.*
