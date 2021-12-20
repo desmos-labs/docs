@@ -34,7 +34,7 @@ cd $HOME
 git clone https://github.com/desmos-labs/desmos.git && cd desmos
 
 # Checkout the correct tag
-git checkout tags/2.3.1
+git checkout tags/v2.3.1
 
 # Build the software
 # If you want to use the default database backend run
