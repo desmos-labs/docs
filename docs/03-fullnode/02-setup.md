@@ -7,7 +7,7 @@ sidebar_position: 2
 # Full node setup
 Following you will find the instructions on how to manually setup your Desmos full node.
 
-:::warning Requirements
+:::note Requirements
 Before starting, make sure you read the [overview](01-overview.mdx) to make sure your hardware meets the needed
 requirements.
 :::
@@ -34,7 +34,7 @@ cd $HOME
 git clone https://github.com/desmos-labs/desmos.git && cd desmos
 
 # Checkout the correct tag
-git checkout tags/2.3.1
+git checkout tags/v2.3.1
 
 # Build the software
 # If you want to use the default database backend run
@@ -143,8 +143,31 @@ If you change the state sync height, you will need to perform these actions befo
 * If you're running a *full node*:
     1. Run `desmos unsafe-reset-all`;
     2. Restart the node.
-    
-## 6. (Optional) Edit snapshot config
+
+## 6. Full sync - Sync from block 1
+:::warning Full sync from scratch
+With version `2.3.1` it's no longer possible to sync the node from scratch. If, for any reason, you need to do it,
+please follow one of these procedure below:
+:::
+
+:::caution   
+Remember that this procedure takes time (hours, or days) and you will not be able to perform any operation on the node in the meantime.
+:::
+
+### 1. Downgrade the software
+The first thing you need to do in order to start sync from scratch is getting the correct Desmos version according to the network you're connecting to:
+* [**Mainnet**](../06-mainnet/full-sync.md);
+* [**Testnet**](../05-testnets/03-join-public/full-sync.md).
+
+### 2. Disable state-sync (if needed)
+* Open the `~/.desmos/config/config.toml` file;
+* Disable state sync by setting `enable = false`.
+
+### 3. Setup Cosmovisor
+Since we're relying on the cosmos-SDK Upgrade module to update the network, you will need to setup cosmovisor
+in order to handle the updates that happened at different heights in the past. Check how to do it [here](../03-fullnode/05-cosmovisor.md).
+
+## 7. (Optional) Edit snapshot config
 
 Currently, the `snapshot` feature is enabled by the default. This means that your node will periodically create snapshots of the chain state and make them public, allowing other nodes to quickly join the network by syncing the application state at a given height.
 
@@ -170,7 +193,7 @@ pruning-interval = "10"
 You can find out more about pruning [here](01-overview.mdx#understanding-pruning).
 You can find out more about pruning [here](01-overview.mdx#understanding-pruning).
 
-## 7. (Optional) Change your database backend
+## 8. (Optional) Change your database backend
 
 If you would like to run your node using [Facebook's RocksDB](https://github.com/facebook/rocksdb) as the database
 backend, and you have correctly built the Desmos binaries to work with it following the instructions
@@ -190,7 +213,7 @@ db_backend = "rocksdb"
 ```
 
 
-## 8. Open the proper ports
+## 9. Open the proper ports
 
 Now that everything is in place to start the node, the last thing to do is to open up the proper ports.
 
@@ -230,7 +253,7 @@ sudo ufw status
 If you also want to run a gRPC server, RPC node or the REST APIs, you also need to remember to open the related ports as
 well.
 
-## 9. Start the Desmos node
+## 10. Start the Desmos node
 
 After setting up the binary and opening up ports, you are now finally ready to start your node:
 
@@ -304,7 +327,7 @@ desmos status 2>&1 | jq "{catching_up: .SyncInfo.catching_up}"
 
 After your node is fully synced, you can consider running your full node as a [validator node](../04-validators/02-setup.md).
 
-## 10. (Optional) Configure the background service
+## 11. (Optional) Configure the background service
 
 To allow your `desmos` instance to run in the background as a service you need to execute the following command
 
