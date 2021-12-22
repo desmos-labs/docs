@@ -119,7 +119,7 @@ module.exports = {
               label: "master"
             },
             2.3: {
-              label: "2.3.1"
+              label: "v2.3.1"
             }
           }
         },
