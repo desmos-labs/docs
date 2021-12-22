@@ -110,7 +110,8 @@ module.exports = {
                       'testnets/join-public/setup',
                       'testnets/join-public/genesis-file',
                       'testnets/join-public/seeds',
-                      'testnets/join-public/state-sync'
+                      'testnets/join-public/state-sync',
+                      'testnets/join-public/full-sync'
                   ],
 
 
@@ -126,6 +127,7 @@ module.exports = {
             'mainnet/genesis-file',
             'mainnet/seeds',
             'mainnet/state-sync',
+            'mainnet/full-sync',
             'mainnet/security'
           ]
       }

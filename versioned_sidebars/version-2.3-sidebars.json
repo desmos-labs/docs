@@ -274,6 +274,10 @@
             {
               "type": "doc",
               "id": "version-2.3/testnets/join-public/state-sync"
+            },
+            {
+              "type": "doc",
+              "id": "version-2.3/testnets/join-public/full-sync"
             }
           ]
         }
@@ -296,6 +300,10 @@
         {
           "type": "doc",
           "id": "version-2.3/mainnet/state-sync"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.3/mainnet/full-sync"
         },
         {
           "type": "doc",
