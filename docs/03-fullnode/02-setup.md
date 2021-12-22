@@ -147,7 +147,7 @@ If you change the state sync height, you will need to perform these actions befo
 ## 6. Full sync - Sync from block 1
 :::warning Full sync from scratch
 With version `2.3.1` it's no longer possible to sync the node from scratch. If, for any reason, you need to do it,
-please follow one of these procedure below:
+please follow the procedure below.
 :::
 
 :::caution   
@@ -159,13 +159,13 @@ The first thing you need to do in order to start sync from scratch is getting th
 * [**Mainnet**](../06-mainnet/full-sync.md);
 * [**Testnet**](../05-testnets/03-join-public/full-sync.md).
 
-### 2. Disable state-sync (if needed)
-* Open the `~/.desmos/config/config.toml` file;
-* Disable state sync by setting `enable = false`;
-* Run a `desmos unsafe-reset-all`.
+### 2. Disable state-sync
+1. Open the `~/.desmos/config/config.toml` file.
+2. Disable state sync by setting `enable = false`.
+3. Run a `desmos unsafe-reset-all`.
 
-### 3. Setup Cosmovisor (if needed)
-Since we're relying on the cosmos-SDK Upgrade module to update the network, you will need to setup cosmovisor
+### 3. Setup Cosmovisor
+Since we're relying on the Cosmos SDK `x/upgrade` module to update the network, you will need to set up Cosmovisor
 in order to handle the updates that happened at different heights in the past. Check how to do it [here](../03-fullnode/05-cosmovisor.md).
 
 ## 7. (Optional) Edit snapshot config
