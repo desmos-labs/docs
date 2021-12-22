@@ -6,7 +6,7 @@ slug: genesis-file
 ---
 
 # Genesis file
-:::warning Mainnet only   
+:::caution Mainnet only   
 The following seed nodes are to be used when configuring a full node for the **mainnet**. If you are looking for testnet seed nodes, please refer to [this](../05-testnets/03-join-public/genesis-file.md) instead.  
 :::
 

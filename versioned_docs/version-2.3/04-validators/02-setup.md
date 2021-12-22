@@ -44,7 +44,7 @@ desmos keys add <key_name>
 desmos keys add <key_name> --recover
 ```
 
-:::warning Key name
+:::caution Key name
 Please select a key name that you will easily remember and be able to type fast. This name will be used all over the
 places inside other commands later.
 :::
@@ -180,6 +180,6 @@ To show the `operator address`, you can run
 desmos keys show <key_name> -a --bech val
 ```
 
-:::warning Note 
+:::note Note 
 To be in the validator set, you need to have more total voting power than the last validator.
 :::

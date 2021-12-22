@@ -161,9 +161,10 @@ The first thing you need to do in order to start sync from scratch is getting th
 
 ### 2. Disable state-sync (if needed)
 * Open the `~/.desmos/config/config.toml` file;
-* Disable state sync by setting `enable = false`.
+* Disable state sync by setting `enable = false`;
+* Run a `desmos unsafe-reset-all`.
 
-### 3. Setup Cosmovisor
+### 3. Setup Cosmovisor (if needed)
 Since we're relying on the cosmos-SDK Upgrade module to update the network, you will need to setup cosmovisor
 in order to handle the updates that happened at different heights in the past. Check how to do it [here](../03-fullnode/05-cosmovisor.md).
 
