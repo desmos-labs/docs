@@ -50,7 +50,7 @@ To create a single node local testnet, run the following commands:
    ```bash
    desmos init testnet --chain-id testnet
    desmos add-genesis-account <your-key-name> 100000000000stake
-   desmos gentx <your-key-name> 1000000000stake
+   desmos gentx <your-key-name> 1000000000stake --chain-id testnet
    desmos collect-gentxs
    ``` 
    
