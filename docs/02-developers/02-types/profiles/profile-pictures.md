@@ -8,7 +8,7 @@ slug: profile-pictures
 # Pictures
 Picture contains the data of a user profile's related pictures.
 
-## Contained data
+## Attributes
 Picture contains two fields that are both optional.
 
 ### `Profile` (`string`)

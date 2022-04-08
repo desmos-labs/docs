@@ -8,7 +8,7 @@ slug: dtag-transfer-request
 # DTag transfer request
 A DTag transfer request represents the request made from a user to get the DTag of another one.
  
-## Contained data
+## Attributes
 Here follows the data of a DTag transfer request. 
 
 ### `DTagToTrade` (`string`)

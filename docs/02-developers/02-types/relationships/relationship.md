@@ -9,7 +9,7 @@ slug: relationship
 Inside Desmos, users can create relationships with other users.  
 A relationship inside Desmos is the equivalent of the "follow" concept of traditional social networks.
 
-## Contained data
+## Attributes
 Each relationship contains the data that allows identifying the dApp where the users created such relationship.
 
 ### `Creator` (`string`)

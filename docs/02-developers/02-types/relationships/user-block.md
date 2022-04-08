@@ -8,7 +8,7 @@ slug: user-block
 # User Block
 Inside Desmos, a `UserBlock` identifies the fact that a user blocked another one.
 
-## Contained data
+## Attributes
 `UserBlock` contains data that allows users to create the most complete report they need.
 
 ### `Blocker` (`string`)

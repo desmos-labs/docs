@@ -13,7 +13,7 @@ Since this is a decentralized profile, every data inside it can be omitted excep
 Profile can be enriched with some of your personal data that could be verified later on chain by providing
 some additional information.
 
-## Contained data
+## Attributes
 A profile contains different fields. Most of them are optional and can be edited.
 
 ### `DTag` (`string`)
