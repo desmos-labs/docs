@@ -11,7 +11,7 @@ This message allows you to remove a previously linked chain address from your De
 ## Structure
 ```json
 {
-  "@type": "/desmos.profiles.v1beta1.MsgUnlinkChainAccount",
+  "@type": "/desmos.profiles.v2.MsgUnlinkChainAccount",
   "target": "<Address of the chain link to unlink>",
   "chain_name": "<Name of the chain to unlink>",
   "owner": "<Desmos address of the profile that should remove the link>"
@@ -29,7 +29,7 @@ This message allows you to remove a previously linked chain address from your De
 ## Example
 ```json
 {
-  "@type": "/desmos.profiles.v1beta1.MsgUnlinkChain",
+  "@type": "/desmos.profiles.v2.MsgUnlinkChain",
   "target": "cosmos13j7p6faa9jr8ty6lvqv0prldprr6m5xenmafnt",
   "chain_name": "cosmos",
   "owner": "desmos1qchdngxk8zkl4c4mheqdlpgcegkdrtucmwllpx"

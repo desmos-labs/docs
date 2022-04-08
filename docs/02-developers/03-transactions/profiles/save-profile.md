@@ -11,7 +11,7 @@ This message allows you to save a new profile or edit an existent one.
 ## Structure
 ````json
 {
-  "@type": "/desmos.profiles.v1beta1.MsgSaveProfile",
+  "@type": "/desmos.profiles.v2.MsgSaveProfile",
   "dtag": "<Profile dtag>",
   "nickname": "<Profile nickname>",
   "bio": "<Profile biography>",  
@@ -38,7 +38,7 @@ value `[do-not-modify]`.
 
 ````json
 {
-  "@type": "/desmos.profiles.v1beta1.MsgSaveProfile",
+  "@type": "/desmos.profiles.v2.MsgSaveProfile",
   "dtag": "Eva00",
   "nickname": "Rei Ayanami",
   "bio": "The real pilot",

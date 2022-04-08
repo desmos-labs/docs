@@ -11,7 +11,7 @@ This message allows you to delete a previously created profile.
 ## Structure
 ````json
 {
-  "@type": "/desmos.profiles.v1beta1.MsgDeleteProfile",
+  "@type": "/desmos.profiles.v2.MsgDeleteProfile",
   "creator": "<Address of the profile owner>"
 }
 ````
@@ -25,7 +25,7 @@ This message allows you to delete a previously created profile.
 
 ````json
 {
-  "@type": "/desmos.profiles.v1beta1.MsgDeleteProfile",
+  "@type": "/desmos.profiles.v2.MsgDeleteProfile",
   "creator": "desmos1qchdngxk8zkl4c4mheqdlpgcegkdrtucmwllpx"
 }
 ````

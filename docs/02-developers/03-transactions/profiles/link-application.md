@@ -13,7 +13,7 @@ an [application link](../../02-types/profiles/application-link.md#contained-data
 
 ```json
 {
-  "@type": "/desmos.profiles.v1beta1.MsgLinkApplication",
+  "@type": "/desmos.profiles.v2.MsgLinkApplication",
   "link_data": {
     "application": "<Name of the application to link>",
     "username": "<Username of the application account to link>"
@@ -46,7 +46,7 @@ appropriate fields:
 
 ````json
 {
-  "@type": "/desmos.profiles.v1beta1.MsgLinkApplication",
+  "@type": "/desmos.profiles.v2.MsgLinkApplication",
   "link_data": {
     "application": "github",
     "username": "RiccardoM"

@@ -11,7 +11,7 @@ This message allows you to refuse a `DTag` transfer request made by a user.
 ## Structure
 ````json
 {
-  "@type": "/desmos.profiles.v1beta1.MsgRefuseDTagTransferRequest",
+  "@type": "/desmos.profiles.v2.MsgRefuseDTagTransferRequest",
   "sender": "<Desmos address that sent the DTag's request>",
   "receiver": "<Desmos address of the DTag owner>"
 }
@@ -27,7 +27,7 @@ This message allows you to refuse a `DTag` transfer request made by a user.
 
 ````json
 {
-  "@type": "/desmos.profiles.v1beta1.MsgRefuseDTagTransferRequest",
+  "@type": "/desmos.profiles.v2.MsgRefuseDTagTransferRequest",
   "sender": "desmos1nhgk008jvrxwa9tufr9tcr6zfrhe2uz0v90r2a",
   "receiver": "desmos1k99c8htyk32srx78efzg7sxm965prtz0j9qrc7"
 }

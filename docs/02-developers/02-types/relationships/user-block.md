@@ -20,5 +20,5 @@ The address of the blocked user.
 ### `Reason` (`string`)
 The reason why the user has been blocked for.
 
-### `Subspace` (`string`)
-The `Subspace` field identifies the application where the block has been made.
+### `SubspaceID` (`uint64`)
+The `SubspaceID` field identifies the application where the block has been made.

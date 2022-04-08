@@ -12,7 +12,7 @@ This message allows you to remove a previously linked application from your Desm
 
 ```json
 {
-  "@type": "/desmos.profiles.v1beta1.MsgUnlinkApplication",
+  "@type": "/desmos.profiles.v2.MsgUnlinkApplication",
   "application": "<Name of the application to unlink>",
   "username": "<Name of the account inside the application that should be unlinked>",
   "signer": "<Desmos address of the profile that should remove the link>"
@@ -31,7 +31,7 @@ This message allows you to remove a previously linked application from your Desm
 
 ````json
 {
-  "@type": "/desmos.profiles.v1beta1.MsgUnlinkApplication",
+  "@type": "/desmos.profiles.v2.MsgUnlinkApplication",
   "application": "twitter",
   "username": "RicMontagnin",
   "signer": "desmos1qchdngxk8zkl4c4mheqdlpgcegkdrtucmwllpx"
