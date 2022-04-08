@@ -14,12 +14,22 @@ This message allows to set a user group permissions.
 ````
 
 ### Attributes
-| Attribute | Type | Description | Required |
-| :-------: | :----: | :-------- | :------- |
+|   Attribute   |  Type  | Description                                                             | Required |
+|:-------------:|:------:|:------------------------------------------------------------------------|:---------|
+| `subspace_id` | Uint64 | Id of the subspace where the group exists                               | yes      |
+|  `group_id`   | Uint32 | Id of the group to which we need to set the permission for              | yes      |
+| `permissions` | Uint32 | Permissions to be set for the group combined and represented as integer | yes      |
+|    `signer`    | String | Address of the signer of the msg                                        | yes      |
 
 ## Example
 ````json
-
+{
+  "@type": "/desmos.subspaces.v1.MsgSetUserGroupPermissions",
+  "subspace_id": "1",
+  "group_id": 1,
+  "permissions": 3,
+  "signer": "desmos1nwp8gxrnmrsrzjdhvk47vvmthzxjtphgxp5ftc"
+}
 ````
 
 ## Message action

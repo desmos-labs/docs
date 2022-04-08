@@ -14,13 +14,13 @@ This message allows to edit an existent user group.
 ````
 
 ### Attributes
-|   Attribute   |  Type  | Description                                          | Required |
-|:-------------:|:------:|:-----------------------------------------------------|:---------|
-| `subspace_id` | Uint64 | id of the subspaces where the group has been created | yes      |
-|  `group_id`   | Uint32 | id of the group to edit                              | yes      |
-|    `name`     | String | Human-readable name to edit                          | no       |
-| `description` | String | Description of the group to edit                     | no       |
-|  `signer`     | String | Address of the editor of the group                   | yes      |
+|   Attribute   |  Type  | Description                                         | Required |
+|:-------------:|:------:|:----------------------------------------------------|:---------|
+| `subspace_id` | Uint64 | Id of the subspace where the group has been created | yes      |
+|  `group_id`   | Uint32 | Id of the group to edit                             | yes      |
+|    `name`     | String | Human-readable name to edit                         | no       |
+| `description` | String | Description of the group to edit                    | no       |
+|  `signer`     | String | Address of the editor of the group                  | yes      |
 ## Example
 ````json
 {
