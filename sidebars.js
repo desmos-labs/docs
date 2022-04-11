@@ -31,6 +31,11 @@ module.exports = {
                         Relationships: [
                             'developers/types/relationships/relationship',
                             'developers/types/relationships/user-block',
+                        ],
+                        Subspaces: [
+                            'developers/types/subspaces/subspace',
+                            'developers/types/subspaces/user-group',
+                            'developers/types/subspaces/permission-detail'
                         ]
                     }
                 ],
@@ -55,6 +60,18 @@ module.exports = {
                         'developers/transactions/relationships/delete-relationship',
                         'developers/transactions/relationships/block-user',
                         'developers/transactions/relationships/unblock-user',
+                    ],
+                    Subspaces: [
+                        'developers/transactions/subspaces/create-subspace',
+                        'developers/transactions/subspaces/edit-subspace',
+                        'developers/transactions/subspaces/delete-subspace',
+                        'developers/transactions/subspaces/set-user-permissions',
+                        'developers/transactions/subspaces/create-user-group',
+                        'developers/transactions/subspaces/edit-user-group',
+                        'developers/transactions/subspaces/add-user-to-group',
+                        'developers/transactions/subspaces/remove-user-from-user-group',
+                        'developers/transactions/subspaces/set-user-group-permissions',
+                        'developers/transactions/subspaces/delete-user-group'
                     ]
                   },
               ],
@@ -71,6 +88,14 @@ module.exports = {
                         Relationships: [
                             'developers/queries/relationships/relationships',
                             'developers/queries/relationships/blocked-users',
+                        ],
+                        Subspaces: [
+                            'developers/queries/subspaces/subspaces',
+                            'developers/queries/subspaces/subspace',
+                            'developers/queries/subspaces/user-groups',
+                            'developers/queries/subspaces/user-group',
+                            'developers/queries/subspaces/user-group-members',
+                            'developers/queries/subspaces/user-permissions'
                         ]
                     }
                 ],
