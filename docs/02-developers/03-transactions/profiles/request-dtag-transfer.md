@@ -8,15 +8,6 @@ slug: request-dtag-transfer
 # `MsgRequestDTagTransfer`
 This message allows you to request a transfer to your profile for a `DTag` owned by another user.
 
-## Structure
-````json
-{
-  "@type": "/desmos.profiles.v2.MsgRequestDTagTransfer",
-  "receiver": "<Desmos address of the DTag owner>",
-  "sender": "<Desmos address that's making the DTag's request>"
-}
-````
-
 ### Attributes
 | Attribute | Type | Description | Required |
 | :-------: | :----: | :-------- | :------- |

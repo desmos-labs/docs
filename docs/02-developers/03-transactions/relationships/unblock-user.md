@@ -8,16 +8,6 @@ slug: unblock-user
 # `MsgUnblockUser`
 This message allows you to unblock a previously blocked user.
 
-## Structure
-```json
-{
-  "@type": "/desmos.relationships.v1.MsgUnblockUser",
-  "blocker": "<Desmos address of the user that is unblocking another user>",
-  "blocked": "<Desmos address of the unblocked user>",
-  "subspace_id": "<Subspace of the block>"
-}   
-```
-
 |   Attribute   |  Type  | Description | Required |
 |:-------------:|:------:| :-------- | :------- |
 |   `blocker`   | String | Desmos address of the user that is blocking someone else | yes |

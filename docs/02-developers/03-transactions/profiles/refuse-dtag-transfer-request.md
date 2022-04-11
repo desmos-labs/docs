@@ -8,15 +8,6 @@ slug: refuse-dtag-transfer-request
 # `MsgRefuseDTagTransferRequest`
 This message allows you to refuse a `DTag` transfer request made by a user.
 
-## Structure
-````json
-{
-  "@type": "/desmos.profiles.v2.MsgRefuseDTagTransferRequest",
-  "sender": "<Desmos address that sent the DTag's request>",
-  "receiver": "<Desmos address of the DTag owner>"
-}
-````
-
 ### Attributes
 | Attribute | Type | Description | Required |
 | :-------: | :----: | :-------- | :------- |

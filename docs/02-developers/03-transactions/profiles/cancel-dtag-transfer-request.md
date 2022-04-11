@@ -8,15 +8,6 @@ slug: cancel-dtag-transfer-request
 # `MsgCancelDTagTransferRequest`
 This message allows you to cancel a `DTag` transfer request made by yourself.
 
-## Structure
-````json
-{
-  "@type": "/desmos.profiles.v2.MsgCancelDTagTransferRequest",
-  "sender": "<Desmos address that sent the DTag's request>",
-  "receiver": "<Desmos address of the DTag owner>"
-}
-````
-
 ### Attributes
 | Attribute | Type | Description | Required |
 | :-------: | :----: | :-------- | :------- |

@@ -8,18 +8,6 @@ slug: create-subspace
 # `MsgCreateSubspace`
 This message allows to create a subspace.
 
-## Structure
-````json
-{
-  "@type": "/desmos.subspaces.v1.MsgCreateSubspace",
-  "name": "<Human-readable name of the subspace>",
-  "description": "<Summary of what the subspace is about>",
-  "treasury": "<Desmos address of the treasury associated with the subspace>",
-  "owner": "<Desmos address of the subspace owner>",
-  "creator": "<Desmos address of the subspace creator>"
-}
-````
-
 ### Attributes
 | Attribute | Type | Description                                 | Required |
 | :-------: | :----: |:--------------------------------------------|:---------|

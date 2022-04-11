@@ -8,11 +8,6 @@ slug: edit-user-group
 # `MsgEditUserGroup`
 This message allows to edit an existent user group.
 
-## Structure
-````json
-
-````
-
 ### Attributes
 |   Attribute   |  Type  | Description                                         | Required |
 |:-------------:|:------:|:----------------------------------------------------|:---------|

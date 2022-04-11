@@ -8,16 +8,6 @@ slug: delete-relationship
 # `MsgDeleteRelationship`
 This message allows you to delete an existing relationship with a specified counterparty.
 
-## Structure
-````json
-{
-  "@type": "/desmos.relationships.v1.MsgDeleteRelationship",
-  "signer": "<Desmos address of the user deleting the relationship>",
-  "counterparty": "<Desmos address with which the signer want to end the relationship>",
-  "subspace_id": "<Subspace of the relationship>"
-}
-````
-
 ### Attributes
 |   Attribute    |  Type  | Description                                                    | Required |
 |:--------------:|:------:|:---------------------------------------------------------------| :------- |

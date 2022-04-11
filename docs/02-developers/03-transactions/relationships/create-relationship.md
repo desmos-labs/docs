@@ -8,16 +8,6 @@ slug: create-relationship
 # `MsgCreateRelationship`
 This message allows you to create a relationship between the signer and a specified user.
 
-## Structure
-```json
-{
-  "@type": "/desmos.relationships.v1.MsgCreateRelationship",
-  "signer": "<Desmos address of the relationship's creator>",
-  "counterparty": "<Desmos address with which create the relationship>",
-  "subspace_id": "<Subspace of the relationship>"
-}      
-```
-
 ### Attributes
 |   Attribute    |  Type  | Description                                                    | Required |
 |:--------------:|:------:|:---------------------------------------------------------------| :------- |

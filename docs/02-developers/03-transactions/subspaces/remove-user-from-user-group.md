@@ -8,11 +8,6 @@ slug: remove-user-from-user-group
 # `MsgRemoveUserFromUserGroup`
 This message allows to remove a user from a user group.
 
-## Structure
-````json
-
-````
-
 ### Attributes
 | Attribute | Type | Description                                      | Required |
 | :-------: | :----: |:-------------------------------------------------| :------- |

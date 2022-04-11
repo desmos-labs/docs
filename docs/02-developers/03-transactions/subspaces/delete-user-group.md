@@ -8,11 +8,6 @@ slug: delete-user-group
 # `MsgDeleteUserGroup`
 This message allows to delete a user group.
 
-## Structure
-````json
-
-````
-
 ### Attributes
 |   Attribute   |  Type  | Description                               | Required |
 |:-------------:|:------:|:------------------------------------------|:---------|

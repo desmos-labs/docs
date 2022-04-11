@@ -8,17 +8,6 @@ slug: unlink-application
 # `MsgUnlinkApplication`
 This message allows you to remove a previously linked application from your Desmos profile.
 
-## Structure
-
-```json
-{
-  "@type": "/desmos.profiles.v2.MsgUnlinkApplication",
-  "application": "<Name of the application to unlink>",
-  "username": "<Name of the account inside the application that should be unlinked>",
-  "signer": "<Desmos address of the profile that should remove the link>"
-}
-```
-
 ### Attributes
 
 | Attribute | Type | Description | Required |

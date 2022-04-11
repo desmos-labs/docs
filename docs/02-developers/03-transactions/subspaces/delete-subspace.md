@@ -8,15 +8,6 @@ slug: delete-subspace
 # `MsgDeleteSubspace`
 This message allows to delete an existent subspace.
 
-## Structure
-````json
-{
-  "@type": "/desmos.subspaces.v1.MsgDeleteSubspace",
-  "subspace_id": "<Unique id that identifies the subspace>",
-  "signer": "<Desmos address of the msg signer>"
-}
-````
-
 ### Attributes
 | Attribute | Type | Description | Required |
 | :-------: | :----: | :-------- | :------- |

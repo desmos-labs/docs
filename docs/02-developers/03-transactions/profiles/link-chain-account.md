@@ -9,35 +9,6 @@ slug: link-chain-account
 This message allows you to link an external chain address 
 and add the [chain link](../../02-types/profiles/chain-link.md) of it to your Desmos profile.
 
-## Structure
-
-```json
-{
-  "@type": "/desmos.profiles.v2.MsgLinkChainAccount",
-  "chain_address": {
-    "@type": "/desmos.profiles.v2.Bech32Address",
-    "prefix": "<Bech32 prefix of the external chain account>",
-    "value": "<Address of the external chain account>"
-  },
-  "chain_config": {
-    "name": "<Name of the target external chain>"
-  },
-  "proof": {
-    "pub_key": {
-      "@type": "/cosmos.crypto.secp256k1.PubKey",
-      "value": "<Base64 encoded public key>"
-    },
-    "signature": {
-      "@type": "/desmos.profiles.v2.SingleSignatureData",
-      "mode": "<Signature mode applied>",
-      "signature": "<Hex encoded signature created with private key associated to the given public key>"
-    },
-    "plain_text": "<Hex encoded text signed with private key that produce the signature>"
-  },
-  "signer": "<Desmos address of the profile linking the chain account>"
-}
-```
-
 ### Attributes
 
 | Attribute | Type | Description | Required |
@@ -46,6 +17,37 @@ and add the [chain link](../../02-types/profiles/chain-link.md) of it to your De
 | `chain_config` | [ChainConfig](../../02-types/profiles/chain-link.md#Contained-data) | Details of the target external chain | yes |
 | `proof` | [Proof](../../02-types/profiles/chain-link.md#Contained-data) | Data proving the ownership of the external chain account | yes |
 | `signer` | String | Desmos address of the profile with which the link will be associated | yes |
+
+#### ChainAddress attributes
+
+| Attribute |  Type  | Description                           | Required |
+|:---------:|:------:|:--------------------------------------|:---------|
+| `prefix`  | String | Bech 32 prefix of the account         | yes      |
+|  `value`   | String | Address of the external chain account | yes      |
+
+#### ChainConfig attributes
+
+| Attribute |  Type  | Description                                       | Required |
+|:---------:|:------:|:--------------------------------------------------|:---------|
+|   `name`   | String | Name of the external chain to which make the link | yes      |
+
+#### Proof attributes
+|  Attribute   |  Type  | Description                                                                | Required |
+|:------------:|:------:|:---------------------------------------------------------------------------|:---------|
+|  `pub_key`   | Object | The public key associated with the address to link                         | yes      |
+| `signature`  | Object | The hex-encoded signature that proves the ownership of the address to link | yes      |
+| `plain_text` | String | The hex-encoded value signed in order to produce the `signature`             | yes      |
+
+#### PubKey attributes
+| Attribute |  Type  | Description                       | Required |
+|:---------:|:------:|:----------------------------------|:---------|
+|  `value`   | String | Base 64 encoded publick key       | yes      |
+
+#### Signature attributes
+|  Attribute  |  Type  | Description                                                                       | Required |
+|:-----------:|:------:|:----------------------------------------------------------------------------------|:---------|
+|   `mode`    | String | The way with which the signature is performed                                     | yes      |
+| `signature` | String | Hex encoded signature created with private key associated to the given public key | yes      |
 
 
 ## Example

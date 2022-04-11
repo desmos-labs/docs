@@ -8,16 +8,6 @@ slug: accept-dtag-transfer-request
 # `MsgAcceptDTagTransferRequest`
 This message allows you to accept a `DTag` transfer request.
 
-## Structure
-````json
-{
-  "@type": "/desmos.profiles.v2.MsgAcceptDTagTransferRequest",
-  "new_dtag": "<The new DTag for the current owner's profile>",
-  "receiver": "<Desmos address of the DTag owner>",
-  "sender": "<Desmos address that's making the DTag's request>"
-}
-````
-
 ### Attributes
 | Attribute | Type | Description | Required |
 | :-------: | :----: | :-------- | :------- |

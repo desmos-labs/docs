@@ -8,18 +8,10 @@ slug: delete-profile
 # `MsgDeleteProfile`
 This message allows you to delete a previously created profile.
 
-## Structure
-````json
-{
-  "@type": "/desmos.profiles.v2.MsgDeleteProfile",
-  "creator": "<Address of the profile owner>"
-}
-````
-
 ### Attributes
-| Attribute | Type | Description | Required |
-| :-------: | :----: | :-------- | :------- |
-| `creator` | String | Desmos address of the user that is deleting the profile | yes |
+| Attribute | Type | Description                           | Required |
+| :-------: | :----: |:--------------------------------------| :------- |
+| `creator` | String | Desmos address of the profile's owner | yes |
 
 ## Example
 

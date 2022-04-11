@@ -8,11 +8,6 @@ slug: set-user-group-permissions
 # `MsgSetUserGroupPermissions`
 This message allows to set a user group permissions.
 
-## Structure
-````json
-
-````
-
 ### Attributes
 |   Attribute   |  Type  | Description                                                             | Required |
 |:-------------:|:------:|:------------------------------------------------------------------------|:---------|

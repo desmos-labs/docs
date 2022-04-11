@@ -8,19 +8,6 @@ slug: edit-subspace
 # `MsgEditSubspace`
 This message allows to edit an existent subspace.
 
-## Structure
-````json
-{
-  "@type": "/desmos.subspaces.v1.MsgEditSubspace",
-  "subspace_id": "<Unique id that identifies the subspace>",
-  "name": "<Human-readable name of the subspace>",
-  "description": "<Summary of what the subspace is about>",
-  "treasury": "<Desmos address of the treasury associated with the subspace>",
-  "owner": "<Desmos address of the subspace owner>",
-  "signer": "<Desmos address of the msg signer>"
-}
-````
-
 ### Attributes
 |   Attribute   | Type | Description                                                              | Required |
 |:-------------:| :----: |:-------------------------------------------------------------------------|:---------|

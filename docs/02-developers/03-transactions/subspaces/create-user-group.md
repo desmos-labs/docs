@@ -8,18 +8,6 @@ slug: create-user-group
 # `MsgCreateUserGroup`
 This message allows to create a user group inside a subspace.
 
-## Structure
-````json
-{
-  "@type": "/desmos.subspaces.v1.MsgCreateUserGroup",
-  "subspace_id": "<Unique id of the subspace where to create the group>",
-  "name": "<Human-readable name of the group>",
-  "description": "<Description of the group>",
-  "default_permissions": "<Default permissions of the group>",
-  "creator": "<Address of the group creator>"
-}
-````
-
 ### Attributes
 |       Attribute       |  Type  | Description                                                        | Required |
 |:---------------------:|:------:|:-------------------------------------------------------------------|:---------|

@@ -8,19 +8,6 @@ slug: save-profile
 # `MsgSaveProfile`
 This message allows you to save a new profile or edit an existent one.
 
-## Structure
-````json
-{
-  "@type": "/desmos.profiles.v2.MsgSaveProfile",
-  "dtag": "<Profile dtag>",
-  "nickname": "<Profile nickname>",
-  "bio": "<Profile biography>",  
-  "profile_picture": "<URI of the profile account's picture>",
-  "cover_picture": "<URI of the profile cover picture>",
-  "creator": "<Desmos address that's creating the profile>"
-}
-````
-
 ### Attributes
 | Attribute | Type | Description | Required |
 | :-------: | :----: | :-------- | :------- |

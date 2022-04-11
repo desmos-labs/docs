@@ -8,17 +8,6 @@ slug: block-user
 # `MsgBlockUser`
 This message allows you to block a specific user associated with a given address.
 
-## Structure
-```json
-{
-  "@type": "/desmos.relationships.v1.MsgBlockUser",
-  "blocker": "<Desmos address that's blocking someone>",
-  "blocked": "<Desmos address that's been blocked>",
-  "reason": "<Reason of the block>",
-  "subspace_id": "<Subspace of the block>"
-}   
-```
-
 ### Attributes
 |   Attribute   |  Type  | Description                                                  | Required |
 |:-------------:|:------:|:-------------------------------------------------------------| :------- |

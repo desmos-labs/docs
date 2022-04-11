@@ -8,11 +8,6 @@ slug: add-user-to-group
 # `MsgAddUserToGroup`
 This message allows to add a user to a user group.
 
-## Structure
-````json
-
-````
-
 ### Attributes
 |   Attribute   |  Type  | Description                                     | Required |
 |:-------------:|:------:|:------------------------------------------------|:---------|

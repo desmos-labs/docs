@@ -8,16 +8,6 @@ slug: unlink-chain-account
 # `MsgUnlinkChainAccount`
 This message allows you to remove a previously linked chain address from your Desmos profile.
 
-## Structure
-```json
-{
-  "@type": "/desmos.profiles.v2.MsgUnlinkChainAccount",
-  "target": "<Address of the chain link to unlink>",
-  "chain_name": "<Name of the chain to unlink>",
-  "owner": "<Desmos address of the profile that should remove the link>"
-}
-```
-
 ### Attributes
 
 | Attribute | Type | Description | Required |
@@ -35,7 +25,6 @@ This message allows you to remove a previously linked chain address from your De
   "owner": "desmos1qchdngxk8zkl4c4mheqdlpgcegkdrtucmwllpx"
 }
 ```
-
 
 ## Message action
 The action associated to this message is the following:
