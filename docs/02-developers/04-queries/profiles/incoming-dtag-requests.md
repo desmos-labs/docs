@@ -10,9 +10,10 @@ This query allows you to retrieve all the DTag incoming transfer requests with a
 
 **CLI**
 ```bash
-desmos query profiles incoming-dtag-transfer-requests [[receiver]]
+desmos query profiles incoming-dtag-transfer-requests [[receiver]] [flags]
 
 # Examples
 # desmos query profiles incoming-dtag-transfer-requests
 # desmos query profiles incoming-dtag-transfer-requests desmos13p5pamrljhza3fp4es5m3llgmnde5fzcpq6nud
+# desmos query profiles incoming-dtag-transfer-requests desmos13p5pamrljhza3fp4es5m3llgmnde5fzcpq6nud --page=2 --limit=100
 ```

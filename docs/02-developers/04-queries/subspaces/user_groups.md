@@ -10,8 +10,8 @@ This query allows to get all the groups that are present inside the subspace wit
 
 **CLI**
 ```bash
-desmos query subspaces groups list [subspace-id]
+desmos query subspaces groups list [subspace-id] [flags]
 
 # Examples
-# desmos query subspaces groups list 1
+# desmos query subspaces groups list 1 --page=2 --limit=100
 ```

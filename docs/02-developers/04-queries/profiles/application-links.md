@@ -9,11 +9,12 @@ This query allows you to retrieve the application links with the optional user `
 
 **CLI**
 ```bash
-desmos query profiles app-links [[user]] [[application]] [[username]]
+desmos query profiles app-links [[user]] [[application]] [[username]] [flags]
 
 # Examples
 # desmos query profiles app-links 
 # desmos query profiles app-links desmos13p5pamrljhza3fp4es5m3llgmnde5fzcpq6nud
 # desmos query profiles app-links desmos13p5pamrljhza3fp4es5m3llgmnde5fzcpq6nud "twitter"
 # desmos query profiles app-links desmos13p5pamrljhza3fp4es5m3llgmnde5fzcpq6nud "twitter" "twitter_user"
+# desmos query profiles app-links desmos13p5pamrljhza3fp4es5m3llgmnde5fzcpq6nud --page=2 --limit=100
 ```
