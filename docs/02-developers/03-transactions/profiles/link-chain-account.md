@@ -9,31 +9,6 @@ slug: link-chain-account
 This message allows you to link an external chain address 
 and add the [chain link](../../02-types/profiles/chain-link.md) of it to your Desmos profile.
 
-## Structure
-
-```json
-{
-    "@type":"desmos/MsgLinkChainAccount",
-    "chain_address": {
-        "@type": "/desmos.profiles.v1beta1.Bech32Address",
-        "prefix": "<Bech32 prefix of the external chain account>",
-        "value": "<Address of the external chain account>"
-    },
-    "chain_config": {
-        "name": "<Name of the target external chain>"
-    },
-    "proof": {
-        "pub_key": {
-            "@type": "/cosmos.crypto.secp256k1.PubKey",
-            "value": "<Base64 encoded public key>"
-        },
-        "signature": "<Hex encoded signature created with private key associated to the given public key>",
-        "plain_text": "<Text signed with private key>"
-    },
-    "signer": "<Desmos address of the profile linking the chain account>"
-}
-```
-
 ### Attributes
 
 | Attribute | Type | Description | Required |
@@ -43,29 +18,64 @@ and add the [chain link](../../02-types/profiles/chain-link.md) of it to your De
 | `proof` | [Proof](../../02-types/profiles/chain-link.md#Contained-data) | Data proving the ownership of the external chain account | yes |
 | `signer` | String | Desmos address of the profile with which the link will be associated | yes |
 
+#### ChainAddress attributes
+
+| Attribute |  Type  | Description                           | Required |
+|:---------:|:------:|:--------------------------------------|:---------|
+| `prefix`  | String | Bech 32 prefix of the account         | yes      |
+|  `value`   | String | Address of the external chain account | yes      |
+
+#### ChainConfig attributes
+
+| Attribute |  Type  | Description                                       | Required |
+|:---------:|:------:|:--------------------------------------------------|:---------|
+|   `name`   | String | Name of the external chain to which make the link | yes      |
+
+#### Proof attributes
+|  Attribute   |  Type  | Description                                                                | Required |
+|:------------:|:------:|:---------------------------------------------------------------------------|:---------|
+|  `pub_key`   | Object | The public key associated with the address to link                         | yes      |
+| `signature`  | Object | The hex-encoded signature that proves the ownership of the address to link | yes      |
+| `plain_text` | String | The hex-encoded value signed in order to produce the `signature`             | yes      |
+
+#### PubKey attributes
+| Attribute |  Type  | Description                       | Required |
+|:---------:|:------:|:----------------------------------|:---------|
+|  `value`   | String | Base 64 encoded publick key       | yes      |
+
+#### Signature attributes
+|  Attribute  |  Type  | Description                                                                       | Required |
+|:-----------:|:------:|:----------------------------------------------------------------------------------|:---------|
+|   `mode`    | String | The way with which the signature is performed                                     | yes      |
+| `signature` | String | Hex encoded signature created with private key associated to the given public key | yes      |
+
 
 ## Example
 
 ```json
 {
-    "@type": "desmos/MsgLinkChainAccount",
-    "chain_address": {
-        "@type": "/desmos.profiles.v1beta1.Bech32Address",
-        "prefix": "cosmos",
-        "value": "cosmos13j7p6faa9jr8ty6lvqv0prldprr6m5xenmafnt"
+  "@type": "/desmos.profiles.v2.MsgLinkChainAccount",
+  "chain_address": {
+    "@type": "/desmos.profiles.v2.Bech32Address",
+    "value": "cosmos18xnmlzqrqr6zt526pnczxe65zk3f4xgmndpxn2",
+    "prefix": "cosmos"
+  },
+  "proof": {
+    "pub_key": {
+      "@type": "/cosmos.crypto.secp256k1.PubKey",
+      "key": "AyRUhKXAY6zOCjjFkPN78Q29sBKHjUx4VSZQ4HXh66IM"
     },
-    "chain_config":{
-        "name": "cosmos"
+    "signature": {
+      "@type": "/desmos.profiles.v2.SingleSignatureData",
+      "mode": "SIGN_MODE_DIRECT",
+      "signature": "C7xppu4C4S3dgeC9TVqhyGN1hbMnMbnmWgXQI2WE8t0oHIHhDTqXyZgzhNNYiBO7ulno3G8EXO3Ep5KMFngyFg=="
     },
-    "proof": {
-         "pub_key": {
-            "@type": "/cosmos.crypto.secp256k1.PubKey",
-            "key": "AjUIjuahImftpkEAKHBsTsGSsc4Eopje+NrRwUYlcBLr"
-        },
-        "plain_text": "cosmos13j7p6faa9jr8ty6lvqv0prldprr6m5xenmafnt",
-        "signature": "c3bd014b2178d63d94b9c28e628bfcf56736de28f352841b0bb27d6fff2968d62c13a10aeddd1ebfe3b13f3f8e61f79a2c63ae6ff5cb78cb0d64e6b0a70fae57",
-    },
-    "signer": "desmos1qchdngxk8zkl4c4mheqdlpgcegkdrtucmwllpx"
+    "plain_text": "636f736d6f733138786e6d6c7a71727172367a74353236706e637a786536357a6b33663478676d6e6470786e32"
+  },
+  "chain_config": {
+    "name": "cosmos"
+  },
+  "signer": "desmos1nwp8gxrnmrsrzjdhvk47vvmthzxjtphgxp5ftc"
 }
 ```
 

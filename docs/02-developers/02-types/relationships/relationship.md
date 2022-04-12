@@ -9,11 +9,14 @@ slug: relationship
 Inside Desmos, users can create relationships with other users.  
 A relationship inside Desmos is the equivalent of the "follow" concept of traditional social networks.
 
-## Contained data
+## Attributes
 Each relationship contains the data that allows identifying the dApp where the users created such relationship.
 
-### `Recipient` (`string`)
-The user with which create the relationship.
+### `Creator` (`string`)
+The user that wants to create the relationship.
 
-### `Subspace` (`string`)
-The `Subspace` field identifies the application inside which the user creates the relationship. It must be a valid SHA256 string.
+### `Counterparty` (`string`)
+The user representing the counterparty of the relationship.
+
+### `SubspaceID` (`uint64`)
+Id of the subspace inside which the user wants to create the relationship.

@@ -8,7 +8,7 @@ slug: chain-link
 # Chain link
 A chain link represents a link to an external chain account that has been created by the user to connect their Desmos profile to such accounts. These links can be created either offline or using IBC following the specification described inside the [_"Create a chain link"_ section](#create-a-chain-link).
 
-## Contained data
+## Attributes
 Here follows the data contained inside a chain link.
 
 ### `User` (`string`)

@@ -8,7 +8,7 @@ slug: application-link
 # Application link
 An application link (abbr. _app link_) represents a link to an external (and possibly centralized) application.
 
-## Contained data
+## Attributes
 Here follows the data of an application link.
 
 ### `User` (`string`)

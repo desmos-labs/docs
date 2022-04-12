@@ -25,10 +25,17 @@ module.exports = {
                             'developers/types/profiles/profile',
                             'developers/types/profiles/profile-pictures',
                             'developers/types/profiles/dtag-transfer-request',
-                            'developers/types/profiles/relationship',
-                            'developers/types/profiles/user-block',
                             'developers/types/profiles/application-link',
                             'developers/types/profiles/chain-link'
+                        ],
+                        Relationships: [
+                            'developers/types/relationships/relationship',
+                            'developers/types/relationships/user-block',
+                        ],
+                        Subspaces: [
+                            'developers/types/subspaces/subspace',
+                            'developers/types/subspaces/user-group',
+                            'developers/types/subspaces/permission-detail'
                         ]
                     }
                 ],
@@ -43,14 +50,28 @@ module.exports = {
                         'developers/transactions/profiles/accept-dtag-transfer-request',
                         'developers/transactions/profiles/refuse-dtag-transfer-request',
                         'developers/transactions/profiles/cancel-dtag-transfer-request',
-                        'developers/transactions/profiles/create-relationship',
-                        'developers/transactions/profiles/delete-relationship',
-                        'developers/transactions/profiles/block-user',
-                        'developers/transactions/profiles/unblock-user',
                         'developers/transactions/profiles/link-application',
                         'developers/transactions/profiles/unlink-application',
                         'developers/transactions/profiles/link-chain-account',
                         'developers/transactions/profiles/unlink-chain-account',
+                    ],
+                    Relationships: [
+                        'developers/transactions/relationships/create-relationship',
+                        'developers/transactions/relationships/delete-relationship',
+                        'developers/transactions/relationships/block-user',
+                        'developers/transactions/relationships/unblock-user',
+                    ],
+                    Subspaces: [
+                        'developers/transactions/subspaces/create-subspace',
+                        'developers/transactions/subspaces/edit-subspace',
+                        'developers/transactions/subspaces/delete-subspace',
+                        'developers/transactions/subspaces/set-user-permissions',
+                        'developers/transactions/subspaces/create-user-group',
+                        'developers/transactions/subspaces/edit-user-group',
+                        'developers/transactions/subspaces/add-user-to-group',
+                        'developers/transactions/subspaces/remove-user-from-user-group',
+                        'developers/transactions/subspaces/set-user-group-permissions',
+                        'developers/transactions/subspaces/delete-user-group'
                     ]
                   },
               ],
@@ -61,10 +82,20 @@ module.exports = {
                         Profiles: [
                             'developers/queries/profiles/profile',
                             'developers/queries/profiles/incoming-dtag-requests',
-                            'developers/queries/profiles/relationships',
-                            'developers/queries/profiles/blocked-users',
                             'developers/queries/profiles/chain-links',
                             'developers/queries/profiles/application-links',
+                        ],
+                        Relationships: [
+                            'developers/queries/relationships/relationships',
+                            'developers/queries/relationships/blocked-users',
+                        ],
+                        Subspaces: [
+                            'developers/queries/subspaces/subspaces',
+                            'developers/queries/subspaces/subspace',
+                            'developers/queries/subspaces/user-groups',
+                            'developers/queries/subspaces/user-group',
+                            'developers/queries/subspaces/user-group-members',
+                            'developers/queries/subspaces/user-permissions'
                         ]
                     }
                 ],
