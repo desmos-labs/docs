@@ -1,32 +1,26 @@
 # Permission detail
-A permission detail contains the data of a permission
-
-## Attributes
-The following data defines a permission detail.
+A permission detail contains the data of a permission.
 
 ### `User`
-It represents a user permission
+It represents a user permission.
 
-### `Group`
-It represents a group permission
-
-# `User`
-User is a permission that has been set to a specific user
-
-## Attributes
+#### Attributes
 The following attributes defines a `User` permission.
 
-### `User`
+##### `User`
 The Bech32 address of the user for which the permission is set.
 
-### `Permission`
+##### `Permission`
 The permission set to the user.
 
-# `Group`
-Group is a permission that has been set to a user group.
+### `Group`
+It represents a group permission.
 
-### `GroupID`
+#### Attributes
+The following attributes defines a `Group` permission.
+
+##### `GroupID`
 Group ID associated with the permission.
 
-### `Permission`
+##### `Permission`
 The permission set to the group.

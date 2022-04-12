@@ -14,7 +14,7 @@ This message allows to remove a user from a user group.
 | `subspace_id` | Uint64 | Id of the subspace where the group exists        | yes      |
 |  `group_id`   | Uint32 | Id of the group where to remove the user from    | yes      |
 |     `user`     | String | Address of the user to be removed from the group | yes      |
-|   `signer`    | String | Address of the user that sign the msg            | yes      |
+|   `signer`    | String | Address of the user that sign the message        | yes      |
 
 ## Example
 ````json

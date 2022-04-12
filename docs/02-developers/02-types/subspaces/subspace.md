@@ -5,7 +5,7 @@ Inside subspaces users can:
   If a user is the subspace owner or an admin it can set permissions for other users to allow them to perform actions like 
   create contents, manage groups, moderate other users, etc...
 - **Create groups**:   
-  Groups contains users and has their own set of permissions.
+  Groups contain users and have their own set of permissions.
 
 ## Attributes
 Following you can find the subspace attributes.
@@ -20,16 +20,13 @@ The `Name` is the human-readable name of the subspace. It must be non-empty nor 
 The `Description` contains a brief summary of what the subspace is about.
 
 ## `Treasury`
-The `Treasury` represents the account associated with the subspace that should be used to connect external applications to verify it.
-It's a string representation of a Bech32 address that begins with the `desmos` human-readable part.
+The `Treasury` is a Desmos address that can be used to connect external applications to verify it.
 
 ## `Owner`
-The `Owner` is the address of the user that owns the subspace.
-It's a string representation of a Bech32 address that begins with the `desmos` human-readable part.
+The `Owner` is the Desmos address of the user that owns the subspace.
 
 ## `Creator`
-The `Creator` identifies the user that has created the subspace.  
-It's a string representation of a Bech32 address that begins with the `desmos` human-readable part.
+The `Creator` identifies the Desmos address of user that has created the subspace.
 
 ## `CreationTime`
-The time when the subspace has been created.
+The time when the subspace has been created. This will be automatically be assigned by Desmos during the creation process of the subspace, it should not be provided when creating a subspace.

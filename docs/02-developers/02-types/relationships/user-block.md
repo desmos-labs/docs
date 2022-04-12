@@ -21,4 +21,9 @@ The address of the blocked user.
 The reason why the user has been blocked for.
 
 ### `SubspaceID` (`uint64`)
-The `SubspaceID` field identifies the application where the block has been made.
+Id of the subspace inside which the user has been blocked.  
+
+:::note
+If set to `0`, the `Blocker` will block the `Blocked` user inside the generic "Desmos" subspace. This is useful when a user wants to block any future DTag transfer request from a bad user.  
+Blocking someone for the `0` subspace **will not** block it on other subspaces, so other interactions might still be performed there.
+:::

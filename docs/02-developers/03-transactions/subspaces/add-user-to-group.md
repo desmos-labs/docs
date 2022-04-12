@@ -9,12 +9,12 @@ slug: add-user-to-group
 This message allows to add a user to a user group.
 
 ### Attributes
-|   Attribute   |  Type  | Description                                     | Required |
-|:-------------:|:------:|:------------------------------------------------|:---------|
-| `subspace_id` | Uint64 | Id of the subspace where the group exists       | yes      |
-|  `group_id`   | Uint32 | Id of the group where to add the user           | yes      |
-|     `user`     | String | Address of the user to be inserted in the group | yes      |
-|   `signer`    | String | Address of the user that sign the msg           | yes      |
+|   Attribute   |  Type  | Description                                                | Required |
+|:-------------:|:------:|:-----------------------------------------------------------|:---------|
+| `subspace_id` | Uint64 | Id of the subspace where the group exists                  | yes      |
+|  `group_id`   | Uint32 | Id of the group where to add the user                      | yes      |
+|     `user`     | String | Address of the user to be inserted in the group            | yes      |
+|   `signer`    | String | Address of the owner that is adding the user to the group  | yes      |
 
 ## Example
 ````json

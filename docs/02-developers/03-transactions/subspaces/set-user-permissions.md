@@ -14,7 +14,7 @@ This message allows setting user permissions.
 | `subspace_id` | Uint64 | Id of the subspace where the group exists     | yes      |
 |  `group_id`   | Uint32 | Id of the group where to add the user         | yes      |
 | `permissions` | Uint32 | Permissions to be set for a user of the group | yes      |
-|   `signer`    | String | Address of the user that sign the msg         | yes      |
+|   `signer`    | String | Address of the user that sign the message     | yes      |
 
 ## Example
 ````json

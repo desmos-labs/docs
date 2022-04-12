@@ -9,14 +9,14 @@ slug: edit-subspace
 This message allows to edit an existent subspace.
 
 ### Attributes
-|   Attribute   | Type | Description                                                              | Required |
-|:-------------:| :----: |:-------------------------------------------------------------------------|:---------|
-| `subspace_id` | Uint64 | Unique id that identifies the subspace                                   | yes      |
-|    `name`     | String | Human-readable name of the subspace                                      | no       |
-| `description` | String | Brief summary of what the subspace is about                              | no       |
-|  `treasury`   | String | Address associated with the subspace used to connect it to external apps | no       |
-|    `owner`    | String | Address of the owner of the subspace                                     | no       |
-|   `signer`    | String | Address of the signer of the msg                                         | no       |
+|   Attribute   | Type | Description                                                                 | Required |
+|:-------------:| :----: |:----------------------------------------------------------------------------|:---------|
+| `subspace_id` | Uint64 | Unique id that identifies the subspace                                      | yes      |
+|    `name`     | String | Human-readable name of the subspace                                         | no       |
+| `description` | String | Brief summary of what the subspace is about                                 | no       |
+|  `treasury`   | String | Address associated with the subspace used to connect it to external apps    | no       |
+|    `owner`    | String | Address of the owner of the subspace                                        | no       |
+|   `signer`    | String | Address of the signer of the message                                        | yes      |
 
 ## Example
 ````json

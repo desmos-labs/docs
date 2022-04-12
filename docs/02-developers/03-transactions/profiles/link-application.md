@@ -7,17 +7,17 @@ slug: link-application
 
 # `MsgLinkApplication`
 This message allows you to start the process that will verify
-an [application link](../../02-types/profiles/application-link.md#contained-data) and add it to your Desmos profile.
+an [application link](../../02-types/profiles/application-link.md#attributes) and add it to your Desmos profile.
 
 ### Attributes
 
-| Attribute | Type | Description                                                              | Required |
-| :-------: | :----: |:-------------------------------------------------------------------------| :------- |
-| `link_data`  | [Data](../../02-types/profiles/application-link.md#contained-data) | Data of the application to be verified                                   | yes |
-| `call_data`| String | Hex encoded data that will be sent to the data source to verify the link | yes |
-| `source_channel` | String | ID of the IBC channel to be used in order to send the packet             | yes |
-| `source_port` | String | ID of the IBC port to be used in order to send the packet                | yes |
-| `sender` | String | Desmos address of the profile to which the link will be associated       | yes |
+| Attribute |                              Type                              | Description                                                              | Required |
+| :-------: |:--------------------------------------------------------------:|:-------------------------------------------------------------------------| :------- |
+| `link_data`  | [Data](../../02-types/profiles/application-link.md#attributes) | Data of the application to be verified                                   | yes |
+| `call_data`|                             String                             | Hex encoded data that will be sent to the data source to verify the link | yes |
+| `source_channel` |                             String                             | ID of the IBC channel to be used in order to send the packet             | yes |
+| `source_port` |                             String                             | ID of the IBC port to be used in order to send the packet                | yes |
+| `sender` |                             String                             | Desmos address of the profile to which the link will be associated       | yes |
 
 #### LinkData attributes
 

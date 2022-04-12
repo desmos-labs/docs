@@ -8,7 +8,7 @@ The following attributes defines a user group.
 The ID of the subspace inside which the group exists.
 
 ### `ID`
-The ID that uniquely identifies the group.
+The ID that uniquely identifies the group inside the subspace.
 
 ### `Name`
 Human-readable name of the group.

@@ -13,7 +13,7 @@ This message allows to delete a user group.
 |:-------------:|:------:|:------------------------------------------|:---------|
 | `subspace_id` | Uint64 | Id of the subspace where the group exists | yes      |
 |  `group_id`   | Uint32 | Id of the group to delete                 | yes      |
-|   `signer`    | String | Address of the user that sign the msg     | yes      |
+|   `signer`    | String | Address of the user that sign the message | yes      |
 
 ## Example
 ````json

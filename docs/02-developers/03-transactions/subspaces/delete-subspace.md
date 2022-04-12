@@ -12,7 +12,7 @@ This message allows to delete an existent subspace.
 | Attribute | Type | Description | Required |
 | :-------: | :----: | :-------- | :------- |
 | `subspace_id` | Uint64 | Unique id that identifies the subspace | yes |
-| `signer` | String | Address of the signer of the msg | yes | 
+| `signer` | String | Address of the signer of the message | yes | 
 
 ## Example
 ````json
