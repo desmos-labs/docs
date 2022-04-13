@@ -118,6 +118,10 @@ module.exports = {
             current: {
               label: "master"
             },
+            2.3: {
+              label: "v2.3.1",
+              banner: "none"
+            },
             3: {
               label: "v3.0.0"
             }
