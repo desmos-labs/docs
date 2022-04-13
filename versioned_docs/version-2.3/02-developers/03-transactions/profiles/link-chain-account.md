@@ -7,7 +7,7 @@ slug: link-chain-account
 
 # `MsgLinkChainAccount`
 This message allows you to link an external chain address 
-and add the [chain link](versioned_docs/version-2.3/02-developers/02-types/profiles/chain-link.md) of it to your Desmos profile.
+and add the [chain link](../../02-types/profiles/chain-link.md) of it to your Desmos profile.
 
 ## Structure
 
@@ -36,12 +36,12 @@ and add the [chain link](versioned_docs/version-2.3/02-developers/02-types/profi
 
 ### Attributes
 
-| Attribute | Type | Description | Required |
-| :-------: | :----: | :-------- | :------- |
-| `chain_address` | [AddressData](versioned_docs/version-2.3/02-developers/02-types/profiles/chain-link.md#Contained-data) | Address data of the external chain account | yes |
-| `chain_config` | [ChainConfig](versioned_docs/version-2.3/02-developers/02-types/profiles/chain-link.md#Contained-data) | Details of the target external chain | yes |
-| `proof` | [Proof](versioned_docs/version-2.3/02-developers/02-types/profiles/chain-link.md#Contained-data) | Data proving the ownership of the external chain account | yes |
-| `signer` | String | Desmos address of the profile with which the link will be associated | yes |
+| Attribute |                                         Type                                         | Description | Required |
+| :-------: |:------------------------------------------------------------------------------------:| :-------- | :------- |
+| `chain_address` | [AddressData](../../../02-developers/02-types/profiles/chain-link.md#Contained-data) | Address data of the external chain account | yes |
+| `chain_config` | [ChainConfig](../../../02-developers/02-types/profiles/chain-link.md#Contained-data) | Details of the target external chain | yes |
+| `proof` |    [Proof](../../../02-developers/02-types/profiles/chain-link.md#Contained-data)    | Data proving the ownership of the external chain account | yes |
+| `signer` |                                        String                                        | Desmos address of the profile with which the link will be associated | yes |
 
 
 ## Example

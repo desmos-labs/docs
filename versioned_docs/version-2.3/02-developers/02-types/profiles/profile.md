@@ -34,7 +34,7 @@ If specified, it has to be at least of `2` characters long.
 The `Bio` contains the biography of the user. It can be at most `1000` characters long.
 
 ### `Pictures` (`object`)
-The [Pictures](versioned_docs/version-2.3/02-developers/02-types/profiles/profile-pictures.md) contains the pictures of the profile.
+The [Pictures](../../../02-developers/02-types/profiles/profile-pictures.md) contains the pictures of the profile.
 
 ### `Account` (`object`)
 The `Account` represents the base Cosmos account associated with the profile and contains information

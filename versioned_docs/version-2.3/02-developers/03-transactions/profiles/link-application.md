@@ -7,7 +7,7 @@ slug: link-application
 
 # `MsgLinkApplication`
 This message allows you to start the process that will verify
-an [application link](versioned_docs/version-2.3/02-developers/02-types/profiles/application-link.md#contained-data) and add it to your Desmos profile.
+an [application link](../../02-types/profiles/application-link.md#contained-data) and add it to your Desmos profile.
 
 ## Structure
 
@@ -27,13 +27,13 @@ an [application link](versioned_docs/version-2.3/02-developers/02-types/profiles
 
 ### Attributes
 
-| Attribute | Type | Description | Required |
-| :-------: | :----: | :-------- | :------- |
-| `link_data`  | [Data](versioned_docs/version-2.3/02-developers/02-types/profiles/application-link.md#contained-data) | Data of the link to be verified | yes |
-| `call_data`| String | Hex encoded data that will be sent to the data source to verify the link | yes |
-| `source_channel` | String | ID of the IBC channel to be used in order to send the packet | yes |
-| `source_port` | String | ID of the IBC port to be used in order to send the packet | yes |
-| `sender` | String | Desmos address of the profile to which the link will be associated | yes |
+| Attribute |                                Type                                | Description | Required |
+| :-------: |:------------------------------------------------------------------:| :-------- | :------- |
+| `link_data`  | [Data](../../02-types/profiles/application-link.md#contained-data) | Data of the link to be verified | yes |
+| `call_data`|                               String                               | Hex encoded data that will be sent to the data source to verify the link | yes |
+| `source_channel` |                               String                               | ID of the IBC channel to be used in order to send the packet | yes |
+| `source_port` |                               String                               | ID of the IBC port to be used in order to send the packet | yes |
+| `sender` |                               String                               | Desmos address of the profile to which the link will be associated | yes |
 
 #### Note
 You can also specify an optional timeout after which the request will be marked as invalid. This can be done using the
