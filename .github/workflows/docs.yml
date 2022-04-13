@@ -10,7 +10,7 @@ on:
     branches:
       - master
 jobs:
-  Markdown-Link-Check-testnet:
+  Markdown-Link-Check-unversioned-docs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -22,7 +22,7 @@ jobs:
           use-verbose-mode: 'yes'
           folder-path: 'docs'
 
-  Markdown-Link-Check-mainnet:
+  Markdown-Link-Check-versioned-docs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️

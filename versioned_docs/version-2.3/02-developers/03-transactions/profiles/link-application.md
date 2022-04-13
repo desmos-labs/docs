@@ -39,7 +39,7 @@ an [application link](../../02-types/profiles/application-link.md#contained-data
 You can also specify an optional timeout after which the request will be marked as invalid. This can be done using the
 appropriate fields:
 
-- `height` (type [Height](https://docs.cosmos.network/v0.42/core/proto-docs.html#height)), or
+- `height` (`int64`), or
 - `timeout_timestamp` (nanoseconds).
 
 ## Example
