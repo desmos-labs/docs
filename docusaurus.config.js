@@ -142,7 +142,7 @@ module.exports = {
     ],
   ],
   themes: [
-    '@leobragaz/docusaurus-codeblocks'
+    '@you54f/theme-github-codeblock'
   ],
   /*i18n: { // add for localization
     defaultLocale: 'en',

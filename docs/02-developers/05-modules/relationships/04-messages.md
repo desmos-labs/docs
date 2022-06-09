@@ -10,7 +10,7 @@ slug: messages
 ## Msg/CreateRelationship
 A new relationship can be created with the `MsgCreateRelationship`, which allows to specify the subspace inside which the relationship should live and the counterparty address.
 
-```js reference title="test"
+```js reference
 https://github.com/desmos-labs/desmos/blob/v3.0.0/proto/desmos/relationships/v1/msg_server.proto#L27-L39
 ```
 
