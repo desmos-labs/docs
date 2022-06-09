@@ -20,6 +20,11 @@ module.exports = {
       contextualSearch: true,
       appId: 'BH4D9OD16A',
     },
+    docs: {
+      sidebar: {
+        hideable: true,
+      }
+    },
     navbar: {
       logo: {
         alt: 'Desmos logo',
@@ -47,7 +52,6 @@ module.exports = {
         },*/
       ],
     },
-    hideableSidebar: true,
     footer: {
       style: 'dark',
       links: [
@@ -73,12 +77,20 @@ module.exports = {
             },
             {
               label: 'Discord',
-              href: 'https://discord.gg/yxPRGdq',
+              href: 'https://discord.desmos.network/',
+            },
+            {
+              label: 'Medium',
+              href: 'https://medium.com/desmosnetwork'
             },
             {
               label: 'Telegram',
               href: 'https://t.me/desmosnetwork',
             },
+            {
+              label: 'Reddit (not-official)',
+              href: 'https://www.reddit.com/r/DesmosNetwork/'
+            }
           ],
         },
         {
@@ -128,6 +140,9 @@ module.exports = {
         },
       },
     ],
+  ],
+  themes: [
+    '@leobragaz/docusaurus-codeblocks'
   ],
   /*i18n: { // add for localization
     defaultLocale: 'en',

@@ -100,6 +100,36 @@ module.exports = {
                     }
                 ],
             },
+            {
+                Modules: {
+                    //Profiles: [],
+                    Relationships:[
+                        'developers/modules/relationships/overview',
+                        'developers/modules/relationships/concepts',
+                        'developers/modules/relationships/state',
+                        'developers/modules/relationships/messages',
+                        'developers/modules/relationships/events',
+                        'developers/modules/relationships/client'
+                    ],
+                    //Subspaces:[],
+                    //Posts:[],
+                    //Reactions:[],
+                    //Reports:[],
+                    Fees:[
+                       'developers/modules/fees/overview',
+                       'developers/modules/fees/concepts',
+                       'developers/modules/fees/state',
+                       'developers/modules/fees/ante-handlers',
+                       'developers/modules/fees/parameters',
+                       'developers/modules/fees/client'
+                    ],
+                    Supply:[
+                       'developers/modules/supply/overview',
+                       'developers/modules/supply/concepts',
+                       'developers/modules/supply/client'
+                    ]
+                }
+            },
             'developers/observe-data',
             'developers/faq',
         ]

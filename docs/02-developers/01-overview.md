@@ -6,34 +6,32 @@ sidebar_position: 1
 # Developers Overview
 
 ## Introduction
-[Desmos](../01-intro.md) aims to provide developers a platform on which they will be able to create decentralized and 
-censorship-resistant social network applications. 
-To do so, we've implemented a set of transactions that are useful to perform the most common operations related to this world. 
-If you want to know more about the base concepts of a blockchain and understand some key points, please take a look a the [FAQ page](06-developer-faq.md). 
+[Desmos](../01-intro.md) aims to provide developers a protocol with which they will be able to create decentralized and censorship-resistant social enabled apps. Different apps, with different scopes and their own Term of Services will be able to use the features offered by Desmos to customize their user experience in a unique way.
+ 
+If you want to know more about the base concepts of a blockchain and understand some key points, please take a look at the [FAQ page](06-developer-faq.md). 
 
-## Glossary
-Before digging into the available transactions, let's clarify the meaning of some terms that we will be using a lot.
+## Core features
+The core features of Desmos are organised in **modules** following the specification of the [Cosmos-SDK](https://docs.cosmos.network/main/building-modules/intro.html).   
 
-* A **profile** contains a series of (personal) data associated to an account that a user can create on the chain;
+Here a brief description of each one of these:
 
-* A **post** is a public message that everyone can read on the chain.  
-  When creating it you can also specify if it allows
-  to be commented on or not;
-  
-* A **comment** is a post that has been linked to a parent post;
+* `Profiles`: Handles the creation and management of a decentralized identity and its own links with both your other chains wallets and centralised applications;
 
-* A **reaction** is the way that allows users to express a feeling on a specific post;
+* `Relationships`: Handles the creation and management of mono-directional and bidirectional [relationships] between users' wallets. It also allows managing users blocks lists;
 
-* A **subspace** is a "zone" where a specific app or more apps can live on and share contents;
+* `Subspaces`: Handles the creation and management of a [subspace] and their [sections] inside Desmos;
 
-If you want to know more about how we store the data on-chain and all the chain types, please refer to
-the __"Types" section__.
+* `Posts`: Handles the creation and management of posts and their contents. These contents can include a variety of different attachments such as medias (pics, gifs, videos) and polls. Posts can also be enriched with a variety of [entities].
 
-## Performing transactions
+* `Reactions`: Handles the creation and management of reactions to posts;
 
-If you want to know more about performing transactions to change the current chain state, please go to the __"Transactions" section__.
+* `Reports`: Handle the creation and management of posts' and users' reports.
 
-## Querying data
+## Support features
+These features are not directly connected to the social-networks scope but serve the network maintainers and
+external services.
 
-If you want to know all the GRPC endpoints and CLI commands available to query the existing chain state and the
-saved data, please go to the __"Queries" section__. 
+* `Fees`: Allows setting custom additional fees to modules' messages;
+* `Supply`: Allows retrieving information about a particular token total and circulating supply.
+
+If you want to know more about each module, its concepts and how to interact with them check the [modules] section.
