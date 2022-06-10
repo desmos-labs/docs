@@ -71,7 +71,7 @@ Out of all validator candidates that signaled themselves, the 100 with the most 
 ### How can I join the testnet?
 The Testnet is a great environment to test your validator setup before launch.
 
-We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator. You can find all relevant information about the testnet [here](../05-testnets/03-join-public/setup.md) and [here](https://github.com/desmos-labs/morpheus).
+We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator. You can find all relevant information about the testnet [here](docs/05-testnet/03-join-public/setup.md) and [here](https://github.com/desmos-labs/morpheus).
 
 ### What are the different types of keys?
 In short, there are two types of keys:

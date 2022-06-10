@@ -1,21 +1,21 @@
 ---
 id: faq
 title: F.A.Q
-sidebar_position: 6
+sidebar_position: 4
 ---
 
 # FAQs
 
 ## General Concepts
 ### What is a transaction? 
-As you know, the blockchain can be seen as a decentralized state machine that stores a state. A transaction is the method used by clients to tell the chain that some operations must be taken to change such current state.
+As you know, the blockchain can be seen as a decentralized state machine that stores a state. A transaction is the method used by clients to trigger state-changes inside the blockchain.
 
-Every transaction is composed of some common data (such as the account data of the sender, a `memo`, etc.) but the most important parts are [messages](#what-is-a-message). 
+To know more about transactions inside the cosmos-SDK based blockchains, check the documentation [here](https://docs.cosmos.network/main/core/transactions.html).
 
 ### What is a message?
-A (transaction) message is the method that allows you to specify what action(s) should be done inside a transaction to change the current chain state. For example, inside Desmos we can use messages to tell the chain to store a new post, add a like to a post, comment on an existing post and many more.
+A (transaction) message is the method that allows you to specify which action(s) should be taken inside a transaction to change the current chain state. For example, inside Desmos we can use messages to tell the chain to create a profile, store a post, report a user, etc..
 
-To know more about all the different messages types and the associated actions that allow you to do, please go to the __transactions__ section. 
+To know more about all the available messages inside Desmos Modules check the __Developers__ section.
 
 ### How do I send a transaction?
 Sending a transaction is pretty straight forward. All what you need to have is access to an instance of an HD wallet associated with a Desmos account having some `desmos` tokens inside. Once you have it, you simply need to: 
@@ -26,7 +26,7 @@ Sending a transaction is pretty straight forward. All what you need to have is a
 
 3. Put the signed JSON inside a bigger JSON object containing the un-signed transaction data. 
 
-4. Send the complete JSON to a full node REST API endpoint. 
+4. Send the complete JSON to a full node GRPC API endpoint. 
 
 Please note that when sending transactions you are required to pay a **fee** so that the chain can sustain economically. To avoid paying a higher fee and wasting the user's funds, you should always **put multiple messages inside the same transactions**. This will also decrease the overall execution of all messages and can allow you to save time and provide the users a better UX overall. 
 
@@ -44,12 +44,12 @@ Due to the fact that transactions can take up a different time to be executed (s
 ws://<full-node-host>/websocket
 ```
 
-If you want to know more about it, please refer to the [websocket page](05-observe-data.md).
+If you want to know more about it, please refer to the [websocket page](03-observe-data.md).
 
 ## Developing applications
 ### I wrongly did an operation. Can I revert it?
 Unfortunately, due to the nature of the blockchain itself we cannot allow to revert any operations that have been done. For example, once you send a post to Desmos, it will stay there forever and everyone will be able to read it as it appeared when created. 
-Even if you edit a post, the original one will always be there an people will be able to see that you made some changes. It's like trying to editing something that is public and written in a stone that cannot be destroyed. 
+Even if you edit or delete a post, the original one will always be inside the chain's history and people will be able to see that you made some changes. It's like trying to edit something that is public and written in a stone that cannot be destroyed. 
 
 For this reason, we suggest you to take **all the possible precautions** before sending any transaction to the chain. 
 

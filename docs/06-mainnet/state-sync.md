@@ -7,7 +7,7 @@ slug: state-sync
 
 # State sync mainnet
 :::caution Mainnet only   
-The following seed nodes are to be used when configuring a full node for the **mainnet**. If you are looking for testnet seed nodes, please refer to [this](../05-testnets/03-join-public/state-sync.md) instead.  
+The following seed nodes are to be used when configuring a full node for the **mainnet**. If you are looking for testnet seed nodes, please refer to [this](docs/05-testnet/03-join-public/state-sync.md) instead.  
 :::
 
 In order to use this feature, you will have to edit a couple of things inside your `~/.desmos/config/config.toml` file,

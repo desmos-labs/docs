@@ -3,12 +3,12 @@ id: overview
 title: Overview
 sidebar_position: 1
 ---
-# Developers Overview
+# Overview
 
 ## Introduction
 [Desmos](../01-intro.md) aims to provide developers a protocol with which they will be able to create decentralized and censorship-resistant social enabled apps. Different apps, with different scopes and their own Term of Services will be able to use the features offered by Desmos to customize their user experience in a unique way.
  
-If you want to know more about the base concepts of a blockchain and understand some key points, please take a look at the [FAQ page](06-developer-faq.md). 
+If you want to know more about the base concepts of a blockchain and understand some key points, please take a look at the [FAQ page](04-developer-faq.md). 
 
 ## Core features
 The core features of Desmos are organised in **modules** following the specification of the [Cosmos-SDK](https://docs.cosmos.network/main/building-modules/intro.html).   
