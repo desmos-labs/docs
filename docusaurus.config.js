@@ -73,7 +73,7 @@ module.exports = {
             },
             {
               label: 'Discord',
-              href: 'https://discord.gg/yxPRGdq',
+              href: 'https://discord.desmos.network/',
             },
             {
               label: 'Telegram',
