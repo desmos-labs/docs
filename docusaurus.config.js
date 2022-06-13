@@ -20,6 +20,11 @@ module.exports = {
       contextualSearch: true,
       appId: 'BH4D9OD16A',
     },
+    docs: {
+      sidebar: {
+        hideable: true,
+      }
+    },
     navbar: {
       logo: {
         alt: 'Desmos logo',
@@ -47,7 +52,6 @@ module.exports = {
         },*/
       ],
     },
-    hideableSidebar: true,
     footer: {
       style: 'dark',
       links: [
