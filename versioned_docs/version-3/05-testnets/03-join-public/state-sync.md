@@ -47,7 +47,8 @@ under the `statesync` section:
    | `2643235 - 2756259`         |          `v2.2.0`           |
    | `2756260 - 3130831`         |          `v2.3.0`           |
    | `2756260 - 3130831`         |          `v2.3.0`           |
-   | `> 3130831`                 |          `v2.3.1`           |
+   | `3130832 - 4877865`         |          `v2.3.1`           |
+   | `> 4877865`                 |          `v3.0.0`           |
 
 Here is an example of what the `statesync` section of your `~/.desmos/config/config.toml` file should look like in the end (the `trust_height` and `trust_hash` should contain your values instead):
 
