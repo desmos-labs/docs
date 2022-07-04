@@ -20,7 +20,15 @@ module.exports = {
             'developers/overview',
             {
                 Modules: {
-                    //Profiles: [],
+                    Profiles: [
+                        'developers/modules/profiles/overview',
+                        'developers/modules/profiles/concepts',
+                        'developers/modules/profiles/state',
+                        'developers/modules/profiles/messages',
+                        'developers/modules/profiles/events',
+                        'developers/modules/profiles/params',
+                        'developers/modules/profiles/client'
+                    ],
                     Relationships:[
                         'developers/modules/relationships/overview',
                         'developers/modules/relationships/concepts',

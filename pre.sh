@@ -3,7 +3,8 @@
 # Include desmos modules specs
 git clone https://github.com/desmos-labs/desmos.git
 
-rm -rf docs/02-developers/modules && mkdir -p docs/02-developers/05-modules && cd docs/02-developers/05-modules
+# shellcheck disable=SC2164
+rm -rf docs/02-developers/modules && mkdir -p docs/02-developers/05-modules && cd docs/02-developers/02-modules
 
 for D in ../../../desmos/x/*; do
   if [ -d "${D}" ]; then
