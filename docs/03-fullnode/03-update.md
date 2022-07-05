@@ -1,7 +1,8 @@
 ---
 id: update
 title: Update
-sidebar_position: 3
+sidebar_label: Update
+slug: update
 ---
 
 # Updating your Desmos fullnode

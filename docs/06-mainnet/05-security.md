@@ -8,11 +8,9 @@ sidebar_position: 2
 Each validator candidate is encouraged to run its operations independently, as diverse setups increase the resilience of the network.
 
 ## Key Management System & Hardware Security Modules
-It is critical that an attacker cannot steal a validator's key. If this is possible, 
-it puts the entire stake delegated to the compromised validator at risk. 
-HSM alongside KMS are an important strategies for mitigating this risk.
+It is critical that an attacker cannot steal a validator's key. If this is possible, it puts the entire stake delegated to the compromised validator at risk. HSM alongside KMS are an important strategies for mitigating this risk.
 
-You can take a look on how to setup a KMS with or without HSM by reading [here](kms/kms.md).
+You can take a look on how to set up a KMS with or without HSM by reading [here](kms/kms.md).
 
 ## Sentry Nodes (DDOS Protection)
 Validators are responsible for ensuring that the network can sustain denial of service attacks.

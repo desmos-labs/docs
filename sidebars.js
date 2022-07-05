@@ -98,12 +98,10 @@ module.exports = {
                       'testnet/join-public/genesis-file',
                       'testnet/join-public/seeds',
                       'testnet/join-public/state-sync',
-                      'testnet/join-public/full-sync'
+                      'testnet/join-public/full-sync',
                   ],
-
-
               },
-
+              'testnet/endpoints'
           ]
       },
       {
@@ -115,7 +113,8 @@ module.exports = {
             'mainnet/seeds',
             'mainnet/state-sync',
             'mainnet/full-sync',
-            'mainnet/security'
+            'mainnet/security',
+            'mainnet/endpoints'
           ]
       }
       /*{

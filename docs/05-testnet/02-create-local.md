@@ -23,8 +23,7 @@ To create a single node local testnet, run the following commands:
    desmos keys add <your-key-name>
    ```
 
-   You will be required to input a password. Please make sure you use one that you will remember later. You should now
-   see an output like
+   You will be required to input a password. Please make sure you use one that you will remember later. You should now see an output like
 
    ```bash
    $ desmos keys add jack --dry-run
@@ -62,8 +61,6 @@ To create a single node local testnet, run the following commands:
    desmos start
    ```
 
-
-
 ## Creating a multi node testnet 
 To create a local multi node testnet, you can simply run the following command: 
 
@@ -74,12 +71,12 @@ make localnet-start
 This command creates a 4-node network using the `desmoslabs/desmosnode` image. The ports for each node are found in this
 table:
 
-| Node ID | P2P Port | RPC Port |
-| --------|-------|------|
-| `desmosnode0` | `26656` | `26657` |
-| `desmosnode1` | `26659` | `26660` |
-| `desmosnode2` | `26661` | `26662` |
-| `desmosnode3` | `26663` | `26664` |
+| Node ID       | P2P Port | RPC Port |
+|---------------|----------|----------|
+| `desmosnode0` | `26656`  | `26657`  |
+| `desmosnode1` | `26659`  | `26660`  |
+| `desmosnode2` | `26661`  | `26662`  |
+| `desmosnode3` | `26663`  | `26664`  |
 
 To update the binary, just rebuild it and restart the nodes:
 
@@ -89,9 +86,7 @@ make build-linux localnet-start
 
 #### Configuration
 
-The `make localnet-start` creates files for a 4-node testnet in `./build` by calling the `desmos testnet` command. This
-outputs a handful of files in the
-`./build` directory:
+The `make localnet-start` creates files for a 4-node testnet in `./build` by calling the `desmos testnet` command. This outputs a handful of files in the `./build` directory:
 
 ```bash
 $ tree -L 2 build/
@@ -154,5 +149,4 @@ desmos keys list --home ./build/node0/desmos
 
 Now that accounts exists, you may create new accounts and send those accounts funds!
 
-**Note**: Each node's seed is located at `./build/nodeN/desmos/key_seed.json` and can be restored to the CLI using
-the `desmos keys add --restore` command
+**Note**: Each node's seed is located at `./build/nodeN/desmos/key_seed.json` and can be restored to the CLI using the `desmos keys add --restore` command

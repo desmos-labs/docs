@@ -1,7 +1,8 @@
 ---
 id: cosmovisor
 title: Use Cosmovisor
-sidebar_position: 5
+sidebar_label: Use Cosmovisor
+slug: cosmovisor
 ---
 
 # Cosmovisor 

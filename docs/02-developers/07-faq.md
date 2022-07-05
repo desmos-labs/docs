@@ -1,7 +1,7 @@
 ---
 id: faq
 title: F.A.Q
-sidebar_position: 4
+sidebar_position: 6
 ---
 
 # FAQs
@@ -44,7 +44,7 @@ Due to the fact that transactions can take up a different time to be executed (s
 ws://<full-node-host>/websocket
 ```
 
-If you want to know more about it, please refer to the [websocket page](03-observe-data.md).
+If you want to know more about it, please refer to the [websocket page](05-observe-data.md).
 
 ## Developing applications
 ### I wrongly did an operation. Can I revert it?

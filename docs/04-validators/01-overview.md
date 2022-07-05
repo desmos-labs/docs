@@ -1,7 +1,8 @@
 ---
 id: overview
 title: Overview
-sidebar_position: 1
+sidebar_label: Overview
+slug: overview
 ---
 
 # Validators Overview

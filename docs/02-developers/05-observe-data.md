@@ -1,7 +1,7 @@
 ---
 id: observe-data
 title: Observing data
-sidebar_position: 3
+sidebar_position: 5
 ---
 
 # Observing new data
