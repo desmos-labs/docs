@@ -46,7 +46,7 @@ module.exports = {
                        'developers/modules/fees/concepts',
                        'developers/modules/fees/state',
                        'developers/modules/fees/ante-handlers',
-                       'developers/modules/fees/parameters',
+                       'developers/modules/fees/params',
                        'developers/modules/fees/client'
                     ],
                     Supply:[
@@ -69,9 +69,10 @@ module.exports = {
           items: [
               'fullnode/overview',
               'fullnode/setup',
+              'fullnode/cosmovisor',
               'fullnode/update',
-              'fullnode/rocksdb-installation',
-              'fullnode/cosmovisor'
+              'fullnode/reset-data',
+              'fullnode/rocksdb-installation'
           ]
       },
       {

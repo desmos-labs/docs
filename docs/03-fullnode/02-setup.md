@@ -22,7 +22,7 @@ By default, Desmos uses [LevelDB](https://github.com/google/leveldb) as its data
 version `v0.6.0` we've also added the possibility of optionally
 using [Facebook's RocksDB](https://github.com/facebook/rocksdb), which, although still being experimental, is known to
 be faster and could lead to lower syncing times. If you want to try out RocksDB you can take a look at
-our [RocksDB installation guide](04-rocksdb-installation.mdx) before proceeding further.
+our [RocksDB installation guide](06-rocksdb-installation.mdx) before proceeding further.
 :::
 
 In your terminal, run the following:
@@ -167,7 +167,7 @@ The first thing you need to do in order to start sync from scratch is getting th
 
 ### 3. Setup Cosmovisor
 Since we're relying on the Cosmos SDK `x/upgrade` module to update the network, you will need to set up Cosmovisor
-in order to handle the updates that happened at different heights in the past. Check how to do it [here](../03-fullnode/05-cosmovisor.md).
+in order to handle the updates that happened at different heights in the past. Check how to do it [here](03-cosmovisor.md).
 
 ## 7. (Optional) Edit snapshot config
 
@@ -410,4 +410,4 @@ $ systemctl status desmosd
 ```
 
 ## 10. Cosmovisor
-In order to do automatic on-chain upgrades we will be using cosmovisor. Please check out [Using Cosmovisor](05-cosmovisor.md) for information on how to set this up.
+In order to do automatic on-chain upgrades we will be using cosmovisor. Please check out [Using Cosmovisor](03-cosmovisor.md) for information on how to set this up.

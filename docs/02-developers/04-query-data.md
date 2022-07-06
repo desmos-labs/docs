@@ -64,5 +64,3 @@ Another way to query the Desmos data is GQL. GQL is different from the above met
 The GQL endpoints for Desmos chains are the following:
 1. [Testnet GQL endpoint](../05-testnet/04-endpoints.md#gql)
 2. [Mainnet GQL endpoint](../06-mainnet/06-endpoints.md#gql)
-
-
