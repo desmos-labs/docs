@@ -22,20 +22,20 @@ The following instructions explain how to **manually upgrade** the node:
    ```
    
 3. Go into the directory in which you have installed `desmos`. If you have followed
-the [installation instructions](../03-fullnode/02-setup.md) and didn't change the path, it should be `~/desmos`:
-```bash
-cd <installation-path> 
+the installation instructions and didn't change the path, it should be `~/desmos`:
+    ```bash
+    cd <installation-path> 
 
-# e.g.
-# cd ~/desmos
-```
+    # e.g.
+    # cd ~/desmos
+    ```
 
-3. Now, update the `desmos` software:
-```bash
-git fetch --tags
-git checkout tags/$(git describe --tags `git rev-list --tags --max-count=1`)
-make build && make install
-```
+4. Now, update the `desmos` software:
+    ```bash
+    git fetch --tags
+    git checkout tags/$(git describe --tags `git rev-list --tags --max-count=1`)
+    make build && make install
+    ```
 
 :::tip Select the version you need  
 The above commands checks out the latest release that has been tagged on our repository. If you wish to check out a specific version instead, use the following commands:
@@ -71,11 +71,11 @@ cosmovisor version
 ```
 :::
 
-## Automatic upgrade
+## Automatic upgrade (with Cosmovisor)
 Here below it is explained how to prepare your node to be able to **automatically upgrade** itself.
 
-1. If you didn't already do it [setup Cosmovisor](../03-fullnode/03-cosmovisor.md). Cosmovisor handles the automatic upgrades that happens after the _upgrade governance proposal_ passes.
-2. If during an upgrade your node doesn't have enough space left or if the cosmovisor backup it is taking too much
+1.Cosmovisor handles the automatic upgrades that happens after the _upgrade governance proposal_ passes.
+If during an upgrade your node doesn't have enough space left or if the cosmovisor backup it is taking too much
   time, you can do the following:
    1. Open your `desmosd` editor:
    ```bash

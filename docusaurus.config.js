@@ -3,7 +3,7 @@ module.exports = {
   tagline: 'Desmos network official documentation for developers and validators',
   url: 'https://test-docs.desmos.network',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   onDuplicateRoutes: 'warn',
   favicon: 'assets/favicon.ico',
