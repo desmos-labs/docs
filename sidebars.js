@@ -56,6 +56,8 @@ module.exports = {
                     ]
                 }
             },
+            'developers/tools-to-build',
+            'developers/query-data',
             'developers/observe-data',
             'developers/faq',
         ]

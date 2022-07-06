@@ -1,7 +1,8 @@
 ---
 id: query-data
 title: Query data
-sidebar_position: 4
+sidebar_label: Query data
+slug: query-data
 ---
 
 # Query data

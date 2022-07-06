@@ -1,7 +1,8 @@
 ---
 id: tools-to-build
 title: Tools to build DApps
-sidebar_position: 3
+sidebar_label: Tools to build DApps
+slug: tools-to-build
 ---
 
 # Tools to build DApps
