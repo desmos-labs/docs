@@ -37,10 +37,35 @@ module.exports = {
                         'developers/modules/relationships/events',
                         'developers/modules/relationships/client'
                     ],
-                    //Subspaces:[],
+                    Subspaces:[
+                        'developers/modules/subspaces/overview',
+                        'developers/modules/subspaces/concepts',
+                        'developers/modules/subspaces/state',
+                        'developers/modules/subspaces/messages',
+                        'developers/modules/subspaces/events',
+                        'developers/modules/subspaces/permissions',
+                        'developers/modules/subspaces/client'
+                    ],
                     //Posts:[],
-                    //Reactions:[],
-                    //Reports:[],
+                    Reactions:[
+                        'developers/modules/reactions/overview',
+                        'developers/modules/reactions/concepts',
+                        'developers/modules/reactions/state',
+                        'developers/modules/reactions/messages',
+                        'developers/modules/reactions/events',
+                        'developers/modules/reactions/permissions',
+                        'developers/modules/reactions/client'
+                    ],
+                    Reports:[
+                        'developers/modules/reports/overview',
+                        'developers/modules/reports/concepts',
+                        'developers/modules/reports/state',
+                        'developers/modules/reports/messages',
+                        'developers/modules/reports/events',
+                        'developers/modules/reports/permissions',
+                        'developers/modules/reports/params',
+                        'developers/modules/reports/client'
+                    ],
                     Fees:[
                        'developers/modules/fees/overview',
                        'developers/modules/fees/concepts',
