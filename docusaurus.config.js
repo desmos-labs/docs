@@ -144,6 +144,18 @@ module.exports = {
   themes: [
     '@you54f/theme-github-codeblock'
   ],
+  plugins: [
+    [
+      "@edno/docusaurus2-graphql-doc-generator",
+      {
+        schema: "docs/07-graphql/schema.graphql",
+        root: "docs/",
+        baseURL: "07-graphql",
+        homepage: "docs/07-graphql/gql.md",
+        pretty: true,
+      }
+    ],
+  ]
   /*i18n: { // add for localization
     defaultLocale: 'en',
     locales: ['en', 'chinese'],

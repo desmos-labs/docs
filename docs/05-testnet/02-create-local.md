@@ -1,7 +1,8 @@
 ---
 id: create-local
 title: Create a local testnet
-sidebar_position: 2
+sidebar_label: create-local
+slug: create-local
 ---
 
 # Create a local testnet

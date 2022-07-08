@@ -4,7 +4,7 @@
 git clone https://github.com/desmos-labs/desmos.git
 
 # shellcheck disable=SC2164
-rm -rf docs/02-developers/modules && mkdir -p docs/02-developers/05-modules && cd docs/02-developers/02-modules
+rm -rf docs/02-developers/modules && mkdir -p docs/02-developers/02-modules && cd docs/02-developers/02-modules
 
 for D in ../../../desmos/x/*; do
   if [ -d "${D}" ]; then
