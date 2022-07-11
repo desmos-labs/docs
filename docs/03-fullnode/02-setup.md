@@ -110,7 +110,7 @@ In order to provide a custom seed to your private key, you can do as follows:
 
 To connect to an existing network, or start a new one, a genesis file is required. The file contains all the settings
 telling how the genesis block of the network should look like.
- - If you are setting up a **testnet** node refer to this [procedure](docs/05-testnet/03-join-public/02-genesis-file.md);
+ - If you are setting up a **testnet** node refer to this [procedure](../05-testnet/03-join-public/02-genesis-file.md);
  - If you are setting up a **mainnet** node refer to this [procedure](../06-mainnet/01-genesis-file.md).
 
 ## 4. Setup seeds
@@ -122,7 +122,7 @@ file.
 Seed nodes are a particular type of nodes present on the network. Your fullnode will connect to them, and they will
 provide it with a list of other fullnodes that are present on the network. Then, your fullnode will automatically
 connect to such nodes. 
-- If you are looking for **testnet** seeds please check here: [Testnet seeds](docs/05-testnet/03-join-public/03-seeds.md);
+- If you are looking for **testnet** seeds please check here: [Testnet seeds](../05-testnet/03-join-public/03-seeds.md);
 - If you are looking for **mainnet** seeds please check here: [Mainnet seeds](../06-mainnet/02-seeds.md).
 
 ## 5. State sync
@@ -131,7 +131,7 @@ Starting from Desmos `v0.15.0`, we've added the support for Tendermint'
 s [state sync](https://docs.tendermint.com/master/nodes/state-sync.html#configure-state-sync). This feature allows new nodes to
 sync with the chain extremely fast, by downloading snapshots created by other full nodes.
 Here below, you can find the links to check for the correct procedure depending on which network you're setting up your node:
-- If you are setting up state-sync for the **testnet** follow the [State sync testnet procedure](docs/05-testnet/03-join-public/04-state-sync.md);
+- If you are setting up state-sync for the **testnet** follow the [State sync testnet procedure](../05-testnet/03-join-public/04-state-sync.md);
 - If you are setting up state-sync for the **mainnet** follow the [State sync mainnet procedure](../06-mainnet/03-state-sync.md).
 
 ### Changing state sync height
@@ -158,7 +158,7 @@ Remember that this procedure takes time (hours, or days) and you will not be abl
 ### 1. Downgrade the software
 The first thing you need to do in order to start sync from scratch is getting the correct Desmos version according to the network you're connecting to:
 * [**Mainnet**](../06-mainnet/04-full-sync.md);
-* [**Testnet**](docs/05-testnet/03-join-public/05-full-sync.md).
+* [**Testnet**](../05-testnet/03-join-public/05-full-sync.md).
 
 ### 2. Disable state-sync
 1. Open the `~/.desmos/config/config.toml` file.

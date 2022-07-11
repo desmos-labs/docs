@@ -7,7 +7,7 @@ slug: seeds
 
 # Seed nodes
 :::caution Mainnet only   
-The following seed nodes are to be used when configuring a full node for the **mainnet**. If you are looking for testnet seed nodes, please refer to [this](docs/05-testnet/03-join-public/03-seeds.md) instead.  
+The following seed nodes are to be used when configuring a full node for the **mainnet**. If you are looking for testnet seed nodes, please refer to [this](../05-testnet/03-join-public/03-seeds.md) instead.  
 :::
 
 Add these seeds here to the `~/.desmos/config/config.toml` file

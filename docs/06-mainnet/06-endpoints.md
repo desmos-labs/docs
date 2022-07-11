@@ -10,18 +10,18 @@ Here below the list of all the useful endpoints you might need to interact with 
 
 ## RPC
 
-1. https://rpc.mainnet.desmos.network
-2. http://135.181.60.250:26557
-3. https://desmos-rpc01.skynetvalidators.com
-4. https://rpc-desmos.itastakers.com
-5. https://rpc.desmos.nodes.guru/
+1. `https://rpc.mainnet.desmos.network`
+2. `http://135.181.60.250:26557`
+3. `https://desmos-rpc01.skynetvalidators.com`
+4. `https://rpc-desmos.itastakers.com`
+5. `https://rpc.desmos.nodes.guru`
 
 ## REST & gRPC
 
-1. https://api.mainnet.desmos.network
-2. http://135.181.60.250:1917
-3. https://lcd-desmos.itastakers.com
+1. `https://api.mainnet.desmos.network`
+2. `http://135.181.60.250:1917`
+3. `https://lcd-desmos.itastakers.com`
 
 ## GQL
 
-https://gql.mainnet.desmos.network/v1/graphql
+`https://gql.mainnet.desmos.network/v1/graphql`
