@@ -125,13 +125,19 @@ module.exports = {
           sidebarCollapsible: true,
           editUrl: 'https://github.com/desmos-labs/docs/master',
           showLastUpdateTime: true,
-          lastVersion: "3",
+          lastVersion: "4.1.0",
           versions: {
             current: {
               label: "master"
             },
+            2.3: {
+              label: "v2.3.0"
+            },
             3: {
               label: "v3.0.0"
+            },
+            "4.1.0" : {
+              label: "v4.1.0"
             }
           }
         },
