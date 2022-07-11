@@ -1,7 +1,8 @@
 ---
 id: migrating
 title: Migrating
-sidebar_position: 5
+sidebar_label: Migrating
+slug: migrating
 ---
 
 # Migrating a validator

@@ -3,7 +3,7 @@ module.exports = {
   tagline: 'Desmos network official documentation for developers and validators',
   url: 'https://test-docs.desmos.network',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   onDuplicateRoutes: 'warn',
   favicon: 'assets/favicon.ico',
@@ -80,9 +80,17 @@ module.exports = {
               href: 'https://discord.desmos.network/',
             },
             {
+              label: 'Medium',
+              href: 'https://medium.com/desmosnetwork'
+            },
+            {
               label: 'Telegram',
               href: 'https://t.me/desmosnetwork',
             },
+            {
+              label: 'Reddit (not-official)',
+              href: 'https://www.reddit.com/r/DesmosNetwork/'
+            }
           ],
         },
         {
@@ -122,10 +130,6 @@ module.exports = {
             current: {
               label: "master"
             },
-            2.3: {
-              label: "v2.3.1",
-              banner: "none"
-            },
             3: {
               label: "v3.0.0"
             }
@@ -137,6 +141,21 @@ module.exports = {
       },
     ],
   ],
+  themes: [
+    '@you54f/theme-github-codeblock'
+  ],
+  plugins: [
+    [
+      "@edno/docusaurus2-graphql-doc-generator",
+      {
+        schema: "docs/07-graphql/schema.graphql",
+        root: "docs/",
+        baseURL: "07-graphql",
+        homepage: "docs/07-graphql/gql.md",
+        pretty: true,
+      }
+    ],
+  ]
   /*i18n: { // add for localization
     defaultLocale: 'en',
     locales: ['en', 'chinese'],

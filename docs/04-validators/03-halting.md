@@ -1,7 +1,8 @@
 ---
 id: halting
 title: Halting
-sidebar_position: 4
+sidebar_label: Halting
+slug: halting
 ---
 
 # Halting Your Validator

@@ -19,87 +19,79 @@ module.exports = {
         items: [
             'developers/overview',
             {
-                Types: [
-                    {
-                        Profiles: [
-                            'developers/types/profiles/profile',
-                            'developers/types/profiles/profile-pictures',
-                            'developers/types/profiles/dtag-transfer-request',
-                            'developers/types/profiles/application-link',
-                            'developers/types/profiles/chain-link'
-                        ],
-                        Relationships: [
-                            'developers/types/relationships/relationship',
-                            'developers/types/relationships/user-block',
-                        ],
-                        Subspaces: [
-                            'developers/types/subspaces/subspace',
-                            'developers/types/subspaces/user-group',
-                            'developers/types/subspaces/permission-detail'
-                        ]
-                    }
-                ],
-            },
-            {
-              Transactions: [
-                  {
+                Modules: {
                     Profiles: [
-                        'developers/transactions/profiles/save-profile',
-                        'developers/transactions/profiles/delete-profile',
-                        'developers/transactions/profiles/request-dtag-transfer',
-                        'developers/transactions/profiles/accept-dtag-transfer-request',
-                        'developers/transactions/profiles/refuse-dtag-transfer-request',
-                        'developers/transactions/profiles/cancel-dtag-transfer-request',
-                        'developers/transactions/profiles/link-application',
-                        'developers/transactions/profiles/unlink-application',
-                        'developers/transactions/profiles/link-chain-account',
-                        'developers/transactions/profiles/unlink-chain-account',
+                        'developers/modules/profiles/overview',
+                        'developers/modules/profiles/concepts',
+                        'developers/modules/profiles/state',
+                        'developers/modules/profiles/messages',
+                        'developers/modules/profiles/events',
+                        'developers/modules/profiles/params',
+                        'developers/modules/profiles/client'
                     ],
-                    Relationships: [
-                        'developers/transactions/relationships/create-relationship',
-                        'developers/transactions/relationships/delete-relationship',
-                        'developers/transactions/relationships/block-user',
-                        'developers/transactions/relationships/unblock-user',
+                    Relationships:[
+                        'developers/modules/relationships/overview',
+                        'developers/modules/relationships/concepts',
+                        'developers/modules/relationships/state',
+                        'developers/modules/relationships/messages',
+                        'developers/modules/relationships/events',
+                        'developers/modules/relationships/client'
                     ],
-                    Subspaces: [
-                        'developers/transactions/subspaces/create-subspace',
-                        'developers/transactions/subspaces/edit-subspace',
-                        'developers/transactions/subspaces/delete-subspace',
-                        'developers/transactions/subspaces/set-user-permissions',
-                        'developers/transactions/subspaces/create-user-group',
-                        'developers/transactions/subspaces/edit-user-group',
-                        'developers/transactions/subspaces/add-user-to-group',
-                        'developers/transactions/subspaces/remove-user-from-user-group',
-                        'developers/transactions/subspaces/set-user-group-permissions',
-                        'developers/transactions/subspaces/delete-user-group'
+                    Subspaces:[
+                        'developers/modules/subspaces/overview',
+                        'developers/modules/subspaces/concepts',
+                        'developers/modules/subspaces/state',
+                        'developers/modules/subspaces/messages',
+                        'developers/modules/subspaces/events',
+                        'developers/modules/subspaces/permissions',
+                        'developers/modules/subspaces/client'
+                    ],
+                    Posts:[
+                        'developers/modules/posts/overview',
+                        'developers/modules/posts/concepts',
+                        'developers/modules/posts/state',
+                        'developers/modules/posts/messages',
+                        'developers/modules/posts/events',
+                        'developers/modules/posts/permissions',
+                        'developers/modules/posts/params',
+                        'developers/modules/posts/client'
+                    ],
+                    Reactions:[
+                        'developers/modules/reactions/overview',
+                        'developers/modules/reactions/concepts',
+                        'developers/modules/reactions/state',
+                        'developers/modules/reactions/messages',
+                        'developers/modules/reactions/events',
+                        'developers/modules/reactions/permissions',
+                        'developers/modules/reactions/client'
+                    ],
+                    Reports:[
+                        'developers/modules/reports/overview',
+                        'developers/modules/reports/concepts',
+                        'developers/modules/reports/state',
+                        'developers/modules/reports/messages',
+                        'developers/modules/reports/events',
+                        'developers/modules/reports/permissions',
+                        'developers/modules/reports/params',
+                        'developers/modules/reports/client'
+                    ],
+                    Fees:[
+                       'developers/modules/fees/overview',
+                       'developers/modules/fees/concepts',
+                       'developers/modules/fees/state',
+                       'developers/modules/fees/ante-handlers',
+                       'developers/modules/fees/params',
+                       'developers/modules/fees/client'
+                    ],
+                    Supply:[
+                       'developers/modules/supply/overview',
+                       'developers/modules/supply/concepts',
+                       'developers/modules/supply/client'
                     ]
-                  },
-              ],
+                }
             },
-            {
-                Queries: [
-                    {
-                        Profiles: [
-                            'developers/queries/profiles/profile',
-                            'developers/queries/profiles/incoming-dtag-requests',
-                            'developers/queries/profiles/chain-links',
-                            'developers/queries/profiles/application-links',
-                        ],
-                        Relationships: [
-                            'developers/queries/relationships/relationships',
-                            'developers/queries/relationships/blocked-users',
-                        ],
-                        Subspaces: [
-                            'developers/queries/subspaces/subspaces',
-                            'developers/queries/subspaces/subspace',
-                            'developers/queries/subspaces/user-groups',
-                            'developers/queries/subspaces/user-group',
-                            'developers/queries/subspaces/user-group-members',
-                            'developers/queries/subspaces/user-permissions'
-                        ]
-                    }
-                ],
-            },
+            'developers/tools-to-build',
+            'developers/query-data',
             'developers/observe-data',
             'developers/faq',
         ]
@@ -111,9 +103,10 @@ module.exports = {
           items: [
               'fullnode/overview',
               'fullnode/setup',
+              'fullnode/cosmovisor',
               'fullnode/update',
-              'fullnode/rocksdb-installation',
-              'fullnode/cosmovisor'
+              'fullnode/reset-data',
+              'fullnode/rocksdb-installation'
           ]
       },
       {
@@ -131,23 +124,21 @@ module.exports = {
       },
       {
           type: 'category',
-          label: 'Testnets',
+          label: 'Testnet',
           collapsed: true,
           items: [
-              'testnets/overview',
-              'testnets/create-local',
+              'testnet/overview',
+              'testnet/create-local',
               {
                   'Join the public testnet': [
-                      'testnets/join-public/setup',
-                      'testnets/join-public/genesis-file',
-                      'testnets/join-public/seeds',
-                      'testnets/join-public/state-sync',
-                      'testnets/join-public/full-sync'
+                      'testnet/join-public/setup',
+                      'testnet/join-public/genesis-file',
+                      'testnet/join-public/seeds',
+                      'testnet/join-public/state-sync',
+                      'testnet/join-public/full-sync',
                   ],
-
-
               },
-
+              'testnet/endpoints'
           ]
       },
       {
@@ -159,12 +150,20 @@ module.exports = {
             'mainnet/seeds',
             'mainnet/state-sync',
             'mainnet/full-sync',
-            'mainnet/security'
+            'mainnet/security',
+            'mainnet/endpoints'
+          ]
+      },
+      {
+          type: "category",
+          label: 'GraphQL Schemas',
+          collapsed: true,
+          items: [
+              {
+                  type: "autogenerated",
+                  dirName: "07-graphql"
+              }
           ]
       }
-      /*{
-        type: 'autogenerated',
-        dirName: '.'
-      }*/
   ],
 };

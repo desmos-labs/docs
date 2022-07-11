@@ -1,7 +1,8 @@
 ---
 id: common-problems
 title: Common Problems
-sidebar_position: 6
+sidebar_label: Common Problems
+slug: common-problems
 ---
 
 # Common Problems

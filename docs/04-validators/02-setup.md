@@ -1,16 +1,17 @@
 ---
 id: setup
 title: Setup
-sidebar_position: 3
+sidebar_label: Setup
+slug: setup
 ---
 
 # Become a Desmos validator
 [Validators](01-overview.md) are responsible for committing new blocks to the blockchain through voting. 
 A validator's stake is slashed if they become unavailable or sign blocks at the same height. Please read about 
-[Sentry Node Architecture](06-validator-faq.md#how-can-validators-protect-themselves-from-denial-of-service-attacks) to protect your node from DDOS attacks and to ensure high-availability.
+[Sentry Node Architecture](07-validator-faq.md#how-can-validators-protect-themselves-from-denial-of-service-attacks) to protect your node from DDOS attacks and to ensure high-availability.
 
 :::danger Warning
-If you want to become a validator for the `mainnet`, you should [research security](../06-mainnet/security.md).
+If you want to become a validator for the `mainnet`, you should [research security](../06-mainnet/05-security.md).
 :::
 
 ## 1. Run a fullnode

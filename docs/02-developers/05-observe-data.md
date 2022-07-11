@@ -1,7 +1,8 @@
 ---
 id: observe-data
 title: Observing data
-sidebar_position: 5
+sidebar_label: Observing data
+slug: observe-data
 ---
 
 # Observing new data
@@ -16,11 +17,11 @@ All the live data observation is done though the usage of a [websocket](https://
 ws://lcd-endpoint/websocket
 
 # Example
-# ws://morpheus1000.desmos.network/websocket
+# ws://morpheus.desmos.network/websocket
 ```
 
-### Queries
-In order to subscribe to specific events, you will need to send one or more messages to the websocket once you opened a connection to it. Such messages needs to contain the following JSON object and must be string encoded: 
+### Events
+In order to subscribe to specific events, you will need to send one or more messages to the websocket once you opened a connection to it. Such messages need to contain the following JSON object and must be string encoded: 
 
 ```json
 {
@@ -28,15 +29,15 @@ In order to subscribe to specific events, you will need to send one or more mess
   "method": "subscribe",
   "id": "0",
   "params": {
-    "query": "<Query to send>"
+    "query": "tm.event='eventCategory' AND eventType.eventAttribute='attributeValue'"
   }
 }
 ``` 
 
 The `query` field can have the following values: 
 
-* `tm.event='NewBloc'` if you want to observe each new block that is created (even empty ones)
-* `tm.event='Tx'` if you want to subscribe to all new transactions
+* `tm.event='NewBlock'` if you want to observe each new block that is created (even empty ones);
+* `tm.event='Tx'` if you want to subscribe to all new transactions;
 * `message.action='<action>'` if you want to subscribe to events emitted when a specific message is sent to the chain. 
   In this case, please refer to the `Message action` section on each transaction message 
   specification page to know what is the type associated to each message.
@@ -50,7 +51,7 @@ Please note that if you want to subscribe to multiple events you will need to se
   "method": "subscribe",
   "id": "0",
   "params": {
-    "query": "message.action='create_post'"
+    "query": "message.action='save_profile'"
   }
 }
 ```
