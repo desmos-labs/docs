@@ -17,10 +17,10 @@ To query data using `CLI`, you can check the following commands of each module:
 
 * [Profiles CLI commands](02-modules/profiles/07-client.md#cli);
 * [Relationships CLI commands](02-modules/relationships/06-client.md#cli);
-* [Subspaces CLI commands];
-* [Posts CLI commands];
-* [Reports CLI commands];
-* [Reactions CLI commands];
+* [Subspaces CLI commands](02-modules/subspaces/07-client.md#cli);
+* [Posts CLI commands](02-modules/posts/08-client.md#cli);
+* [Reports CLI commands](02-modules/reports/08-client.md#cli);
+* [Reactions CLI commands](02-modules/reactions/07-client.md#cli);
 * [Supply CLI commands](02-modules/supply/03-client.md#cli);
 * [Fees CLI commands](02-modules/fees/06-client.md#cli).
 
@@ -38,9 +38,10 @@ To query data using the `gRPC` endpoint, you can use the following endpoints:
 The above endpoints can be combined with the following endpoints to get the desired data:
 * [Profiles gRPC endpoints](02-modules/profiles/07-client.md#grpc);
 * [Relationships gRPC endpoints](02-modules/relationships/06-client.md#grpc);
-* [Subspaces gRPC endpoints];
-* [Posts gRPC endpoints];
-* [Reports gRPC endpoints];
+* [Subspaces gRPC endpoints](02-modules/subspaces/07-client.md#grpc);
+* [Posts gRPC endpoints](02-modules/posts/08-client.md#grpc);
+* [Reports gRPC endpoints](02-modules/reports/08-client.md#grpc);
+* [Reactions gRPC endpoints](02-modules/reactions/07-client.md#grpc);
 * [Supply gRPC endpoints](02-modules/fees/06-client.md#grpc);
 * [Fees gRPC endpoints](02-modules/fees/06-client.md#grpc).
 
@@ -50,13 +51,14 @@ TO query data using the `REST` endpoint, you can use the following endpoints:
 2. [Mainnet gRPC endpoint](../06-mainnet/06-endpoints.md#rest--grpc)
 
 The above endpoints can be used with the following endpoints to get the desired data:
-* [Profiles gRPC endpoints](02-modules/profiles/07-client.md#rest);
-* [Relationships gRPC endpoints](02-modules/relationships/06-client.md#rest);
-* [Subspaces gRPC endpoints];
-* [Posts gRPC endpoints];
-* [Reports gRPC endpoints];
-* [Supply gRPC endpoints](02-modules/fees/06-client.md#rest);
-* [Fees gRPC endpoints](02-modules/fees/06-client.md#rest).
+* [Profiles REST endpoints](02-modules/profiles/07-client.md#rest);
+* [Relationships REST endpoints](02-modules/relationships/06-client.md#rest);
+* [Subspaces REST endpoints](02-modules/subspaces/07-client.md#rest);
+* [Posts REST endpoints](02-modules/posts/08-client.md#rest);
+* [Reports REST endpoints](02-modules/reports/08-client.md#rest);
+* [Reactions REST endpoints](02-modules/reactions/07-client.md#rest);
+* [Supply REST endpoints](02-modules/fees/06-client.md#rest);
+* [Fees REST endpoints](02-modules/fees/06-client.md#rest).
 
 ## GQL
 Another way to query the Desmos data is GQL. GQL is different from the above methods because it offers high possibilities of customisation for developers based on their needs. It is possible to interact with GQL endpoints in the client you are building by using one of the many libraries available for this kind of interaction. You can check what suites your needs here: [GraphQL resources](https://graphql.org/code/).
