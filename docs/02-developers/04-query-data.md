@@ -47,8 +47,8 @@ The above endpoints can be combined with the following endpoints to get the desi
 
 ## REST
 TO query data using the `REST` endpoint, you can use the following endpoints:
-1. [Testnet gRPC endpoint](../05-testnet/04-endpoints.md#rest--grpc)
-2. [Mainnet gRPC endpoint](../06-mainnet/06-endpoints.md#rest--grpc)
+1. [Testnet REST endpoint](../05-testnet/04-endpoints.md#rest--grpc)
+2. [Mainnet REST endpoint](../06-mainnet/06-endpoints.md#rest--grpc)
 
 The above endpoints can be used with the following endpoints to get the desired data:
 * [Profiles REST endpoints](02-modules/profiles/07-client.md#rest);
