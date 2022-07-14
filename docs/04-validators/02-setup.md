@@ -45,6 +45,16 @@ desmos keys add <key_name>
 desmos keys add <key_name> --recover
 ```
 
+**or** use the `--ledger` flag if you want to import your ledger wallet account.
+
+```shell
+desmos keys add <key_name> --ledger
+```
+
+:::note
+In order to use ledger you will need to use the Desmos app. You can download it from the ledger live store.
+:::
+
 :::caution Key name
 Please select a key name that you will easily remember and be able to type fast. This name will be used all over the
 places inside other commands later.

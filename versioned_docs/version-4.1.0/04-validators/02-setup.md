@@ -6,8 +6,8 @@ slug: setup
 ---
 
 # Become a Desmos validator
-[Validators](01-overview.md) are responsible for committing new blocks to the blockchain through voting. 
-A validator's stake is slashed if they become unavailable or sign blocks at the same height. Please read about 
+[Validators](01-overview.md) are responsible for committing new blocks to the blockchain through voting.
+A validator's stake is slashed if they become unavailable or sign blocks at the same height. Please read about
 [Sentry Node Architecture](07-validator-faq.md#how-can-validators-protect-themselves-from-denial-of-service-attacks) to protect your node from DDOS attacks and to ensure high-availability.
 
 :::danger Warning
@@ -44,6 +44,16 @@ desmos keys add <key_name>
 ```shell
 desmos keys add <key_name> --recover
 ```
+
+**or** use the `--ledger` flag if you want to import your ledger wallet account.
+
+```shell
+desmos keys add <key_name> --ledger
+```
+
+:::note
+In order to use ledger you will need to use the Desmos app. You can download it from the ledger live store.
+:::
 
 :::caution Key name
 Please select a key name that you will easily remember and be able to type fast. This name will be used all over the
@@ -82,7 +92,7 @@ On Morpheus testnet, we are using `udaric` as the staking token and it will be t
 We are using `udsm` as the staking token on Mainnet.  
 :::
 
-#### Testnet: 
+#### Testnet:
 ```bash
 desmos tx staking create-validator \
   --amount=1000000udaric \
@@ -181,6 +191,6 @@ To show the `operator address`, you can run
 desmos keys show <key_name> -a --bech val
 ```
 
-:::note Note 
+:::note Note
 To be in the validator set, you need to have more total voting power than the last validator.
 :::
