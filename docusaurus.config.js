@@ -15,10 +15,9 @@ module.exports = {
       respectPrefersColorScheme: true,
     },
     algolia: {
-      apiKey: 'a0c8cc3eb829f6595a2cd41870f92a81',
+      apiKey: '492b6729d095b18f5599d6584e00ae11',
+      appId: '1IAGPKAXGP',
       indexName: 'desmos',
-      contextualSearch: true,
-      appId: 'BH4D9OD16A',
     },
     docs: {
       sidebar: {
