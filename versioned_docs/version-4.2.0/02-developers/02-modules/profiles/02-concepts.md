@@ -111,7 +111,7 @@ To implement the IBC capability of connecting an external account to a Desmos pr
 `LinkChainAccountPacketData` defines the object that should be sent inside a `MsgSendPacket` when wanting to link an external chain to a Desmos profile using IBC.
 
 ```js reference
-https://github.com/desmos-labs/desmos/blob/master/x/profiles/types/models_packets.pb.go#L28-L43
+https://github.com/desmos-labs/desmos/blob/v4.2.0/x/profiles/types/models_packets.pb.go#L28-L43
 ```
 
 Note that the `SourceAddress` field must be one of the currently supported types:
