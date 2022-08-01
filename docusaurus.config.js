@@ -18,6 +18,7 @@ module.exports = {
       apiKey: '492b6729d095b18f5599d6584e00ae11',
       appId: '1IAGPKAXGP',
       indexName: 'desmos',
+      contextualSearch: false,
     },
     docs: {
       sidebar: {
