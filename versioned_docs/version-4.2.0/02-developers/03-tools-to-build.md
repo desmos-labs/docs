@@ -70,7 +70,7 @@ import {
 } from "@desmoslabs/desmjs";
 import {
     MsgSaveProfile,
-} from "@desmoslabs/desmjs-types/desmos/profiles/v2/msgs_profile";
+} from "@desmoslabs/desmjs-types/desmos/profiles/v3/msgs_profile";
 
 
 const mnemonic = "math track fish reopen project latin radio spoon please table between install cheap smile deer glide desk license bench vapor chef sock list case";
@@ -81,7 +81,7 @@ const [firstAccount] = await signer.getAccounts();
 const client = await DesmosClient.connectWithSigner(rpcEndpoint, signer);
 
 const msg: MsgSaveProfileEncodeObject = {
-    typeUrl: "/desmos.profiles.v2.MsgSaveProfile",
+    typeUrl: "/desmos.profiles.v3.MsgSaveProfile",
     value: MsgSaveProfile.fromPartial({
         dtag: "frieza",
         nickname: "Frieza",
@@ -108,8 +108,8 @@ import {
 } from "@desmoslabs/desmjs";
 import {
     MsgCreatePost,
-} from "@desmoslabs/desmjs-types/desmos/posts/v2/msgs";
-import { ReplySetting } from "@desmoslabs/desmjs-types/desmos/posts/v2/models";
+} from "@desmoslabs/desmjs-types/desmos/posts/v3/msgs";
+import { ReplySetting } from "@desmoslabs/desmjs-types/desmos/posts/v3/models";
 import Long from "long";
 
 
@@ -121,7 +121,7 @@ const [firstAccount] = await signer.getAccounts();
 const client = await DesmosClient.connectWithSigner(rpcEndpoint, signer);
 
 const msg: MsgCreatePostEncodeObject = {
-    typeUrl: "/desmos.posts.v2.MsgCreatePost",
+    typeUrl: "/desmos.posts.v3.MsgCreatePost",
     value: MsgCreatePost.fromPartial({
         subspaceId: Long.fromNumber(1),
         sectionId: 0,
@@ -154,7 +154,7 @@ import {
 import { DesmosClient, SigningMode, assertIsDeliverTxSuccess, MsgSaveProfileEncodeObject } from "@desmoslabs/desmjs";
 import {
     MsgSaveProfile,
-} from "@desmoslabs/desmjs-types/desmos/profiles/v2/msgs_profile";
+} from "@desmoslabs/desmjs-types/desmos/profiles/v3/msgs_profile";
 
 
 const connector = new WalletConnect({
@@ -174,7 +174,7 @@ const [firstAccount] = await signer.getAccounts();
 const client = await DesmosClient.connectWithSigner(rpcEndpoint, signer);
 
 const msg: MsgSaveProfileEncodeObject = {
-    typeUrl: "/desmos.profiles.v2.MsgSaveProfile",
+    typeUrl: "/desmos.profiles.v3.MsgSaveProfile",
     value: MsgSaveProfile.fromPartial({
         dtag: "frieza",
         nickname: "Frieza",
