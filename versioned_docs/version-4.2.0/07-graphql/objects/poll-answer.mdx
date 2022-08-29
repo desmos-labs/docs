@@ -4,34 +4,31 @@ title: poll_answer
 hide_table_of_contents: false
 ---
 
-
 columns and relationships of "poll_answer"
 
 ```graphql
 type poll_answer {
   answers_indexes: _int8!
+  attachment_row_id: bigint!
+  height: bigint!
   post_attachment: post_attachment!
+  row_id: Int!
   user_address: String!
 }
 ```
 
-
 ### Fields
 
-#### [`answers_indexes`](#) ([`_int8!`](../scalars/int-8))
+#### [`answers_indexes`](#) ([`_int8!`](/07-graphql/scalars/int-8))
 
+#### [`attachment_row_id`](#) ([`bigint!`](/07-graphql/scalars/bigint))
 
+#### [`height`](#) ([`bigint!`](/07-graphql/scalars/bigint))
 
-
-#### [`post_attachment`](#) ([`post_attachment!`](../objects/post-attachment))
+#### [`post_attachment`](#) ([`post_attachment!`](/07-graphql/objects/post-attachment))
 
 An object relationship
 
+#### [`row_id`](#) ([`Int!`](/07-graphql/scalars/int))
 
-#### [`user_address`](#) ([`String!`](../scalars/string))
-
-
-
-
-
-
+#### [`user_address`](#) ([`String!`](/07-graphql/scalars/string))

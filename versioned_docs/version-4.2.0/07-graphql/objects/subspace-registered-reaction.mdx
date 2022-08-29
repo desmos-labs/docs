@@ -4,46 +4,34 @@ title: subspace_registered_reaction
 hide_table_of_contents: false
 ---
 
-
 columns and relationships of "subspace_registered_reaction"
 
 ```graphql
 type subspace_registered_reaction {
   display_value: String!
+  height: bigint!
   id: bigint!
+  row_id: Int!
   shorthand_code: String!
   subspace: subspace!
   subspace_id: bigint!
 }
 ```
 
-
 ### Fields
 
-#### [`display_value`](#) ([`String!`](../scalars/string))
+#### [`display_value`](#) ([`String!`](/07-graphql/scalars/string))
 
+#### [`height`](#) ([`bigint!`](/07-graphql/scalars/bigint))
 
+#### [`id`](#) ([`bigint!`](/07-graphql/scalars/bigint))
 
+#### [`row_id`](#) ([`Int!`](/07-graphql/scalars/int))
 
-#### [`id`](#) ([`bigint!`](../scalars/bigint))
+#### [`shorthand_code`](#) ([`String!`](/07-graphql/scalars/string))
 
-
-
-
-#### [`shorthand_code`](#) ([`String!`](../scalars/string))
-
-
-
-
-#### [`subspace`](#) ([`subspace!`](../objects/subspace))
+#### [`subspace`](#) ([`subspace!`](/07-graphql/objects/subspace))
 
 An object relationship
 
-
-#### [`subspace_id`](#) ([`bigint!`](../scalars/bigint))
-
-
-
-
-
-
+#### [`subspace_id`](#) ([`bigint!`](/07-graphql/scalars/bigint))

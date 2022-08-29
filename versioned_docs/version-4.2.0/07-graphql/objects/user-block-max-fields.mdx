@@ -4,40 +4,26 @@ title: user_block_max_fields
 hide_table_of_contents: false
 ---
 
-
 aggregate max on columns
 
 ```graphql
 type user_block_max_fields {
-  blocked_user_address: String
+  blocked_address: String
   blocker_address: String
+  height: bigint
   reason: String
-  subspace: String
+  subspace_id: bigint
 }
 ```
 
-
 ### Fields
 
-#### [`blocked_user_address`](#) ([`String`](../scalars/string))
+#### [`blocked_address`](#) ([`String`](/07-graphql/scalars/string))
 
+#### [`blocker_address`](#) ([`String`](/07-graphql/scalars/string))
 
+#### [`height`](#) ([`bigint`](/07-graphql/scalars/bigint))
 
+#### [`reason`](#) ([`String`](/07-graphql/scalars/string))
 
-#### [`blocker_address`](#) ([`String`](../scalars/string))
-
-
-
-
-#### [`reason`](#) ([`String`](../scalars/string))
-
-
-
-
-#### [`subspace`](#) ([`String`](../scalars/string))
-
-
-
-
-
-
+#### [`subspace_id`](#) ([`bigint`](/07-graphql/scalars/bigint))

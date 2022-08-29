@@ -4,46 +4,32 @@ title: report_max_fields
 hide_table_of_contents: false
 ---
 
-
 aggregate max on columns
 
 ```graphql
 type report_max_fields {
   creation_date: timestamp
+  height: bigint
   id: bigint
   message: String
   reporter_address: String
+  row_id: Int
   subspace_id: bigint
 }
 ```
 
-
 ### Fields
 
-#### [`creation_date`](#) ([`timestamp`](../scalars/timestamp))
+#### [`creation_date`](#) ([`timestamp`](/07-graphql/scalars/timestamp))
 
+#### [`height`](#) ([`bigint`](/07-graphql/scalars/bigint))
 
+#### [`id`](#) ([`bigint`](/07-graphql/scalars/bigint))
 
+#### [`message`](#) ([`String`](/07-graphql/scalars/string))
 
-#### [`id`](#) ([`bigint`](../scalars/bigint))
+#### [`reporter_address`](#) ([`String`](/07-graphql/scalars/string))
 
+#### [`row_id`](#) ([`Int`](/07-graphql/scalars/int))
 
-
-
-#### [`message`](#) ([`String`](../scalars/string))
-
-
-
-
-#### [`reporter_address`](#) ([`String`](../scalars/string))
-
-
-
-
-#### [`subspace_id`](#) ([`bigint`](../scalars/bigint))
-
-
-
-
-
-
+#### [`subspace_id`](#) ([`bigint`](/07-graphql/scalars/bigint))

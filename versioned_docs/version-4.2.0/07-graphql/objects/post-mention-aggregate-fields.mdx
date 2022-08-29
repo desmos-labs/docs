@@ -1,0 +1,51 @@
+---
+id: post-mention-aggregate-fields
+title: post_mention_aggregate_fields
+hide_table_of_contents: false
+---
+
+aggregate fields of "post_mention"
+
+```graphql
+type post_mention_aggregate_fields {
+  avg: post_mention_avg_fields
+  count(columns: [post_mention_select_column!], distinct: Boolean): Int!
+  max: post_mention_max_fields
+  min: post_mention_min_fields
+  stddev: post_mention_stddev_fields
+  stddev_pop: post_mention_stddev_pop_fields
+  stddev_samp: post_mention_stddev_samp_fields
+  sum: post_mention_sum_fields
+  var_pop: post_mention_var_pop_fields
+  var_samp: post_mention_var_samp_fields
+  variance: post_mention_variance_fields
+}
+```
+
+### Fields
+
+#### [`avg`](#) ([`post_mention_avg_fields`](/07-graphql/objects/post-mention-avg-fields))
+
+#### [`count`](#) ([`Int!`](/07-graphql/scalars/int))
+
+- ##### [`columns`](#) ([`[post_mention_select_column!]`](/07-graphql/enums/post-mention-select-column))
+
+- ##### [`distinct`](#) ([`Boolean`](/07-graphql/scalars/boolean))
+
+#### [`max`](#) ([`post_mention_max_fields`](/07-graphql/objects/post-mention-max-fields))
+
+#### [`min`](#) ([`post_mention_min_fields`](/07-graphql/objects/post-mention-min-fields))
+
+#### [`stddev`](#) ([`post_mention_stddev_fields`](/07-graphql/objects/post-mention-stddev-fields))
+
+#### [`stddev_pop`](#) ([`post_mention_stddev_pop_fields`](/07-graphql/objects/post-mention-stddev-pop-fields))
+
+#### [`stddev_samp`](#) ([`post_mention_stddev_samp_fields`](/07-graphql/objects/post-mention-stddev-samp-fields))
+
+#### [`sum`](#) ([`post_mention_sum_fields`](/07-graphql/objects/post-mention-sum-fields))
+
+#### [`var_pop`](#) ([`post_mention_var_pop_fields`](/07-graphql/objects/post-mention-var-pop-fields))
+
+#### [`var_samp`](#) ([`post_mention_var_samp_fields`](/07-graphql/objects/post-mention-var-samp-fields))
+
+#### [`variance`](#) ([`post_mention_variance_fields`](/07-graphql/objects/post-mention-variance-fields))

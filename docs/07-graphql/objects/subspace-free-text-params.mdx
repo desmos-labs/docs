@@ -4,12 +4,12 @@ title: subspace_free_text_params
 hide_table_of_contents: false
 ---
 
-
 columns and relationships of "subspace_free_text_params"
 
 ```graphql
 type subspace_free_text_params {
   enabled: Boolean!
+  height: bigint!
   max_length: bigint!
   reg_ex: String
   subspace: subspace!
@@ -17,33 +17,18 @@ type subspace_free_text_params {
 }
 ```
 
-
 ### Fields
 
-#### [`enabled`](#) ([`Boolean!`](../scalars/boolean))
+#### [`enabled`](#) ([`Boolean!`](/07-graphql/scalars/boolean))
 
+#### [`height`](#) ([`bigint!`](/07-graphql/scalars/bigint))
 
+#### [`max_length`](#) ([`bigint!`](/07-graphql/scalars/bigint))
 
+#### [`reg_ex`](#) ([`String`](/07-graphql/scalars/string))
 
-#### [`max_length`](#) ([`bigint!`](../scalars/bigint))
-
-
-
-
-#### [`reg_ex`](#) ([`String`](../scalars/string))
-
-
-
-
-#### [`subspace`](#) ([`subspace!`](../objects/subspace))
+#### [`subspace`](#) ([`subspace!`](/07-graphql/objects/subspace))
 
 An object relationship
 
-
-#### [`subspace_id`](#) ([`bigint!`](../scalars/bigint))
-
-
-
-
-
-
+#### [`subspace_id`](#) ([`bigint!`](/07-graphql/scalars/bigint))

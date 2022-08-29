@@ -4,128 +4,107 @@ title: subspace_user_group
 hide_table_of_contents: false
 ---
 
-
 columns and relationships of "subspace_user_group"
 
 ```graphql
 type subspace_user_group {
   description: String
+  height: bigint!
   id: bigint!
   members(
-  distinct_on: [subspace_user_group_member_select_column!]
-  limit: Int
-  offset: Int
-  order_by: [subspace_user_group_member_order_by!]
-  where: subspace_user_group_member_bool_exp
-): [subspace_user_group_member!]!
+    distinct_on: [subspace_user_group_member_select_column!]
+    limit: Int
+    offset: Int
+    order_by: [subspace_user_group_member_order_by!]
+    where: subspace_user_group_member_bool_exp
+  ): [subspace_user_group_member!]!
   members_aggregate(
-  distinct_on: [subspace_user_group_member_select_column!]
-  limit: Int
-  offset: Int
-  order_by: [subspace_user_group_member_order_by!]
-  where: subspace_user_group_member_bool_exp
-): subspace_user_group_member_aggregate!
+    distinct_on: [subspace_user_group_member_select_column!]
+    limit: Int
+    offset: Int
+    order_by: [subspace_user_group_member_order_by!]
+    where: subspace_user_group_member_bool_exp
+  ): subspace_user_group_member_aggregate!
   name: String!
-  permissions: _text!
+  permissions: _text
+  row_id: Int!
   section: subspace_section!
+  section_row_id: bigint!
   subspace: subspace!
   subspace_id: bigint!
 }
 ```
 
-
 ### Fields
 
-#### [`description`](#) ([`String`](../scalars/string))
+#### [`description`](#) ([`String`](/07-graphql/scalars/string))
 
+#### [`height`](#) ([`bigint!`](/07-graphql/scalars/bigint))
 
+#### [`id`](#) ([`bigint!`](/07-graphql/scalars/bigint))
 
-
-#### [`id`](#) ([`bigint!`](../scalars/bigint))
-
-
-
-
-#### [`members`](#) ([`[subspace_user_group_member!]!`](../objects/subspace-user-group-member))
+#### [`members`](#) ([`[subspace_user_group_member!]!`](/07-graphql/objects/subspace-user-group-member))
 
 An array relationship
-- ##### [`distinct_on`](#) ([`[subspace_user_group_member_select_column!]`](../enums/subspace-user-group-member-select-column))
+
+- ##### [`distinct_on`](#) ([`[subspace_user_group_member_select_column!]`](/07-graphql/enums/subspace-user-group-member-select-column))
 
 distinct select on columns
 
-
-- ##### [`limit`](#) ([`Int`](../scalars/int))
+- ##### [`limit`](#) ([`Int`](/07-graphql/scalars/int))
 
 limit the number of rows returned
 
-
-- ##### [`offset`](#) ([`Int`](../scalars/int))
+- ##### [`offset`](#) ([`Int`](/07-graphql/scalars/int))
 
 skip the first n rows. Use only with order_by
 
-
-- ##### [`order_by`](#) ([`[subspace_user_group_member_order_by!]`](../inputs/subspace-user-group-member-order-by))
+- ##### [`order_by`](#) ([`[subspace_user_group_member_order_by!]`](/07-graphql/inputs/subspace-user-group-member-order-by))
 
 sort the rows by one or more columns
 
-
-- ##### [`where`](#) ([`subspace_user_group_member_bool_exp`](../inputs/subspace-user-group-member-bool-exp))
+- ##### [`where`](#) ([`subspace_user_group_member_bool_exp`](/07-graphql/inputs/subspace-user-group-member-bool-exp))
 
 filter the rows returned
 
-
-#### [`members_aggregate`](#) ([`subspace_user_group_member_aggregate!`](../objects/subspace-user-group-member-aggregate))
+#### [`members_aggregate`](#) ([`subspace_user_group_member_aggregate!`](/07-graphql/objects/subspace-user-group-member-aggregate))
 
 An aggregate relationship
-- ##### [`distinct_on`](#) ([`[subspace_user_group_member_select_column!]`](../enums/subspace-user-group-member-select-column))
+
+- ##### [`distinct_on`](#) ([`[subspace_user_group_member_select_column!]`](/07-graphql/enums/subspace-user-group-member-select-column))
 
 distinct select on columns
 
-
-- ##### [`limit`](#) ([`Int`](../scalars/int))
+- ##### [`limit`](#) ([`Int`](/07-graphql/scalars/int))
 
 limit the number of rows returned
 
-
-- ##### [`offset`](#) ([`Int`](../scalars/int))
+- ##### [`offset`](#) ([`Int`](/07-graphql/scalars/int))
 
 skip the first n rows. Use only with order_by
 
-
-- ##### [`order_by`](#) ([`[subspace_user_group_member_order_by!]`](../inputs/subspace-user-group-member-order-by))
+- ##### [`order_by`](#) ([`[subspace_user_group_member_order_by!]`](/07-graphql/inputs/subspace-user-group-member-order-by))
 
 sort the rows by one or more columns
 
-
-- ##### [`where`](#) ([`subspace_user_group_member_bool_exp`](../inputs/subspace-user-group-member-bool-exp))
+- ##### [`where`](#) ([`subspace_user_group_member_bool_exp`](/07-graphql/inputs/subspace-user-group-member-bool-exp))
 
 filter the rows returned
 
+#### [`name`](#) ([`String!`](/07-graphql/scalars/string))
 
-#### [`name`](#) ([`String!`](../scalars/string))
+#### [`permissions`](#) ([`_text`](/07-graphql/scalars/text))
 
+#### [`row_id`](#) ([`Int!`](/07-graphql/scalars/int))
 
-
-
-#### [`permissions`](#) ([`_text!`](../scalars/text))
-
-
-
-
-#### [`section`](#) ([`subspace_section!`](../objects/subspace-section))
+#### [`section`](#) ([`subspace_section!`](/07-graphql/objects/subspace-section))
 
 An object relationship
 
+#### [`section_row_id`](#) ([`bigint!`](/07-graphql/scalars/bigint))
 
-#### [`subspace`](#) ([`subspace!`](../objects/subspace))
+#### [`subspace`](#) ([`subspace!`](/07-graphql/objects/subspace))
 
 An object relationship
 
-
-#### [`subspace_id`](#) ([`bigint!`](../scalars/bigint))
-
-
-
-
-
-
+#### [`subspace_id`](#) ([`bigint!`](/07-graphql/scalars/bigint))

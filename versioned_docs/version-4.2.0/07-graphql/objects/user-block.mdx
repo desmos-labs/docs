@@ -4,52 +4,41 @@ title: user_block
 hide_table_of_contents: false
 ---
 
-
 columns and relationships of "user_block"
 
 ```graphql
 type user_block {
   blocked: profile!
-  blocked_user_address: String!
+  blocked_address: String!
   blocker: profile!
   blocker_address: String!
+  height: bigint!
   reason: String
-  subspace: String!
+  subspace: subspace!
+  subspace_id: bigint!
 }
 ```
 
-
 ### Fields
 
-#### [`blocked`](#) ([`profile!`](../objects/profile))
+#### [`blocked`](#) ([`profile!`](/07-graphql/objects/profile))
 
 An object relationship
 
+#### [`blocked_address`](#) ([`String!`](/07-graphql/scalars/string))
 
-#### [`blocked_user_address`](#) ([`String!`](../scalars/string))
-
-
-
-
-#### [`blocker`](#) ([`profile!`](../objects/profile))
+#### [`blocker`](#) ([`profile!`](/07-graphql/objects/profile))
 
 An object relationship
 
+#### [`blocker_address`](#) ([`String!`](/07-graphql/scalars/string))
 
-#### [`blocker_address`](#) ([`String!`](../scalars/string))
+#### [`height`](#) ([`bigint!`](/07-graphql/scalars/bigint))
 
+#### [`reason`](#) ([`String`](/07-graphql/scalars/string))
 
+#### [`subspace`](#) ([`subspace!`](/07-graphql/objects/subspace))
 
+An object relationship
 
-#### [`reason`](#) ([`String`](../scalars/string))
-
-
-
-
-#### [`subspace`](#) ([`String!`](../scalars/string))
-
-
-
-
-
-
+#### [`subspace_id`](#) ([`bigint!`](/07-graphql/scalars/bigint))

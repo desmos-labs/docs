@@ -1,0 +1,51 @@
+---
+id: chain-link-aggregate-fields
+title: chain_link_aggregate_fields
+hide_table_of_contents: false
+---
+
+aggregate fields of "chain_link"
+
+```graphql
+type chain_link_aggregate_fields {
+  avg: chain_link_avg_fields
+  count(columns: [chain_link_select_column!], distinct: Boolean): Int!
+  max: chain_link_max_fields
+  min: chain_link_min_fields
+  stddev: chain_link_stddev_fields
+  stddev_pop: chain_link_stddev_pop_fields
+  stddev_samp: chain_link_stddev_samp_fields
+  sum: chain_link_sum_fields
+  var_pop: chain_link_var_pop_fields
+  var_samp: chain_link_var_samp_fields
+  variance: chain_link_variance_fields
+}
+```
+
+### Fields
+
+#### [`avg`](#) ([`chain_link_avg_fields`](/07-graphql/objects/chain-link-avg-fields))
+
+#### [`count`](#) ([`Int!`](/07-graphql/scalars/int))
+
+- ##### [`columns`](#) ([`[chain_link_select_column!]`](/07-graphql/enums/chain-link-select-column))
+
+- ##### [`distinct`](#) ([`Boolean`](/07-graphql/scalars/boolean))
+
+#### [`max`](#) ([`chain_link_max_fields`](/07-graphql/objects/chain-link-max-fields))
+
+#### [`min`](#) ([`chain_link_min_fields`](/07-graphql/objects/chain-link-min-fields))
+
+#### [`stddev`](#) ([`chain_link_stddev_fields`](/07-graphql/objects/chain-link-stddev-fields))
+
+#### [`stddev_pop`](#) ([`chain_link_stddev_pop_fields`](/07-graphql/objects/chain-link-stddev-pop-fields))
+
+#### [`stddev_samp`](#) ([`chain_link_stddev_samp_fields`](/07-graphql/objects/chain-link-stddev-samp-fields))
+
+#### [`sum`](#) ([`chain_link_sum_fields`](/07-graphql/objects/chain-link-sum-fields))
+
+#### [`var_pop`](#) ([`chain_link_var_pop_fields`](/07-graphql/objects/chain-link-var-pop-fields))
+
+#### [`var_samp`](#) ([`chain_link_var_samp_fields`](/07-graphql/objects/chain-link-var-samp-fields))
+
+#### [`variance`](#) ([`chain_link_variance_fields`](/07-graphql/objects/chain-link-variance-fields))
