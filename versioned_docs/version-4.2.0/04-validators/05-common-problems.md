@@ -283,4 +283,4 @@ If so, please ask inside our discord server what's the correct version/versions 
 Previous delegators will still be able to unbond from a tombstoned validator.
 
 More information about the slashing penalties and tombstoning can be
-found [here](https://docs.cosmos.network/master/modules/slashing/07_tombstone.html#staking-tombstone).
+found [here](https://docs.cosmos.network/v0.46/modules/slashing/07_tombstone.html).

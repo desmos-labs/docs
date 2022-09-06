@@ -4,27 +4,24 @@ title: posts_params
 hide_table_of_contents: false
 ---
 
-
 columns and relationships of "posts_params"
 
 ```graphql
 type posts_params {
-  params(
-  path: String
-): jsonb!
+  height: bigint!
+  one_row_id: Boolean!
+  params(path: String): jsonb!
 }
 ```
 
-
 ### Fields
 
-#### [`params`](#) ([`jsonb!`](../scalars/jsonb))
+#### [`height`](#) ([`bigint!`](../scalars/bigint))
 
+#### [`one_row_id`](#) ([`Boolean!`](../scalars/boolean))
+
+#### [`params`](#) ([`jsonb!`](../scalars/jsonb))
 
 - ##### [`path`](#) ([`String`](../scalars/string))
 
 JSON select path
-
-
-
-

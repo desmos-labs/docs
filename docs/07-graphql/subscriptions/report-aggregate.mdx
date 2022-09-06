@@ -4,7 +4,6 @@ title: report_aggregate
 hide_table_of_contents: false
 ---
 
-
 fetch aggregated fields from the table: "report"
 
 ```graphql
@@ -17,40 +16,30 @@ report_aggregate(
 ): report_aggregate!
 ```
 
-
 ### Arguments
 
 #### [`distinct_on`](#) ([`[report_select_column!]`](../enums/report-select-column))
 
 distinct select on columns
 
-
 #### [`limit`](#) ([`Int`](../scalars/int))
 
 limit the number of rows returned
-
 
 #### [`offset`](#) ([`Int`](../scalars/int))
 
 skip the first n rows. Use only with order_by
 
-
 #### [`order_by`](#) ([`[report_order_by!]`](../inputs/report-order-by))
 
 sort the rows by one or more columns
 
-
 #### [`where`](#) ([`report_bool_exp`](../inputs/report-bool-exp))
 
 filter the rows returned
-
 
 ### Type
 
 #### [`report_aggregate`](../objects/report-aggregate)
 
 aggregated selection of "report"
-
-
-
-

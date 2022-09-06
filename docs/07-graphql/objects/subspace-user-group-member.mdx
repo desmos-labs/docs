@@ -4,16 +4,17 @@ title: subspace_user_group_member
 hide_table_of_contents: false
 ---
 
-
 columns and relationships of "subspace_user_group_member"
 
 ```graphql
 type subspace_user_group_member {
   group: subspace_user_group!
+  group_row_id: bigint!
+  height: bigint!
   member_address: String!
+  row_id: Int!
 }
 ```
-
 
 ### Fields
 
@@ -21,11 +22,10 @@ type subspace_user_group_member {
 
 An object relationship
 
+#### [`group_row_id`](#) ([`bigint!`](../scalars/bigint))
+
+#### [`height`](#) ([`bigint!`](../scalars/bigint))
 
 #### [`member_address`](#) ([`String!`](../scalars/string))
 
-
-
-
-
-
+#### [`row_id`](#) ([`Int!`](../scalars/int))
