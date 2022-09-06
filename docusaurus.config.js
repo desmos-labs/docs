@@ -133,12 +133,6 @@ module.exports = {
             2.3: {
               label: "v2.3.0"
             },
-            3: {
-              label: "v3.0.0"
-            },
-            "4.1.0" : {
-              label: "v4.1.0"
-            },
             "4.2.0" : {
               label: "v4.2.0"
             },
@@ -160,7 +154,7 @@ module.exports = {
         schema: "docs/07-graphql/schema.graphql",
         root: "docs/",
         baseURL: "07-graphql",
-        homepage: "docs/07-graphql/gql.md",
+        homepage: "docs/07-graphql/01-overview.md",
         pretty: true,
       }
     ],

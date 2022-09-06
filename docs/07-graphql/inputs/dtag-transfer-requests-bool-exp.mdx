@@ -4,7 +4,6 @@ title: dtag_transfer_requests_bool_exp
 hide_table_of_contents: false
 ---
 
-
 Boolean expression to filter rows from the table "dtag_transfer_requests". All fields are combined with a logical 'AND'.
 
 ```graphql
@@ -12,6 +11,7 @@ input dtag_transfer_requests_bool_exp {
   _and: [dtag_transfer_requests_bool_exp!]
   _not: dtag_transfer_requests_bool_exp
   _or: [dtag_transfer_requests_bool_exp!]
+  height: bigint_comparison_exp
   profile: profile_bool_exp
   profileBySenderAddress: profile_bool_exp
   receiver_address: String_comparison_exp
@@ -19,43 +19,20 @@ input dtag_transfer_requests_bool_exp {
 }
 ```
 
-
 ### Fields
 
 #### [`_and`](#) ([`[dtag_transfer_requests_bool_exp!]`](../inputs/dtag-transfer-requests-bool-exp))
 
-
-
-
 #### [`_not`](#) ([`dtag_transfer_requests_bool_exp`](../inputs/dtag-transfer-requests-bool-exp))
-
-
-
 
 #### [`_or`](#) ([`[dtag_transfer_requests_bool_exp!]`](../inputs/dtag-transfer-requests-bool-exp))
 
-
-
+#### [`height`](#) ([`bigint_comparison_exp`](../inputs/bigint-comparison-exp))
 
 #### [`profile`](#) ([`profile_bool_exp`](../inputs/profile-bool-exp))
 
-
-
-
 #### [`profileBySenderAddress`](#) ([`profile_bool_exp`](../inputs/profile-bool-exp))
-
-
-
 
 #### [`receiver_address`](#) ([`String_comparison_exp`](../inputs/string-comparison-exp))
 
-
-
-
 #### [`sender_address`](#) ([`String_comparison_exp`](../inputs/string-comparison-exp))
-
-
-
-
-
-
