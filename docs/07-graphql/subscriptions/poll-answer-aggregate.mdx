@@ -4,6 +4,7 @@ title: poll_answer_aggregate
 hide_table_of_contents: false
 ---
 
+
 fetch aggregated fields from the table: "poll_answer"
 
 ```graphql
@@ -16,30 +17,40 @@ poll_answer_aggregate(
 ): poll_answer_aggregate!
 ```
 
+
 ### Arguments
 
-#### [`distinct_on`](#) ([`[poll_answer_select_column!]`](/07-graphql/enums/poll-answer-select-column))
+#### [`distinct_on`](#) ([`[poll_answer_select_column!]`](../enums/poll-answer-select-column))
 
 distinct select on columns
 
-#### [`limit`](#) ([`Int`](/07-graphql/scalars/int))
+
+#### [`limit`](#) ([`Int`](../scalars/int))
 
 limit the number of rows returned
 
-#### [`offset`](#) ([`Int`](/07-graphql/scalars/int))
+
+#### [`offset`](#) ([`Int`](../scalars/int))
 
 skip the first n rows. Use only with order_by
 
-#### [`order_by`](#) ([`[poll_answer_order_by!]`](/07-graphql/inputs/poll-answer-order-by))
+
+#### [`order_by`](#) ([`[poll_answer_order_by!]`](../inputs/poll-answer-order-by))
 
 sort the rows by one or more columns
 
-#### [`where`](#) ([`poll_answer_bool_exp`](/07-graphql/inputs/poll-answer-bool-exp))
+
+#### [`where`](#) ([`poll_answer_bool_exp`](../inputs/poll-answer-bool-exp))
 
 filter the rows returned
 
+
 ### Type
 
-#### [`poll_answer_aggregate`](/07-graphql/objects/poll-answer-aggregate)
+#### [`poll_answer_aggregate`](../objects/poll-answer-aggregate)
 
 aggregated selection of "poll_answer"
+
+
+
+

@@ -4,41 +4,51 @@ title: application_link_oracle_request
 hide_table_of_contents: false
 ---
 
+
 columns and relationships of "application_link_oracle_request"
 
 ```graphql
 type application_link_oracle_request {
   application_link: application_link!
-  application_link_id: bigint!
-  call_data(path: String): jsonb!
+  call_data(
+  path: String
+): jsonb!
   client_id: String!
-  height: bigint!
-  id: Int!
-  request_id: String!
-  script_id: String!
+  request_id: bigint!
+  script_id: bigint!
 }
 ```
 
+
 ### Fields
 
-#### [`application_link`](#) ([`application_link!`](/07-graphql/objects/application-link))
+#### [`application_link`](#) ([`application_link!`](../objects/application-link))
 
 An object relationship
 
-#### [`application_link_id`](#) ([`bigint!`](/07-graphql/scalars/bigint))
 
-#### [`call_data`](#) ([`jsonb!`](/07-graphql/scalars/jsonb))
+#### [`call_data`](#) ([`jsonb!`](../scalars/jsonb))
 
-- ##### [`path`](#) ([`String`](/07-graphql/scalars/string))
+
+- ##### [`path`](#) ([`String`](../scalars/string))
 
 JSON select path
 
-#### [`client_id`](#) ([`String!`](/07-graphql/scalars/string))
 
-#### [`height`](#) ([`bigint!`](/07-graphql/scalars/bigint))
+#### [`client_id`](#) ([`String!`](../scalars/string))
 
-#### [`id`](#) ([`Int!`](/07-graphql/scalars/int))
 
-#### [`request_id`](#) ([`String!`](/07-graphql/scalars/string))
 
-#### [`script_id`](#) ([`String!`](/07-graphql/scalars/string))
+
+#### [`request_id`](#) ([`bigint!`](../scalars/bigint))
+
+
+
+
+#### [`script_id`](#) ([`bigint!`](../scalars/bigint))
+
+
+
+
+
+

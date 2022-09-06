@@ -4,35 +4,39 @@ title: post_attachment
 hide_table_of_contents: false
 ---
 
+
 columns and relationships of "post_attachment"
 
 ```graphql
 type post_attachment {
-  content(path: String): jsonb!
-  height: bigint!
+  content(
+  path: String
+): jsonb!
   id: bigint!
   post: post!
-  post_row_id: bigint!
-  row_id: Int!
 }
 ```
 
+
 ### Fields
 
-#### [`content`](#) ([`jsonb!`](/07-graphql/scalars/jsonb))
+#### [`content`](#) ([`jsonb!`](../scalars/jsonb))
 
-- ##### [`path`](#) ([`String`](/07-graphql/scalars/string))
+
+- ##### [`path`](#) ([`String`](../scalars/string))
 
 JSON select path
 
-#### [`height`](#) ([`bigint!`](/07-graphql/scalars/bigint))
 
-#### [`id`](#) ([`bigint!`](/07-graphql/scalars/bigint))
+#### [`id`](#) ([`bigint!`](../scalars/bigint))
 
-#### [`post`](#) ([`post!`](/07-graphql/objects/post))
+
+
+
+#### [`post`](#) ([`post!`](../objects/post))
 
 An object relationship
 
-#### [`post_row_id`](#) ([`bigint!`](/07-graphql/scalars/bigint))
 
-#### [`row_id`](#) ([`Int!`](/07-graphql/scalars/int))
+
+

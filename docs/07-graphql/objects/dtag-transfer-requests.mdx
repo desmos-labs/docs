@@ -4,11 +4,11 @@ title: dtag_transfer_requests
 hide_table_of_contents: false
 ---
 
+
 columns and relationships of "dtag_transfer_requests"
 
 ```graphql
 type dtag_transfer_requests {
-  height: bigint!
   profile: profile!
   profileBySenderAddress: profile!
   receiver_address: String!
@@ -16,18 +16,28 @@ type dtag_transfer_requests {
 }
 ```
 
+
 ### Fields
 
-#### [`height`](#) ([`bigint!`](/07-graphql/scalars/bigint))
-
-#### [`profile`](#) ([`profile!`](/07-graphql/objects/profile))
+#### [`profile`](#) ([`profile!`](../objects/profile))
 
 An object relationship
 
-#### [`profileBySenderAddress`](#) ([`profile!`](/07-graphql/objects/profile))
+
+#### [`profileBySenderAddress`](#) ([`profile!`](../objects/profile))
 
 An object relationship
 
-#### [`receiver_address`](#) ([`String!`](/07-graphql/scalars/string))
 
-#### [`sender_address`](#) ([`String!`](/07-graphql/scalars/string))
+#### [`receiver_address`](#) ([`String!`](../scalars/string))
+
+
+
+
+#### [`sender_address`](#) ([`String!`](../scalars/string))
+
+
+
+
+
+

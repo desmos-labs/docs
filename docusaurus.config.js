@@ -160,7 +160,7 @@ module.exports = {
         schema: "docs/07-graphql/schema.graphql",
         root: "docs/",
         baseURL: "07-graphql",
-        homepage: "docs/07-graphql/01-overview.md",
+        homepage: "docs/07-graphql/gql.md",
         pretty: true,
       }
     ],
