@@ -17,6 +17,15 @@ yarn start
 This command starts a local development server and opens up a browser window. Most changes are reflected live
 without having to restart the server.
 
+## Update graphql schemas (if needed)
+If a new Desmos release also updated graphql schemas, it's required to also update the related schema files. To do it, run the following command in the project directory:
+
+```console
+npx docusaurus graphql-to-doc
+```
+
+If you want to read more about the graphql generator please check [here](https://www.npmjs.com/package/@edno/docusaurus2-graphql-doc-generator) the docs of the plugin we are using.
+
 ## Build
 
 ```console

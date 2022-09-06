@@ -36,74 +36,74 @@ type report {
 
 ### Fields
 
-#### [`creation_date`](#) ([`timestamp!`](/07-graphql/scalars/timestamp))
+#### [`creation_date`](#) ([`timestamp!`](../scalars/timestamp))
 
-#### [`height`](#) ([`bigint!`](/07-graphql/scalars/bigint))
+#### [`height`](#) ([`bigint!`](../scalars/bigint))
 
-#### [`id`](#) ([`bigint!`](/07-graphql/scalars/bigint))
+#### [`id`](#) ([`bigint!`](../scalars/bigint))
 
-#### [`message`](#) ([`String`](/07-graphql/scalars/string))
+#### [`message`](#) ([`String`](../scalars/string))
 
-#### [`reasons`](#) ([`[report_reason!]!`](/07-graphql/objects/report-reason))
+#### [`reasons`](#) ([`[report_reason!]!`](../objects/report-reason))
 
 An array relationship
 
-- ##### [`distinct_on`](#) ([`[report_reason_select_column!]`](/07-graphql/enums/report-reason-select-column))
+- ##### [`distinct_on`](#) ([`[report_reason_select_column!]`](../enums/report-reason-select-column))
 
 distinct select on columns
 
-- ##### [`limit`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`limit`](#) ([`Int`](../scalars/int))
 
 limit the number of rows returned
 
-- ##### [`offset`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`offset`](#) ([`Int`](../scalars/int))
 
 skip the first n rows. Use only with order_by
 
-- ##### [`order_by`](#) ([`[report_reason_order_by!]`](/07-graphql/inputs/report-reason-order-by))
+- ##### [`order_by`](#) ([`[report_reason_order_by!]`](../inputs/report-reason-order-by))
 
 sort the rows by one or more columns
 
-- ##### [`where`](#) ([`report_reason_bool_exp`](/07-graphql/inputs/report-reason-bool-exp))
+- ##### [`where`](#) ([`report_reason_bool_exp`](../inputs/report-reason-bool-exp))
 
 filter the rows returned
 
-#### [`reasons_aggregate`](#) ([`report_reason_aggregate!`](/07-graphql/objects/report-reason-aggregate))
+#### [`reasons_aggregate`](#) ([`report_reason_aggregate!`](../objects/report-reason-aggregate))
 
 An aggregate relationship
 
-- ##### [`distinct_on`](#) ([`[report_reason_select_column!]`](/07-graphql/enums/report-reason-select-column))
+- ##### [`distinct_on`](#) ([`[report_reason_select_column!]`](../enums/report-reason-select-column))
 
 distinct select on columns
 
-- ##### [`limit`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`limit`](#) ([`Int`](../scalars/int))
 
 limit the number of rows returned
 
-- ##### [`offset`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`offset`](#) ([`Int`](../scalars/int))
 
 skip the first n rows. Use only with order_by
 
-- ##### [`order_by`](#) ([`[report_reason_order_by!]`](/07-graphql/inputs/report-reason-order-by))
+- ##### [`order_by`](#) ([`[report_reason_order_by!]`](../inputs/report-reason-order-by))
 
 sort the rows by one or more columns
 
-- ##### [`where`](#) ([`report_reason_bool_exp`](/07-graphql/inputs/report-reason-bool-exp))
+- ##### [`where`](#) ([`report_reason_bool_exp`](../inputs/report-reason-bool-exp))
 
 filter the rows returned
 
-#### [`reporter_address`](#) ([`String!`](/07-graphql/scalars/string))
+#### [`reporter_address`](#) ([`String!`](../scalars/string))
 
-#### [`row_id`](#) ([`Int!`](/07-graphql/scalars/int))
+#### [`row_id`](#) ([`Int!`](../scalars/int))
 
-#### [`subspace`](#) ([`subspace!`](/07-graphql/objects/subspace))
+#### [`subspace`](#) ([`subspace!`](../objects/subspace))
 
 An object relationship
 
-#### [`subspace_id`](#) ([`bigint!`](/07-graphql/scalars/bigint))
+#### [`subspace_id`](#) ([`bigint!`](../scalars/bigint))
 
-#### [`target`](#) ([`jsonb!`](/07-graphql/scalars/jsonb))
+#### [`target`](#) ([`jsonb!`](../scalars/jsonb))
 
-- ##### [`path`](#) ([`String`](/07-graphql/scalars/string))
+- ##### [`path`](#) ([`String`](../scalars/string))
 
 JSON select path

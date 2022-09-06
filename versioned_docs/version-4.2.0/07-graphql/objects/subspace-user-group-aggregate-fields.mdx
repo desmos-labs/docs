@@ -4,12 +4,16 @@ title: subspace_user_group_aggregate_fields
 hide_table_of_contents: false
 ---
 
+
 aggregate fields of "subspace_user_group"
 
 ```graphql
 type subspace_user_group_aggregate_fields {
   avg: subspace_user_group_avg_fields
-  count(columns: [subspace_user_group_select_column!], distinct: Boolean): Int!
+  count(
+  columns: [subspace_user_group_select_column!]
+  distinct: Boolean
+): Int!
   max: subspace_user_group_max_fields
   min: subspace_user_group_min_fields
   stddev: subspace_user_group_stddev_fields
@@ -22,30 +26,71 @@ type subspace_user_group_aggregate_fields {
 }
 ```
 
+
 ### Fields
 
-#### [`avg`](#) ([`subspace_user_group_avg_fields`](/07-graphql/objects/subspace-user-group-avg-fields))
+#### [`avg`](#) ([`subspace_user_group_avg_fields`](../objects/subspace-user-group-avg-fields))
 
-#### [`count`](#) ([`Int!`](/07-graphql/scalars/int))
 
-- ##### [`columns`](#) ([`[subspace_user_group_select_column!]`](/07-graphql/enums/subspace-user-group-select-column))
 
-- ##### [`distinct`](#) ([`Boolean`](/07-graphql/scalars/boolean))
 
-#### [`max`](#) ([`subspace_user_group_max_fields`](/07-graphql/objects/subspace-user-group-max-fields))
+#### [`count`](#) ([`Int!`](../scalars/int))
 
-#### [`min`](#) ([`subspace_user_group_min_fields`](/07-graphql/objects/subspace-user-group-min-fields))
 
-#### [`stddev`](#) ([`subspace_user_group_stddev_fields`](/07-graphql/objects/subspace-user-group-stddev-fields))
+- ##### [`columns`](#) ([`[subspace_user_group_select_column!]`](../enums/subspace-user-group-select-column))
 
-#### [`stddev_pop`](#) ([`subspace_user_group_stddev_pop_fields`](/07-graphql/objects/subspace-user-group-stddev-pop-fields))
 
-#### [`stddev_samp`](#) ([`subspace_user_group_stddev_samp_fields`](/07-graphql/objects/subspace-user-group-stddev-samp-fields))
 
-#### [`sum`](#) ([`subspace_user_group_sum_fields`](/07-graphql/objects/subspace-user-group-sum-fields))
 
-#### [`var_pop`](#) ([`subspace_user_group_var_pop_fields`](/07-graphql/objects/subspace-user-group-var-pop-fields))
+- ##### [`distinct`](#) ([`Boolean`](../scalars/boolean))
 
-#### [`var_samp`](#) ([`subspace_user_group_var_samp_fields`](/07-graphql/objects/subspace-user-group-var-samp-fields))
 
-#### [`variance`](#) ([`subspace_user_group_variance_fields`](/07-graphql/objects/subspace-user-group-variance-fields))
+
+
+#### [`max`](#) ([`subspace_user_group_max_fields`](../objects/subspace-user-group-max-fields))
+
+
+
+
+#### [`min`](#) ([`subspace_user_group_min_fields`](../objects/subspace-user-group-min-fields))
+
+
+
+
+#### [`stddev`](#) ([`subspace_user_group_stddev_fields`](../objects/subspace-user-group-stddev-fields))
+
+
+
+
+#### [`stddev_pop`](#) ([`subspace_user_group_stddev_pop_fields`](../objects/subspace-user-group-stddev-pop-fields))
+
+
+
+
+#### [`stddev_samp`](#) ([`subspace_user_group_stddev_samp_fields`](../objects/subspace-user-group-stddev-samp-fields))
+
+
+
+
+#### [`sum`](#) ([`subspace_user_group_sum_fields`](../objects/subspace-user-group-sum-fields))
+
+
+
+
+#### [`var_pop`](#) ([`subspace_user_group_var_pop_fields`](../objects/subspace-user-group-var-pop-fields))
+
+
+
+
+#### [`var_samp`](#) ([`subspace_user_group_var_samp_fields`](../objects/subspace-user-group-var-samp-fields))
+
+
+
+
+#### [`variance`](#) ([`subspace_user_group_variance_fields`](../objects/subspace-user-group-variance-fields))
+
+
+
+
+
+

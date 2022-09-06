@@ -119,354 +119,354 @@ type profile {
 
 ### Fields
 
-#### [`address`](#) ([`String!`](/07-graphql/scalars/string))
+#### [`address`](#) ([`String!`](../scalars/string))
 
-#### [`application_links`](#) ([`[application_link!]!`](/07-graphql/objects/application-link))
-
-An array relationship
-
-- ##### [`distinct_on`](#) ([`[application_link_select_column!]`](/07-graphql/enums/application-link-select-column))
-
-distinct select on columns
-
-- ##### [`limit`](#) ([`Int`](/07-graphql/scalars/int))
-
-limit the number of rows returned
-
-- ##### [`offset`](#) ([`Int`](/07-graphql/scalars/int))
-
-skip the first n rows. Use only with order_by
-
-- ##### [`order_by`](#) ([`[application_link_order_by!]`](/07-graphql/inputs/application-link-order-by))
-
-sort the rows by one or more columns
-
-- ##### [`where`](#) ([`application_link_bool_exp`](/07-graphql/inputs/application-link-bool-exp))
-
-filter the rows returned
-
-#### [`application_links_aggregate`](#) ([`application_link_aggregate!`](/07-graphql/objects/application-link-aggregate))
-
-An aggregate relationship
-
-- ##### [`distinct_on`](#) ([`[application_link_select_column!]`](/07-graphql/enums/application-link-select-column))
-
-distinct select on columns
-
-- ##### [`limit`](#) ([`Int`](/07-graphql/scalars/int))
-
-limit the number of rows returned
-
-- ##### [`offset`](#) ([`Int`](/07-graphql/scalars/int))
-
-skip the first n rows. Use only with order_by
-
-- ##### [`order_by`](#) ([`[application_link_order_by!]`](/07-graphql/inputs/application-link-order-by))
-
-sort the rows by one or more columns
-
-- ##### [`where`](#) ([`application_link_bool_exp`](/07-graphql/inputs/application-link-bool-exp))
-
-filter the rows returned
-
-#### [`bio`](#) ([`String!`](/07-graphql/scalars/string))
-
-#### [`blocked_users`](#) ([`[user_block!]!`](/07-graphql/objects/user-block))
+#### [`application_links`](#) ([`[application_link!]!`](../objects/application-link))
 
 An array relationship
 
-- ##### [`distinct_on`](#) ([`[user_block_select_column!]`](/07-graphql/enums/user-block-select-column))
+- ##### [`distinct_on`](#) ([`[application_link_select_column!]`](../enums/application-link-select-column))
 
 distinct select on columns
 
-- ##### [`limit`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`limit`](#) ([`Int`](../scalars/int))
 
 limit the number of rows returned
 
-- ##### [`offset`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`offset`](#) ([`Int`](../scalars/int))
 
 skip the first n rows. Use only with order_by
 
-- ##### [`order_by`](#) ([`[user_block_order_by!]`](/07-graphql/inputs/user-block-order-by))
+- ##### [`order_by`](#) ([`[application_link_order_by!]`](../inputs/application-link-order-by))
 
 sort the rows by one or more columns
 
-- ##### [`where`](#) ([`user_block_bool_exp`](/07-graphql/inputs/user-block-bool-exp))
+- ##### [`where`](#) ([`application_link_bool_exp`](../inputs/application-link-bool-exp))
 
 filter the rows returned
 
-#### [`blocked_users_aggregate`](#) ([`user_block_aggregate!`](/07-graphql/objects/user-block-aggregate))
+#### [`application_links_aggregate`](#) ([`application_link_aggregate!`](../objects/application-link-aggregate))
 
 An aggregate relationship
 
-- ##### [`distinct_on`](#) ([`[user_block_select_column!]`](/07-graphql/enums/user-block-select-column))
+- ##### [`distinct_on`](#) ([`[application_link_select_column!]`](../enums/application-link-select-column))
 
 distinct select on columns
 
-- ##### [`limit`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`limit`](#) ([`Int`](../scalars/int))
 
 limit the number of rows returned
 
-- ##### [`offset`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`offset`](#) ([`Int`](../scalars/int))
 
 skip the first n rows. Use only with order_by
 
-- ##### [`order_by`](#) ([`[user_block_order_by!]`](/07-graphql/inputs/user-block-order-by))
+- ##### [`order_by`](#) ([`[application_link_order_by!]`](../inputs/application-link-order-by))
 
 sort the rows by one or more columns
 
-- ##### [`where`](#) ([`user_block_bool_exp`](/07-graphql/inputs/user-block-bool-exp))
+- ##### [`where`](#) ([`application_link_bool_exp`](../inputs/application-link-bool-exp))
 
 filter the rows returned
 
-#### [`chain_links`](#) ([`[chain_link!]!`](/07-graphql/objects/chain-link))
+#### [`bio`](#) ([`String!`](../scalars/string))
+
+#### [`blocked_users`](#) ([`[user_block!]!`](../objects/user-block))
 
 An array relationship
 
-- ##### [`distinct_on`](#) ([`[chain_link_select_column!]`](/07-graphql/enums/chain-link-select-column))
+- ##### [`distinct_on`](#) ([`[user_block_select_column!]`](../enums/user-block-select-column))
 
 distinct select on columns
 
-- ##### [`limit`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`limit`](#) ([`Int`](../scalars/int))
 
 limit the number of rows returned
 
-- ##### [`offset`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`offset`](#) ([`Int`](../scalars/int))
 
 skip the first n rows. Use only with order_by
 
-- ##### [`order_by`](#) ([`[chain_link_order_by!]`](/07-graphql/inputs/chain-link-order-by))
+- ##### [`order_by`](#) ([`[user_block_order_by!]`](../inputs/user-block-order-by))
 
 sort the rows by one or more columns
 
-- ##### [`where`](#) ([`chain_link_bool_exp`](/07-graphql/inputs/chain-link-bool-exp))
+- ##### [`where`](#) ([`user_block_bool_exp`](../inputs/user-block-bool-exp))
 
 filter the rows returned
 
-#### [`chain_links_aggregate`](#) ([`chain_link_aggregate!`](/07-graphql/objects/chain-link-aggregate))
+#### [`blocked_users_aggregate`](#) ([`user_block_aggregate!`](../objects/user-block-aggregate))
 
 An aggregate relationship
 
-- ##### [`distinct_on`](#) ([`[chain_link_select_column!]`](/07-graphql/enums/chain-link-select-column))
+- ##### [`distinct_on`](#) ([`[user_block_select_column!]`](../enums/user-block-select-column))
 
 distinct select on columns
 
-- ##### [`limit`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`limit`](#) ([`Int`](../scalars/int))
 
 limit the number of rows returned
 
-- ##### [`offset`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`offset`](#) ([`Int`](../scalars/int))
 
 skip the first n rows. Use only with order_by
 
-- ##### [`order_by`](#) ([`[chain_link_order_by!]`](/07-graphql/inputs/chain-link-order-by))
+- ##### [`order_by`](#) ([`[user_block_order_by!]`](../inputs/user-block-order-by))
 
 sort the rows by one or more columns
 
-- ##### [`where`](#) ([`chain_link_bool_exp`](/07-graphql/inputs/chain-link-bool-exp))
+- ##### [`where`](#) ([`user_block_bool_exp`](../inputs/user-block-bool-exp))
 
 filter the rows returned
 
-#### [`cover_pic`](#) ([`String!`](/07-graphql/scalars/string))
-
-#### [`creation_time`](#) ([`timestamp!`](/07-graphql/scalars/timestamp))
-
-#### [`dtag`](#) ([`String!`](/07-graphql/scalars/string))
-
-#### [`followage`](#) ([`[user_relationship!]!`](/07-graphql/objects/user-relationship))
+#### [`chain_links`](#) ([`[chain_link!]!`](../objects/chain-link))
 
 An array relationship
 
-- ##### [`distinct_on`](#) ([`[user_relationship_select_column!]`](/07-graphql/enums/user-relationship-select-column))
+- ##### [`distinct_on`](#) ([`[chain_link_select_column!]`](../enums/chain-link-select-column))
 
 distinct select on columns
 
-- ##### [`limit`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`limit`](#) ([`Int`](../scalars/int))
 
 limit the number of rows returned
 
-- ##### [`offset`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`offset`](#) ([`Int`](../scalars/int))
 
 skip the first n rows. Use only with order_by
 
-- ##### [`order_by`](#) ([`[user_relationship_order_by!]`](/07-graphql/inputs/user-relationship-order-by))
+- ##### [`order_by`](#) ([`[chain_link_order_by!]`](../inputs/chain-link-order-by))
 
 sort the rows by one or more columns
 
-- ##### [`where`](#) ([`user_relationship_bool_exp`](/07-graphql/inputs/user-relationship-bool-exp))
+- ##### [`where`](#) ([`chain_link_bool_exp`](../inputs/chain-link-bool-exp))
 
 filter the rows returned
 
-#### [`followage_aggregate`](#) ([`user_relationship_aggregate!`](/07-graphql/objects/user-relationship-aggregate))
+#### [`chain_links_aggregate`](#) ([`chain_link_aggregate!`](../objects/chain-link-aggregate))
 
 An aggregate relationship
 
-- ##### [`distinct_on`](#) ([`[user_relationship_select_column!]`](/07-graphql/enums/user-relationship-select-column))
+- ##### [`distinct_on`](#) ([`[chain_link_select_column!]`](../enums/chain-link-select-column))
 
 distinct select on columns
 
-- ##### [`limit`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`limit`](#) ([`Int`](../scalars/int))
 
 limit the number of rows returned
 
-- ##### [`offset`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`offset`](#) ([`Int`](../scalars/int))
 
 skip the first n rows. Use only with order_by
 
-- ##### [`order_by`](#) ([`[user_relationship_order_by!]`](/07-graphql/inputs/user-relationship-order-by))
+- ##### [`order_by`](#) ([`[chain_link_order_by!]`](../inputs/chain-link-order-by))
 
 sort the rows by one or more columns
 
-- ##### [`where`](#) ([`user_relationship_bool_exp`](/07-graphql/inputs/user-relationship-bool-exp))
+- ##### [`where`](#) ([`chain_link_bool_exp`](../inputs/chain-link-bool-exp))
 
 filter the rows returned
 
-#### [`following`](#) ([`[user_relationship!]!`](/07-graphql/objects/user-relationship))
+#### [`cover_pic`](#) ([`String!`](../scalars/string))
+
+#### [`creation_time`](#) ([`timestamp!`](../scalars/timestamp))
+
+#### [`dtag`](#) ([`String!`](../scalars/string))
+
+#### [`followage`](#) ([`[user_relationship!]!`](../objects/user-relationship))
 
 An array relationship
 
-- ##### [`distinct_on`](#) ([`[user_relationship_select_column!]`](/07-graphql/enums/user-relationship-select-column))
+- ##### [`distinct_on`](#) ([`[user_relationship_select_column!]`](../enums/user-relationship-select-column))
 
 distinct select on columns
 
-- ##### [`limit`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`limit`](#) ([`Int`](../scalars/int))
 
 limit the number of rows returned
 
-- ##### [`offset`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`offset`](#) ([`Int`](../scalars/int))
 
 skip the first n rows. Use only with order_by
 
-- ##### [`order_by`](#) ([`[user_relationship_order_by!]`](/07-graphql/inputs/user-relationship-order-by))
+- ##### [`order_by`](#) ([`[user_relationship_order_by!]`](../inputs/user-relationship-order-by))
 
 sort the rows by one or more columns
 
-- ##### [`where`](#) ([`user_relationship_bool_exp`](/07-graphql/inputs/user-relationship-bool-exp))
+- ##### [`where`](#) ([`user_relationship_bool_exp`](../inputs/user-relationship-bool-exp))
 
 filter the rows returned
 
-#### [`following_aggregate`](#) ([`user_relationship_aggregate!`](/07-graphql/objects/user-relationship-aggregate))
+#### [`followage_aggregate`](#) ([`user_relationship_aggregate!`](../objects/user-relationship-aggregate))
 
 An aggregate relationship
 
-- ##### [`distinct_on`](#) ([`[user_relationship_select_column!]`](/07-graphql/enums/user-relationship-select-column))
+- ##### [`distinct_on`](#) ([`[user_relationship_select_column!]`](../enums/user-relationship-select-column))
 
 distinct select on columns
 
-- ##### [`limit`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`limit`](#) ([`Int`](../scalars/int))
 
 limit the number of rows returned
 
-- ##### [`offset`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`offset`](#) ([`Int`](../scalars/int))
 
 skip the first n rows. Use only with order_by
 
-- ##### [`order_by`](#) ([`[user_relationship_order_by!]`](/07-graphql/inputs/user-relationship-order-by))
+- ##### [`order_by`](#) ([`[user_relationship_order_by!]`](../inputs/user-relationship-order-by))
 
 sort the rows by one or more columns
 
-- ##### [`where`](#) ([`user_relationship_bool_exp`](/07-graphql/inputs/user-relationship-bool-exp))
+- ##### [`where`](#) ([`user_relationship_bool_exp`](../inputs/user-relationship-bool-exp))
 
 filter the rows returned
 
-#### [`height`](#) ([`bigint!`](/07-graphql/scalars/bigint))
-
-#### [`incoming_dtag_transfer_requests`](#) ([`[dtag_transfer_requests!]!`](/07-graphql/objects/dtag-transfer-requests))
+#### [`following`](#) ([`[user_relationship!]!`](../objects/user-relationship))
 
 An array relationship
 
-- ##### [`distinct_on`](#) ([`[dtag_transfer_requests_select_column!]`](/07-graphql/enums/dtag-transfer-requests-select-column))
+- ##### [`distinct_on`](#) ([`[user_relationship_select_column!]`](../enums/user-relationship-select-column))
 
 distinct select on columns
 
-- ##### [`limit`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`limit`](#) ([`Int`](../scalars/int))
 
 limit the number of rows returned
 
-- ##### [`offset`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`offset`](#) ([`Int`](../scalars/int))
 
 skip the first n rows. Use only with order_by
 
-- ##### [`order_by`](#) ([`[dtag_transfer_requests_order_by!]`](/07-graphql/inputs/dtag-transfer-requests-order-by))
+- ##### [`order_by`](#) ([`[user_relationship_order_by!]`](../inputs/user-relationship-order-by))
 
 sort the rows by one or more columns
 
-- ##### [`where`](#) ([`dtag_transfer_requests_bool_exp`](/07-graphql/inputs/dtag-transfer-requests-bool-exp))
+- ##### [`where`](#) ([`user_relationship_bool_exp`](../inputs/user-relationship-bool-exp))
 
 filter the rows returned
 
-#### [`incoming_dtag_transfer_requests_aggregate`](#) ([`dtag_transfer_requests_aggregate!`](/07-graphql/objects/dtag-transfer-requests-aggregate))
+#### [`following_aggregate`](#) ([`user_relationship_aggregate!`](../objects/user-relationship-aggregate))
 
 An aggregate relationship
 
-- ##### [`distinct_on`](#) ([`[dtag_transfer_requests_select_column!]`](/07-graphql/enums/dtag-transfer-requests-select-column))
+- ##### [`distinct_on`](#) ([`[user_relationship_select_column!]`](../enums/user-relationship-select-column))
 
 distinct select on columns
 
-- ##### [`limit`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`limit`](#) ([`Int`](../scalars/int))
 
 limit the number of rows returned
 
-- ##### [`offset`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`offset`](#) ([`Int`](../scalars/int))
 
 skip the first n rows. Use only with order_by
 
-- ##### [`order_by`](#) ([`[dtag_transfer_requests_order_by!]`](/07-graphql/inputs/dtag-transfer-requests-order-by))
+- ##### [`order_by`](#) ([`[user_relationship_order_by!]`](../inputs/user-relationship-order-by))
 
 sort the rows by one or more columns
 
-- ##### [`where`](#) ([`dtag_transfer_requests_bool_exp`](/07-graphql/inputs/dtag-transfer-requests-bool-exp))
+- ##### [`where`](#) ([`user_relationship_bool_exp`](../inputs/user-relationship-bool-exp))
 
 filter the rows returned
 
-#### [`nickname`](#) ([`String!`](/07-graphql/scalars/string))
+#### [`height`](#) ([`bigint!`](../scalars/bigint))
 
-#### [`outgoing_dtag_transfer_requests`](#) ([`[dtag_transfer_requests!]!`](/07-graphql/objects/dtag-transfer-requests))
+#### [`incoming_dtag_transfer_requests`](#) ([`[dtag_transfer_requests!]!`](../objects/dtag-transfer-requests))
 
 An array relationship
 
-- ##### [`distinct_on`](#) ([`[dtag_transfer_requests_select_column!]`](/07-graphql/enums/dtag-transfer-requests-select-column))
+- ##### [`distinct_on`](#) ([`[dtag_transfer_requests_select_column!]`](../enums/dtag-transfer-requests-select-column))
 
 distinct select on columns
 
-- ##### [`limit`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`limit`](#) ([`Int`](../scalars/int))
 
 limit the number of rows returned
 
-- ##### [`offset`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`offset`](#) ([`Int`](../scalars/int))
 
 skip the first n rows. Use only with order_by
 
-- ##### [`order_by`](#) ([`[dtag_transfer_requests_order_by!]`](/07-graphql/inputs/dtag-transfer-requests-order-by))
+- ##### [`order_by`](#) ([`[dtag_transfer_requests_order_by!]`](../inputs/dtag-transfer-requests-order-by))
 
 sort the rows by one or more columns
 
-- ##### [`where`](#) ([`dtag_transfer_requests_bool_exp`](/07-graphql/inputs/dtag-transfer-requests-bool-exp))
+- ##### [`where`](#) ([`dtag_transfer_requests_bool_exp`](../inputs/dtag-transfer-requests-bool-exp))
 
 filter the rows returned
 
-#### [`outgoing_dtag_transfer_requests_aggregate`](#) ([`dtag_transfer_requests_aggregate!`](/07-graphql/objects/dtag-transfer-requests-aggregate))
+#### [`incoming_dtag_transfer_requests_aggregate`](#) ([`dtag_transfer_requests_aggregate!`](../objects/dtag-transfer-requests-aggregate))
 
 An aggregate relationship
 
-- ##### [`distinct_on`](#) ([`[dtag_transfer_requests_select_column!]`](/07-graphql/enums/dtag-transfer-requests-select-column))
+- ##### [`distinct_on`](#) ([`[dtag_transfer_requests_select_column!]`](../enums/dtag-transfer-requests-select-column))
 
 distinct select on columns
 
-- ##### [`limit`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`limit`](#) ([`Int`](../scalars/int))
 
 limit the number of rows returned
 
-- ##### [`offset`](#) ([`Int`](/07-graphql/scalars/int))
+- ##### [`offset`](#) ([`Int`](../scalars/int))
 
 skip the first n rows. Use only with order_by
 
-- ##### [`order_by`](#) ([`[dtag_transfer_requests_order_by!]`](/07-graphql/inputs/dtag-transfer-requests-order-by))
+- ##### [`order_by`](#) ([`[dtag_transfer_requests_order_by!]`](../inputs/dtag-transfer-requests-order-by))
 
 sort the rows by one or more columns
 
-- ##### [`where`](#) ([`dtag_transfer_requests_bool_exp`](/07-graphql/inputs/dtag-transfer-requests-bool-exp))
+- ##### [`where`](#) ([`dtag_transfer_requests_bool_exp`](../inputs/dtag-transfer-requests-bool-exp))
 
 filter the rows returned
 
-#### [`profile_pic`](#) ([`String!`](/07-graphql/scalars/string))
+#### [`nickname`](#) ([`String!`](../scalars/string))
+
+#### [`outgoing_dtag_transfer_requests`](#) ([`[dtag_transfer_requests!]!`](../objects/dtag-transfer-requests))
+
+An array relationship
+
+- ##### [`distinct_on`](#) ([`[dtag_transfer_requests_select_column!]`](../enums/dtag-transfer-requests-select-column))
+
+distinct select on columns
+
+- ##### [`limit`](#) ([`Int`](../scalars/int))
+
+limit the number of rows returned
+
+- ##### [`offset`](#) ([`Int`](../scalars/int))
+
+skip the first n rows. Use only with order_by
+
+- ##### [`order_by`](#) ([`[dtag_transfer_requests_order_by!]`](../inputs/dtag-transfer-requests-order-by))
+
+sort the rows by one or more columns
+
+- ##### [`where`](#) ([`dtag_transfer_requests_bool_exp`](../inputs/dtag-transfer-requests-bool-exp))
+
+filter the rows returned
+
+#### [`outgoing_dtag_transfer_requests_aggregate`](#) ([`dtag_transfer_requests_aggregate!`](../objects/dtag-transfer-requests-aggregate))
+
+An aggregate relationship
+
+- ##### [`distinct_on`](#) ([`[dtag_transfer_requests_select_column!]`](../enums/dtag-transfer-requests-select-column))
+
+distinct select on columns
+
+- ##### [`limit`](#) ([`Int`](../scalars/int))
+
+limit the number of rows returned
+
+- ##### [`offset`](#) ([`Int`](../scalars/int))
+
+skip the first n rows. Use only with order_by
+
+- ##### [`order_by`](#) ([`[dtag_transfer_requests_order_by!]`](../inputs/dtag-transfer-requests-order-by))
+
+sort the rows by one or more columns
+
+- ##### [`where`](#) ([`dtag_transfer_requests_bool_exp`](../inputs/dtag-transfer-requests-bool-exp))
+
+filter the rows returned
+
+#### [`profile_pic`](#) ([`String!`](../scalars/string))

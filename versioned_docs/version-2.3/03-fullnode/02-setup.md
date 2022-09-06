@@ -127,7 +127,7 @@ connect to such nodes.
 ## 5. State sync
 
 Starting from Desmos `v0.15.0`, we've added the support for Tendermint'
-s [state sync](https://docs.tendermint.com/master/nodes/state-sync.html#configure-state-sync). This feature allows new nodes to
+s [state sync](https://docs.tendermint.com/v0.34/tendermint-core/state-sync.html). This feature allows new nodes to
 sync with the chain extremely fast, by downloading snapshots created by other full nodes.
 Here below, you can find the links to check for the correct procedure depending on which network you're setting up your node:
 - If you are setting up state-sync for the **testnet** follow the [State sync testnet procedure](../05-testnets/03-join-public/state-sync.md);

@@ -4,43 +4,45 @@ title: reaction
 hide_table_of_contents: false
 ---
 
+
 columns and relationships of "reaction"
 
 ```graphql
 type reaction {
-  author: profile
   author_address: String!
-  height: bigint!
   id: bigint!
   post: post!
-  post_row_id: bigint!
-  row_id: Int!
-  value(path: String): jsonb!
+  value(
+  path: String
+): jsonb!
 }
 ```
 
+
 ### Fields
 
-#### [`author`](#) ([`profile`](/07-graphql/objects/profile))
+#### [`author_address`](#) ([`String!`](../scalars/string))
+
+
+
+
+#### [`id`](#) ([`bigint!`](../scalars/bigint))
+
+
+
+
+#### [`post`](#) ([`post!`](../objects/post))
 
 An object relationship
 
-#### [`author_address`](#) ([`String!`](/07-graphql/scalars/string))
 
-#### [`height`](#) ([`bigint!`](/07-graphql/scalars/bigint))
+#### [`value`](#) ([`jsonb!`](../scalars/jsonb))
 
-#### [`id`](#) ([`bigint!`](/07-graphql/scalars/bigint))
 
-#### [`post`](#) ([`post!`](/07-graphql/objects/post))
-
-An object relationship
-
-#### [`post_row_id`](#) ([`bigint!`](/07-graphql/scalars/bigint))
-
-#### [`row_id`](#) ([`Int!`](/07-graphql/scalars/int))
-
-#### [`value`](#) ([`jsonb!`](/07-graphql/scalars/jsonb))
-
-- ##### [`path`](#) ([`String`](/07-graphql/scalars/string))
+- ##### [`path`](#) ([`String`](../scalars/string))
 
 JSON select path
+
+
+
+
