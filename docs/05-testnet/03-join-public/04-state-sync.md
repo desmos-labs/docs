@@ -50,7 +50,11 @@ under the `statesync` section:
       | `3130831 - 5842610`         |          `v2.3.1`           |
       | `5842610 - 6233130`         |          `v3.2.0`           |
       | `6233130 - 6339185`         |          `v4.0.1`           |
-      | `> 6339185`                 |          `v4.1.0`           |
+      | `6339185 - 6658230`         |          `v4.1.0`           |
+      | `6658230 - 6716980`         |          `v4.2.0`           |
+      | `6716980 - 6749550`         |          `v4.3.0`           |
+      | `6749550 - 7349495`         |          `v4.3.0`           |
+      | `> 7349495`                |          `v4.4.2`           |
 
 Here is an example of what the `statesync` section of your `~/.desmos/config/config.toml` file should look like in the end (the `trust_height` and `trust_hash` should contain your values instead):
 
@@ -62,3 +66,9 @@ trust_height = 16962
 trust_hash = "E8ED7A890A64986246EEB02D7D8C4A6D497E3B60C0CAFDDE30F2EE385204C314"
 trust_period = "336h0m0s"
 ```
+
+4. Add peers to `~/.desmos/config/config.toml` file:
+
+ ```toml
+persistent_peers = "67dcef828fc2be3c3bcc19c9542d2b228bd7cff9@seed-4.morpheus.desmos.network:26656,fcf8207fb84a7238089bd0cd8db994e0af9016b6@seed-5.morpheus.desmos.network:26656"
+ ```
