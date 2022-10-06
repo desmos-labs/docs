@@ -9,9 +9,17 @@ slug: endpoints
 Here below the list of all the useful endpoints you might need to interact with testnet data.
 
 ## RPC
-`https://rpc.morpheus.desmos.network:443` 
+`https://rpc.morpheus.desmos.network:443`
 
-## REST & gRPC
+## gRPC
+
+`https://grpc.morpheus.desmos.network:443`
+
+## Web Socket
+
+`wss://ws.morpheus.desmos.network:443`
+
+## REST
 
 `https://lcd.morpheus.desmos.network`
 
