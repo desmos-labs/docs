@@ -19,6 +19,10 @@ Here below the list of all the useful endpoints you might need to interact with 
 ## gRPC
 `https://desmos-grpc.lavenderfive.com:443/`
 
+## Web Socket
+
+`wss://rpc.mainnet.desmos.network:443/websocket`
+
 ## REST
 
 1. `https://api.mainnet.desmos.network`
